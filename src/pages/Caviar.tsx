@@ -29,7 +29,7 @@ export default function Caviar() {
         title="Premium Caviar"
         description="Royal Keta premium red caviar. Sustainably produced, exquisite taste. Available for wholesale orders."
         path="/caviar"
-        ogImage="/og/caviar.jpg"
+        ogImage="/og/caviar.svg"
       />
 
       <Hero

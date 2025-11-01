@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E5D596"/>
+      <stop offset="50%" style="stop-color:#CFAE58"/>
+      <stop offset="100%" style="stop-color:#B89842"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" fill="#0B0F14" rx="12"/>
+
+  <!-- Crown -->
+  <path d="M 16 20 L 22 28 L 18 28 Z M 28 16 L 34 28 L 26 28 Z M 40 20 L 46 28 L 42 28 Z M 15 28 L 49 28 L 47 36 L 17 36 Z"
+        fill="url(#gold)"/>
+
+  <!-- Gems on crown -->
+  <circle cx="22" cy="22" r="2" fill="#4FD1C5"/>
+  <circle cx="32" cy="18" r="2.5" fill="#4FD1C5"/>
+  <circle cx="42" cy="22" r="2" fill="#4FD1C5"/>
+
+  <!-- Simplified fish body -->
+  <ellipse cx="32" cy="48" rx="18" ry="8" fill="url(#gold)" opacity="0.85"/>
+
+  <!-- Tail -->
+  <path d="M 50 48 L 56 44 L 58 48 L 56 52 Z" fill="url(#gold)" opacity="0.85"/>
+
+  <!-- Dorsal fin -->
+  <path d="M 30 40 L 32 36 L 34 40 Z" fill="url(#gold)" opacity="0.7"/>
+
+  <!-- Eye -->
+  <circle cx="22" cy="47" r="1.5" fill="#0B0F14"/>
+</svg>

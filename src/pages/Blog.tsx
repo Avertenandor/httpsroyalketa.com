@@ -73,7 +73,7 @@ export default function Blog() {
         title="Blog"
         description="Latest news, updates, and insights from Royal Keta hatchery. Learn about breeding techniques, tour highlights, and investment updates."
         path="/blog"
-        ogImage="/og/blog.jpg"
+        ogImage="/og/blog.svg"
       />
 
       <Hero

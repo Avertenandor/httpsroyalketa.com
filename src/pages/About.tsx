@@ -9,7 +9,7 @@ export default function About() {
         title="About Us"
         description="Royal Keta: pioneering sustainable salmon breeding on Sakhalin Island. Our mission, team, and partners."
         path="/about"
-        ogImage="/og/about.jpg"
+        ogImage="/og/about.svg"
       />
 
       <Hero

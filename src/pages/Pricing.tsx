@@ -70,7 +70,7 @@ export default function Pricing() {
         title="Pricing"
         description="Royal Keta tour packages and pricing. Family, Premium, and Corporate options. Compare features and book your visit."
         path="/pricing"
-        ogImage="/og/pricing.jpg"
+        ogImage="/og/pricing.svg"
       />
 
       <Hero

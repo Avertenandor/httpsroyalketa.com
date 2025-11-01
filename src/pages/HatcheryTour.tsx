@@ -37,7 +37,7 @@ export default function HatcheryTour() {
         title="Hatchery Tour"
         description="Experience salmon breeding up close. Family-friendly tours with caviar tasting and gift jars. Book your visit to Royal Keta hatchery."
         path="/hatchery-tour"
-        ogImage="/og/hatchery-tour.jpg"
+        ogImage="/og/hatchery-tour.svg"
       />
 
       <Hero

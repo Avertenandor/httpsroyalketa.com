@@ -36,7 +36,7 @@ export default function BlogPost() {
         title={post.title}
         description="Latest breeding season update from Royal Keta hatchery"
         path={`/blog/${slug}`}
-        ogImage="/og/blog.jpg"
+        ogImage="/og/blog.svg"
         type="article"
       />
 

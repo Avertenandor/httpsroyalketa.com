@@ -102,7 +102,7 @@ export default function FAQ() {
         title="FAQ"
         description="Frequently asked questions about Royal Keta hatchery tours, caviar products, and investment opportunities. Get answers to all your questions."
         path="/faq"
-        ogImage="/og/faq.jpg"
+        ogImage="/og/faq.svg"
       />
 
       <Hero

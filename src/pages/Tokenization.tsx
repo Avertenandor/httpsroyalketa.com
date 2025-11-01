@@ -45,7 +45,7 @@ export default function Tokenization() {
         title="Tokenization & Franchise"
         description="Royal Keta tokenized investment platform and franchise opportunities. Blockchain-verified returns and scalable aquaculture business model."
         path="/tokenization"
-        ogImage="/og/tokenization.jpg"
+        ogImage="/og/tokenization.svg"
       />
 
       <Hero

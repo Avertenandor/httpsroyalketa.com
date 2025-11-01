@@ -23,7 +23,7 @@ export default function Legal() {
         title="Legal Information"
         description="Terms of service, privacy policy, and legal disclosures for Royal Keta hatchery and investment services."
         path="/legal"
-        ogImage="/og/legal.jpg"
+        ogImage="/og/legal.svg"
       />
 
       <Hero

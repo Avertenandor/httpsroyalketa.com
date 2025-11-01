@@ -51,7 +51,7 @@ export default function Gallery() {
         title="Gallery"
         description="Photo gallery of Royal Keta hatchery: breeding process, family tours, and premium caviar production."
         path="/gallery"
-        ogImage="/og/gallery.jpg"
+        ogImage="/og/gallery.svg"
       />
 
       <Hero

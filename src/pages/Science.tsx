@@ -10,7 +10,7 @@ export default function Science() {
         title="Our Science"
         description="Advanced aquaculture methodology: from roe selection to smolt release. Learn about our sustainable salmon breeding practices."
         path="/science"
-        ogImage="/og/science.jpg"
+        ogImage="/og/science.svg"
       />
 
       <Hero

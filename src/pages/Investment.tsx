@@ -38,7 +38,7 @@ export default function Investment() {
         title="Investment Opportunities"
         description="Transparent tokenized investment in sustainable aquaculture. Four models from caviar dividends to full spectrum returns."
         path="/investment"
-        ogImage="/og/investment.jpg"
+        ogImage="/og/investment.svg"
       />
 
       <Hero

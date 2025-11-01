@@ -42,6 +42,7 @@ export default function Home() {
         title="From Roe to Royal"
         description="Premium salmon hatchery and caviar production on Sakhalin Island. Experience family tours, taste excellence, invest in the future."
         path="/"
+        ogImage="/og/home.svg"
         jsonLd={organizationJsonLd}
       />
 

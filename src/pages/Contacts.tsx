@@ -11,7 +11,7 @@ export default function Contacts() {
         title="Contacts"
         description="Contact Royal Keta. Visit us in Nevelsky District, Sakhalin. Email, phone, Telegram, WhatsApp."
         path="/contacts"
-        ogImage="/og/contacts.jpg"
+        ogImage="/og/contacts.svg"
       />
 
       <Hero
