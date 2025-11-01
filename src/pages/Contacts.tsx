@@ -1,6 +1,7 @@
 import { Seo } from '@/seo/Seo';
 import { Hero } from '@/components/Hero';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { LeafletMap } from '@/components/LeafletMap';
 import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
 
 export default function Contacts() {
@@ -137,10 +138,25 @@ export default function Contacts() {
               </CardContent>
             </Card>
 
-            <div className="mt-8 premium-card p-6">
-              <h4 className="font-display font-semibold text-gold mb-3">Map Placeholder</h4>
-              <div className="h-64 bg-background-secondary rounded-lg flex items-center justify-center text-foreground-muted">
-                Leaflet Map Component Here
+            <div className="mt-8">
+              <h4 className="font-display font-semibold text-gold mb-4">Location</h4>
+              <div className="premium-card overflow-hidden">
+                <LeafletMap
+                  center={[46.6833, 141.8667]}
+                  zoom={12}
+                  markerText="Royal Keta Hatchery"
+                  className="h-80 rounded-lg"
+                />
+              </div>
+              <div className="mt-4 text-sm text-foreground-muted text-center">
+                <a
+                  href="https://yandex.ru/maps/?ll=141.8667,46.6833&z=12"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold hover:text-gold-light transition-colors"
+                >
+                  Open in Yandex Maps →
+                </a>
               </div>
             </div>
           </div>

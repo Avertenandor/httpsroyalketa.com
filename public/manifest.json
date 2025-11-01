@@ -1,0 +1,17 @@
+{
+  "name": "Royal Keta",
+  "short_name": "Royal Keta",
+  "description": "Premium salmon hatchery and caviar production on Sakhalin Island",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0F14",
+  "theme_color": "#CFAE58",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

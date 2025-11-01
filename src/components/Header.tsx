@@ -6,12 +6,14 @@ import { cn } from '@/lib/utils';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Hatchery Tour', href: '/hatchery-tour' },
+  { name: 'Tours', href: '/hatchery-tour' },
   { name: 'Science', href: '/science' },
   { name: 'Caviar', href: '/caviar' },
   { name: 'Investment', href: '/investment' },
+  { name: 'Pricing', href: '/pricing' },
   { name: 'Gallery', href: '/gallery' },
-  { name: 'About', href: '/about' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'FAQ', href: '/faq' },
   { name: 'Contacts', href: '/contacts' },
 ];
 
