@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 13% 8%; /* #0B0F14 */
+    --foreground: 210 22% 87%; /* #D6DEE6 */
+
+    --card: 220 13% 9%;
+    --card-foreground: 210 22% 87%;
+
+    --popover: 220 13% 9%;
+    --popover-foreground: 210 22% 87%;
+
+    --primary: 43 52% 58%; /* Gold #CFAE58 */
+    --primary-foreground: 220 13% 8%;
+
+    --secondary: 180 63% 55%; /* Ocean/Teal */
+    --secondary-foreground: 220 13% 8%;
+
+    --muted: 217 10% 56%;
+    --muted-foreground: 210 22% 87%;
+
+    --accent: 43 52% 58%;
+    --accent-foreground: 220 13% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 10% 20%;
+    --input: 217 10% 20%;
+    --ring: 43 52% 58%;
+
+    --radius: 16px;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Glass morphism card */
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-lg;
+  }
+
+  /* Premium card with shadow */
+  .premium-card {
+    @apply glass-card shadow-premium hover:shadow-glow-gold transition-all duration-300;
+  }
+
+  /* Skip to main content link for accessibility */
+  .skip-link {
+    @apply absolute left-0 top-0 bg-gold text-background px-4 py-2 z-50;
+    transform: translateY(-100%);
+    @apply focus:transform-none;
+  }
+
+  /* Content container */
+  .content-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Text content max width for readability */
+  .prose-content {
+    max-width: 72ch;
+  }
+}
+
+@layer utilities {
+  /* Text shadows for headings */
+  .text-shadow-gold {
+    text-shadow: 0 2px 10px rgba(207, 174, 88, 0.3);
+  }
+
+  /* Gradient text */
+  .gradient-gold {
+    @apply bg-gradient-to-r from-gold-light via-gold to-gold-dark bg-clip-text text-transparent;
+  }
+
+  .gradient-ocean {
+    @apply bg-gradient-to-r from-ocean-light via-ocean to-ocean-dark bg-clip-text text-transparent;
+  }
+
+  /* Animation utilities */
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-4 transition-all duration-700;
+  }
+
+  .animate-on-scroll.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* Leaflet map dark theme overrides */
+.leaflet-container {
+  background: #0B0F14 !important;
+  @apply rounded-lg;
+}
+
+.leaflet-tile {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+}
+
+/* PhotoSwipe dark theme overrides */
+.pswp {
+  --pswp-bg: #0B0F14;
+  --pswp-icon-color: #CFAE58;
+  --pswp-icon-color-secondary: #D6DEE6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gold/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gold/50;
+}
