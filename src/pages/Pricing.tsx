@@ -8,58 +8,58 @@ import { Link } from 'react-router-dom';
 export default function Pricing() {
   const packages = [
     {
-      name: 'Family',
+      name: 'Семейный',
       price: '₽ 5,000',
-      duration: '2 hours',
-      people: '2-4 people',
+      duration: '2 часа',
+      people: '2-4 человека',
       features: [
-        { name: 'Guided hatchery tour', included: true },
-        { name: 'Feed the fish experience', included: true },
-        { name: 'Caviar tasting (50g)', included: true },
-        { name: 'Gift jar (100g)', included: true },
-        { name: 'Educational materials', included: true },
-        { name: 'Private guide', included: false },
-        { name: 'Fishing session', included: false },
-        { name: 'Premium gift package', included: false },
-        { name: 'Lunch included', included: false },
-        { name: 'Photography service', included: false },
+        { name: 'Экскурсия с гидом', included: true },
+        { name: 'Кормление рыб', included: true },
+        { name: 'Дегустация икры (50г)', included: true },
+        { name: 'Подарочная банка (100г)', included: true },
+        { name: 'Образовательные материалы', included: true },
+        { name: 'Персональный гид', included: false },
+        { name: 'Рыболовная сессия', included: false },
+        { name: 'Премиальный подарочный пакет', included: false },
+        { name: 'Обед включён', included: false },
+        { name: 'Фото-услуги', included: false },
       ],
     },
     {
-      name: 'Premium',
+      name: 'Премиум',
       price: '₽ 10,000',
-      duration: '3-4 hours',
-      people: '2-6 people',
+      duration: '3-4 часа',
+      people: '2-6 человек',
       featured: true,
       features: [
-        { name: 'Guided hatchery tour', included: true },
-        { name: 'Feed the fish experience', included: true },
-        { name: 'Caviar tasting (100g)', included: true },
-        { name: 'Gift jar (250g)', included: true },
-        { name: 'Educational materials', included: true },
-        { name: 'Private guide', included: true },
-        { name: 'Fishing session (1 hour)', included: true },
-        { name: 'Premium gift package', included: true },
-        { name: 'Lunch included', included: true },
-        { name: 'Photography service', included: false },
+        { name: 'Экскурсия с гидом', included: true },
+        { name: 'Кормление рыб', included: true },
+        { name: 'Дегустация икры (100г)', included: true },
+        { name: 'Подарочная банка (250г)', included: true },
+        { name: 'Образовательные материалы', included: true },
+        { name: 'Персональный гид', included: true },
+        { name: 'Рыболовная сессия (1 час)', included: true },
+        { name: 'Премиальный подарочный пакет', included: true },
+        { name: 'Обед включён', included: true },
+        { name: 'Фото-услуги', included: false },
       ],
     },
     {
-      name: 'Corporate',
-      price: 'Custom',
-      duration: 'Flexible',
-      people: '10+ people',
+      name: 'Корпоративный',
+      price: 'По договору',
+      duration: 'Гибкое',
+      people: '10+ человек',
       features: [
-        { name: 'Guided hatchery tour', included: true },
-        { name: 'Feed the fish experience', included: true },
-        { name: 'Caviar tasting (unlimited)', included: true },
-        { name: 'Gift jar (500g each)', included: true },
-        { name: 'Educational materials', included: true },
-        { name: 'Private guide', included: true },
-        { name: 'Fishing session (flexible)', included: true },
-        { name: 'Premium gift package', included: true },
-        { name: 'Lunch & catering', included: true },
-        { name: 'Photography service', included: true },
+        { name: 'Экскурсия с гидом', included: true },
+        { name: 'Кормление рыб', included: true },
+        { name: 'Дегустация икры (безлимитно)', included: true },
+        { name: 'Подарочная банка (500г каждому)', included: true },
+        { name: 'Образовательные материалы', included: true },
+        { name: 'Персональный гид', included: true },
+        { name: 'Рыболовная сессия (гибкая)', included: true },
+        { name: 'Премиальный подарочный пакет', included: true },
+        { name: 'Обед и кейтеринг', included: true },
+        { name: 'Фото-услуги', included: true },
       ],
     },
   ];
@@ -67,26 +67,26 @@ export default function Pricing() {
   return (
     <>
       <Seo
-        title="Pricing"
-        description="Royal Keta tour packages and pricing. Family, Premium, and Corporate options. Compare features and book your visit."
+        title="Тарифы"
+        description="Пакеты туров и тарифы Роял Кета. Семейные, Премиум и Корпоративные варианты. Сравните возможности и забронируйте визит."
         path="/pricing"
         ogImage="/og/pricing.svg"
       />
 
       <Hero
-        subtitle="Tour Packages"
-        title="Choose Your Experience"
-        description="Transparent pricing for unforgettable hatchery visits"
+        subtitle="Турные Пакеты"
+        title="Выберите Ваш Опыт"
+        description="Прозрачное ценообразование для незабываемых посещений хозяйства"
       />
 
       <section className="content-container py-20">
         <div className="text-center mb-12">
-          <Badge variant="gold" className="mb-4">Compare Packages</Badge>
+          <Badge variant="gold" className="mb-4">Сравните Пакеты</Badge>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
-            All-Inclusive Packages
+            Всё Включено
           </h2>
           <p className="text-foreground-muted max-w-2xl mx-auto">
-            Every package includes caviar tasting and gift jars. No hidden fees.
+            Каждый пакет включает дегустацию икры и подарочные банки. Никаких скрытых комиссий.
           </p>
         </div>
 
@@ -95,12 +95,12 @@ export default function Pricing() {
           <table className="w-full premium-card">
             <thead>
               <tr className="border-b border-white/10">
-                <th className="text-left p-6 font-display text-xl text-gold">Features</th>
+                <th className="text-left p-6 font-display text-xl text-gold">Возможности</th>
                 {packages.map((pkg) => (
                   <th key={pkg.name} className="p-6">
                     <div className="text-center">
                       {pkg.featured && (
-                        <Badge variant="gold" className="mb-2">Most Popular</Badge>
+                        <Badge variant="gold" className="mb-2">Популярный</Badge>
                       )}
                       <div className="text-2xl font-display font-bold text-gold mb-1">
                         {pkg.name}
@@ -119,7 +119,7 @@ export default function Pricing() {
                         variant={pkg.featured ? 'premium' : 'default'}
                         className="w-full"
                       >
-                        <Link to="/hatchery-tour">Select</Link>
+                        <Link to="/hatchery-tour">Выбрать</Link>
                       </Button>
                     </div>
                   </th>
@@ -152,7 +152,7 @@ export default function Pricing() {
           {packages.map((pkg) => (
             <div key={pkg.name} className="premium-card p-6">
               {pkg.featured && (
-                <Badge variant="gold" className="mb-3">Most Popular</Badge>
+                <Badge variant="gold" className="mb-3">Популярный</Badge>
               )}
               <h3 className="text-2xl font-display font-bold text-gold mb-2">
                 {pkg.name}
@@ -185,7 +185,7 @@ export default function Pricing() {
                 variant={pkg.featured ? 'premium' : 'default'}
                 className="w-full"
               >
-                <Link to="/hatchery-tour">Select Package</Link>
+                <Link to="/hatchery-tour">Выбрать Пакет</Link>
               </Button>
             </div>
           ))}
@@ -193,18 +193,18 @@ export default function Pricing() {
 
         <div className="mt-16 premium-card p-8 text-center">
           <h3 className="text-2xl font-display font-bold text-gold mb-4">
-            Custom Corporate Packages
+            Индивидуальные Корпоративные Пакеты
           </h3>
           <p className="text-foreground-muted mb-6 max-w-2xl mx-auto">
-            Planning a team building event or corporate retreat? We offer fully customizable packages
-            for groups of 10 or more, including catering, extended fishing sessions, and exclusive access.
+            Планируете тимбилдинг или корпоративный отдых? Мы предлагаем полностью настраиваемые 
+            пакеты для групп от 10 человек, включая кейтеринг, расширенные рыболовные сессии и эксклюзивный доступ.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild variant="premium" size="lg">
-              <a href="mailto:hello@royalketa.com">Request Quote</a>
+              <a href="mailto:hello@royalketa.com">Запросить Расчёт</a>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link to="/contacts">Contact Us</Link>
+              <Link to="/contacts">Связаться с Нами</Link>
             </Button>
           </div>
         </div>

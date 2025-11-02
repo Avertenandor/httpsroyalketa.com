@@ -8,23 +8,23 @@ export default function Contacts() {
   return (
     <>
       <Seo
-        title="Contacts"
-        description="Contact Royal Keta. Visit us in Nevelsky District, Sakhalin. Email, phone, Telegram, WhatsApp."
+        title="Контакты"
+        description="Свяжитесь с Роял Кета. Посетите нас в Невельском районе Сахалина. Email, телефон, Telegram, WhatsApp."
         path="/contacts"
         ogImage="/og/contacts.svg"
       />
 
       <Hero
-        subtitle="Get in Touch"
-        title="Contact Us"
-        description="We're here to answer your questions about tours, caviar, and investment opportunities"
+        subtitle="Свяжитесь с Нами"
+        title="Контакты"
+        description="Мы готовы ответить на ваши вопросы о турах, икре и инвестиционных возможностях"
       />
 
       <section className="content-container py-20">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-2xl font-display font-bold text-gold mb-6">
-              Contact Information
+              Контактная Информация
             </h3>
             <div className="space-y-4">
               <Card>
@@ -32,9 +32,9 @@ export default function Contacts() {
                   <div className="flex items-start gap-3">
                     <MapPin className="h-5 w-5 text-gold mt-1" />
                     <div>
-                      <CardTitle className="text-base mb-1">Location</CardTitle>
+                      <CardTitle className="text-base mb-1">Местоположение</CardTitle>
                       <p className="text-sm text-foreground-muted">
-                        Nevelsky District, Sakhalin Oblast, Russia
+                        Невельский район, Сахалинская область, Россия
                       </p>
                     </div>
                   </div>
@@ -63,7 +63,7 @@ export default function Contacts() {
                   <div className="flex items-start gap-3">
                     <Phone className="h-5 w-5 text-gold mt-1" />
                     <div>
-                      <CardTitle className="text-base mb-1">Phone</CardTitle>
+                      <CardTitle className="text-base mb-1">Телефон</CardTitle>
                       <a
                         href="tel:+79999999999"
                         className="text-sm text-foreground-muted hover:text-gold transition-colors"
@@ -117,34 +117,34 @@ export default function Contacts() {
 
           <div>
             <h3 className="text-2xl font-display font-bold text-gold mb-6">
-              Business Hours
+              Время Работы
             </h3>
             <Card>
               <CardContent className="pt-6">
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-foreground-muted">Monday - Friday</span>
+                    <span className="text-foreground-muted">Понедельник - Пятница</span>
                     <span className="text-foreground">09:00 - 18:00</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-foreground-muted">Saturday</span>
+                    <span className="text-foreground-muted">Суббота</span>
                     <span className="text-foreground">10:00 - 16:00</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-foreground-muted">Sunday</span>
-                    <span className="text-foreground">Closed</span>
+                    <span className="text-foreground-muted">Воскресенье</span>
+                    <span className="text-foreground">Закрыто</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             <div className="mt-8">
-              <h4 className="font-display font-semibold text-gold mb-4">Location</h4>
+              <h4 className="font-display font-semibold text-gold mb-4">Местоположение</h4>
               <div className="premium-card overflow-hidden">
                 <LeafletMap
                   center={[46.6833, 141.8667]}
                   zoom={12}
-                  markerText="Royal Keta Hatchery"
+                  markerText="Хозяйство Роял Кета"
                   className="h-80 rounded-lg"
                 />
               </div>
@@ -155,7 +155,7 @@ export default function Contacts() {
                   rel="noopener noreferrer"
                   className="text-gold hover:text-gold-light transition-colors"
                 >
-                  Open in Yandex Maps →
+                  Открыть в Яндекс Картах →
                 </a>
               </div>
             </div>

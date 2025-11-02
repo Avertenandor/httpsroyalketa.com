@@ -6,8 +6,8 @@ export default function NotFound() {
   return (
     <>
       <Seo
-        title="Page Not Found"
-        description="The page you're looking for doesn't exist."
+        title="Страница Не Найдена"
+        description="Страница, которую вы ищете, не существует."
         path="/404"
       />
 
@@ -15,17 +15,17 @@ export default function NotFound() {
         <div className="content-container text-center">
           <div className="text-8xl font-bold gradient-gold mb-4">404</div>
           <h1 className="text-4xl font-display font-bold text-gold mb-4">
-            Page Not Found
+            Страница Не Найдена
           </h1>
           <p className="text-foreground-muted mb-8 max-w-md mx-auto">
-            The page you're looking for has swum away. Let's get you back to familiar waters.
+            Страница, которую вы ищете, уплыла. Давайте вернём вас в знакомые воды.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild variant="premium" size="lg">
-              <Link to="/">Back to Home</Link>
+              <Link to="/">Вернуться Домой</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link to="/contacts">Contact Us</Link>
+              <Link to="/contacts">Связаться с Нами</Link>
             </Button>
           </div>
         </div>

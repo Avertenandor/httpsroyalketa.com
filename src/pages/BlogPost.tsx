@@ -9,24 +9,24 @@ export default function BlogPost() {
 
   // In a real app, fetch post data based on slug
   const post = {
-    title: 'Breeding Season 2025: Record Numbers',
-    category: 'Science Updates',
+    title: 'Сезон Разведения 2025: Рекордные Числа',
+    category: 'Научные Обновления',
     date: '2025-01-15',
-    readTime: '5 min',
+    readTime: '5 мин',
     content: `
-      <p>Our latest breeding cycle has exceeded all expectations, with survival rates reaching 15% above our previous records. This remarkable achievement is the result of several key innovations in our aquaculture methodology.</p>
+      <p>Наш последний цикл разведения превзошёл все ожидания, показатели выживаемости достигли уровня на 15% выше наших предыдущих рекордов. Это замечательное достижение является результатом нескольких ключевых инноваций в нашей методологии аквакультуры.</p>
 
-      <h2>Advanced Temperature Control</h2>
-      <p>We've implemented a new precision temperature management system that maintains optimal conditions throughout the incubation period. This technology allows us to respond dynamically to environmental changes while minimizing stress on developing eggs.</p>
+      <h2>Передовое Управление Температурой</h2>
+      <p>Мы внедрили новую систему прецизионного управления температурой, которая поддерживает оптимальные условия на протяжении всего периода инкубации. Эта технология позволяет нам динамически реагировать на изменения окружающей среды, минимизируя стресс у развивающихся икринок.</p>
 
-      <h2>Optimized Feeding Protocols</h2>
-      <p>Our nutrition team developed a custom feed blend specifically tailored to the genetic characteristics of our salmon stock. The results have been extraordinary, with faster growth rates and improved health markers across all life stages.</p>
+      <h2>Оптимизированные Протоколы Кормления</h2>
+      <p>Наша команда по питанию разработала индивидуальную кормовую смесь, специально адаптированную к генетическим характеристикам нашего лососёвого поголовья. Результаты оказались необычайными, с более быстрыми темпами роста и улучшенными показателями здоровья на всех стадиях жизни.</p>
 
-      <h2>Genetic Diversity Program</h2>
-      <p>We continue to prioritize genetic diversity in our breeding program, carefully selecting broodstock to maintain healthy genetic variation. This approach ensures the long-term sustainability of our operations and the resilience of our salmon populations.</p>
+      <h2>Программа Генетического Разнообразия</h2>
+      <p>Мы продолжаем приоритетно заниматься генетическим разнообразием в нашей программе разведения, тщательно отбирая племенное поголовье для поддержания здорового генетического разнообразия. Этот подход обеспечивает долгосрочную устойчивость наших операций и устойчивость наших лососёвых популяций.</p>
 
-      <h2>Looking Ahead</h2>
-      <p>As we move into 2025, we're excited to expand our breeding capacity while maintaining the high standards that make Royal Keta caviar exceptional. We invite investors and partners to join us in this journey of sustainable aquaculture excellence.</p>
+      <h2>Взгляд Вперёд</h2>
+      <p>Переходя в 2025 год, мы рады расширить наши мощности по разведению, продолжая при этом поддерживать высокие стандарты, которые делают икру Роял Кета исключительной. Мы приглашаем инвесторов и партнёров присоединиться к нам в этом пути совершенства устойчивой аквакультуры.</p>
     `,
   };
 
@@ -34,7 +34,7 @@ export default function BlogPost() {
     <>
       <Seo
         title={post.title}
-        description="Latest breeding season update from Royal Keta hatchery"
+        description="Последние обновления сезона разведения от хозяйства Роял Кета"
         path={`/blog/${slug}`}
         ogImage="/og/blog.svg"
         type="article"
@@ -44,7 +44,7 @@ export default function BlogPost() {
         <Button asChild variant="ghost" className="mb-8">
           <Link to="/blog">
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Blog
+            Назад к Блогу
           </Link>
         </Button>
 
@@ -58,11 +58,11 @@ export default function BlogPost() {
           <div className="flex items-center gap-4 text-sm text-foreground-muted mb-8 pb-8 border-b border-white/10">
             <div className="flex items-center gap-1">
               <Calendar className="h-4 w-4" />
-              <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+              <span>{new Date(post.date).toLocaleDateString('ru-RU', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
             </div>
             <div className="flex items-center gap-1">
               <Clock className="h-4 w-4" />
-              <span>{post.readTime} read</span>
+              <span>{post.readTime} чтения</span>
             </div>
           </div>
 
@@ -73,10 +73,10 @@ export default function BlogPost() {
 
           <div className="mt-12 pt-8 border-t border-white/10">
             <h3 className="text-xl font-display font-bold text-gold mb-4">
-              Related Topics
+              Связанные Темы
             </h3>
             <div className="flex flex-wrap gap-2">
-              {['Aquaculture', 'Breeding', 'Sustainability', 'Science'].map((tag) => (
+              {['Аквакультура', 'Разведение', 'Устойчивость', 'Наука'].map((tag) => (
                 <Badge key={tag} variant="outline">{tag}</Badge>
               ))}
             </div>
@@ -84,13 +84,13 @@ export default function BlogPost() {
 
           <div className="mt-12 premium-card p-8 text-center">
             <h3 className="text-2xl font-display font-bold text-gold mb-4">
-              Interested in Learning More?
+              Хотите Узнать Больше?
             </h3>
             <p className="text-foreground-muted mb-6">
-              Book a tour to see our breeding operations in action
+              Забронируйте тур, чтобы увидеть наши операции по разведению в действии
             </p>
             <Button asChild variant="premium" size="lg">
-              <Link to="/hatchery-tour">Book Tour</Link>
+              <Link to="/hatchery-tour">Забронировать Тур</Link>
             </Button>
           </div>
         </article>
