@@ -25,20 +25,69 @@ export function Hero({
       {backgroundPattern && (
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-b from-ocean/20 to-transparent" />
+
+          {/* Animated floating orbs with parallax */}
           <motion.div
-            className="absolute inset-0"
-            initial={{ y: 0 }}
-            animate={{ y: -20 }}
+            className="absolute top-20 left-10 w-72 h-72 bg-gold/10 rounded-full blur-3xl"
+            initial={{ y: 0, x: 0 }}
+            animate={{
+              y: [-20, 20, -20],
+              x: [-10, 10, -10],
+            }}
+            transition={{
+              duration: 15,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+          />
+
+          <motion.div
+            className="absolute bottom-20 right-10 w-96 h-96 bg-ocean/10 rounded-full blur-3xl"
+            initial={{ y: 0, x: 0 }}
+            animate={{
+              y: [20, -20, 20],
+              x: [10, -10, 10],
+            }}
+            transition={{
+              duration: 18,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+          />
+
+          <motion.div
+            className="absolute top-1/2 left-1/2 w-64 h-64 bg-gold/5 rounded-full blur-3xl"
+            initial={{ y: 0, x: 0, scale: 1 }}
+            animate={{
+              y: [-30, 30, -30],
+              x: [-20, 20, -20],
+              scale: [1, 1.2, 1],
+            }}
             transition={{
               duration: 20,
               repeat: Infinity,
-              repeatType: 'reverse',
               ease: 'easeInOut',
             }}
+          />
+
+          {/* Animated wave patterns */}
+          <motion.div
+            className="absolute bottom-0 left-0 right-0 h-32 opacity-10"
+            initial={{ x: 0 }}
+            animate={{ x: [-100, 0] }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: 'linear',
+            }}
           >
-            {/* Decorative elements */}
-            <div className="absolute top-20 left-10 w-72 h-72 bg-gold/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-ocean/10 rounded-full blur-3xl" />
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-full">
+              <path
+                d="M0,50 Q150,0 300,50 T600,50 T900,50 T1200,50 L1200,120 L0,120 Z"
+                fill="currentColor"
+                className="text-ocean/30"
+              />
+            </svg>
           </motion.div>
         </div>
       )}

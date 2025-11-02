@@ -1,5 +1,9 @@
 import { Seo } from '@/seo/Seo';
 import { Hero } from '@/components/Hero';
+import { Statistics } from '@/components/Statistics';
+import { Testimonials } from '@/components/Testimonials';
+import { InvestmentCalculator } from '@/components/InvestmentCalculator';
+import { ShareButtons } from '@/components/ShareButtons';
 import { organizationJsonLd } from '@/seo/ld/organization';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -81,7 +85,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="h-full hover:shadow-glow-gold transition-all duration-300 cursor-pointer">
+              <Card className="h-full card-tilt hover:shadow-glow-gold cursor-pointer">
                 <CardHeader>
                   <pillar.icon className="h-12 w-12 text-gold mb-4" />
                   <CardTitle>{pillar.title}</CardTitle>
@@ -139,57 +143,25 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Investment Teaser */}
-      <section className="content-container py-20">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <Badge variant="gold" className="mb-4">Investment Opportunity</Badge>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
-              Transparent Tokenized Returns
-            </h2>
-            <p className="text-foreground-muted mb-6">
-              Four investment models (A/B/C/D) with clear terms. From caviar dividends to crypto returns. Built on blockchain transparency.
-            </p>
-            <ul className="space-y-3 mb-8">
-              {['Model A: Caviar Dividends', 'Model B: Caviar + Crypto', 'Model C: Premium Returns', 'Model D: Full Spectrum'].map((model) => (
-                <li key={model} className="flex items-center gap-2 text-foreground-muted">
-                  <div className="h-2 w-2 rounded-full bg-gold" />
-                  {model}
-                </li>
-              ))}
-            </ul>
-            <Button asChild variant="premium" size="lg">
-              <Link to="/investment">View Investment Models</Link>
-            </Button>
-          </motion.div>
+      {/* Statistics Section */}
+      <Statistics />
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="premium-card p-8"
-          >
-            <h3 className="text-2xl font-display font-bold text-gold mb-4">Why Invest?</h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold text-foreground mb-1">Sustainable Growth</h4>
-                <p className="text-sm text-foreground-muted">Year-round operations with proven methodology</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-1">Blockchain Verified</h4>
-                <p className="text-sm text-foreground-muted">On-chain tracking of investments and returns</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-1">Tangible Value</h4>
-                <p className="text-sm text-foreground-muted">Real products, real profits, real transparency</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+      {/* Investment Calculator */}
+      <InvestmentCalculator />
+
+      {/* Testimonials */}
+      <Testimonials />
+
+      {/* Share Section */}
+      <section className="content-container py-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center"
+        >
+          <ShareButtons title="Royal Keta — From Roe to Royal" />
+        </motion.div>
       </section>
     </>
   );
