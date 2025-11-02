@@ -4,6 +4,7 @@ import { Statistics } from '@/components/Statistics';
 import { Testimonials } from '@/components/Testimonials';
 import { InvestmentCalculator } from '@/components/InvestmentCalculator';
 import { ShareButtons } from '@/components/ShareButtons';
+import { ParticlesCanvas } from '@/components/ParticlesCanvas';
 import { organizationJsonLd } from '@/seo/ld/organization';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -42,6 +43,9 @@ export default function Home() {
 
   return (
     <>
+      {/* Floating caviar roe particles effect */}
+      <ParticlesCanvas count={40} />
+
       <Seo
         title="From Roe to Royal"
         description="Premium salmon hatchery and caviar production on Sakhalin Island. Experience family tours, taste excellence, invest in the future."
