@@ -3,21 +3,21 @@ import { Mail, Phone, MapPin, MessageCircle, Send } from 'lucide-react';
 
 const footerLinks = {
   company: [
-    { name: 'About Us', href: '/about' },
-    { name: 'Science', href: '/science' },
-    { name: 'Gallery', href: '/gallery' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'О Нас', href: '/about' },
+    { name: 'Наука', href: '/science' },
+    { name: 'Галерея', href: '/gallery' },
+    { name: 'Блог', href: '/blog' },
   ],
   services: [
-    { name: 'Hatchery Tour', href: '/hatchery-tour' },
-    { name: 'Premium Caviar', href: '/caviar' },
-    { name: 'Investment', href: '/investment' },
-    { name: 'Pricing', href: '/pricing' },
+    { name: 'Экскурсии по Хозяйству', href: '/hatchery-tour' },
+    { name: 'Премиальная Икра', href: '/caviar' },
+    { name: 'Инвестиции', href: '/investment' },
+    { name: 'Тарифы', href: '/pricing' },
   ],
   support: [
     { name: 'FAQ', href: '/faq' },
-    { name: 'Contacts', href: '/contacts' },
-    { name: 'Legal', href: '/legal' },
+    { name: 'Контакты', href: '/contacts' },
+    { name: 'Правовая Информация', href: '/legal' },
   ],
 };
 
@@ -35,16 +35,16 @@ export function Footer() {
               className="flex items-center gap-2 text-xl font-display font-bold text-gold mb-4"
             >
               <span className="text-2xl">👑</span>
-              <span className="gradient-gold">ROYAL KETA</span>
+              <span className="gradient-gold">РОЯЛ КЕТА</span>
             </Link>
             <p className="text-foreground-muted mb-4 prose-content">
-              Premium salmon hatchery and caviar production on Sakhalin Island.
-              Experience the science, taste the excellence.
+              Премиальное лососёвое хозяйство и производство икры на острове Сахалин.
+              Откройте для себя науку, попробуйте совершенство.
             </p>
             <div className="space-y-2 text-sm text-foreground-muted">
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-gold" />
-                <span>Nevelsky District, Sakhalin</span>
+                <span>Невельский район, Сахалин</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-gold" />
@@ -63,7 +63,7 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-display font-semibold text-gold mb-4">Company</h3>
+            <h3 className="font-display font-semibold text-gold mb-4">Компания</h3>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
@@ -80,7 +80,7 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-display font-semibold text-gold mb-4">Services</h3>
+            <h3 className="font-display font-semibold text-gold mb-4">Услуги</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.href}>
@@ -97,7 +97,7 @@ export function Footer() {
 
           {/* Support */}
           <div>
-            <h3 className="font-display font-semibold text-gold mb-4">Support</h3>
+            <h3 className="font-display font-semibold text-gold mb-4">Поддержка</h3>
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.href}>
@@ -134,13 +134,13 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-foreground-muted">
-          <p>&copy; {currentYear} Royal Keta. All rights reserved.</p>
+          <p>&copy; {currentYear} Роял Кета. Все права защищены.</p>
           <div className="flex gap-6">
             <Link to="/legal#privacy" className="hover:text-gold transition-colors">
-              Privacy Policy
+              Политика Конфиденциальности
             </Link>
             <Link to="/legal#terms" className="hover:text-gold transition-colors">
-              Terms of Service
+              Условия Использования
             </Link>
           </div>
         </div>
