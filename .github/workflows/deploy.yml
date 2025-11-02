@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - claude/royal-keta-premium-site-011CUhjbxWemBMT3jEp1iFYx
 
 permissions:
   contents: read
