@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - claude/royal-keta-premium-site-011CUhjbxWemBMT3jEp1iFYx
+  workflow_dispatch:  # Позволяет запустить вручную
 
 permissions:
   contents: read
