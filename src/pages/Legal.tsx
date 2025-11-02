@@ -20,141 +20,141 @@ export default function Legal() {
   return (
     <>
       <Seo
-        title="Legal Information"
-        description="Terms of service, privacy policy, and legal disclosures for Royal Keta hatchery and investment services."
+        title="Правовая Информация"
+        description="Условия обслуживания, политика конфиденциальности и правовые раскрытия для хозяйства Роял Кета и инвестиционных услуг."
         path="/legal"
         ogImage="/og/legal.svg"
       />
 
       <Hero
-        subtitle="Legal Information"
-        title="Terms & Policies"
-        description="Transparency and compliance in all our operations"
+        subtitle="Правовая Информация"
+        title="Условия и Политики"
+        description="Прозрачность и соответствие во всех наших операциях"
       />
 
       <section className="content-container py-20">
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Terms of Service */}
           <div id="terms" className="scroll-mt-20">
-            <Badge variant="gold" className="mb-4">Terms of Service</Badge>
+            <Badge variant="gold" className="mb-4">Условия Обслуживания</Badge>
             <h2 className="text-3xl font-display font-bold text-gold mb-6">
-              Terms of Service
+              Условия Обслуживания
             </h2>
             <div className="space-y-4 text-foreground-muted">
               <p>
-                Last Updated: January 2025
+                Последнее Обновление: Январь 2025
               </p>
               <p>
-                By accessing and using Royal Keta services, including hatchery tours, product purchases,
-                and investment opportunities, you agree to be bound by these Terms of Service.
-              </p>
-
-              <h3 className="text-xl font-display text-foreground mt-6 mb-3">1. Tour Services</h3>
-              <p>
-                Hatchery tours are subject to availability and weather conditions. We reserve the right
-                to reschedule or cancel tours for safety reasons. Full refund policies are outlined in our
-                booking confirmation.
+                Получая доступ и используя услуги Роял Кета, включая экскурсии по хозяйству, покупку продукции
+                и инвестиционные возможности, вы соглашаетесь быть связанными данными Условиями Обслуживания.
               </p>
 
-              <h3 className="text-xl font-display text-foreground mt-6 mb-3">2. Product Sales</h3>
+              <h3 className="text-xl font-display text-foreground mt-6 mb-3">1. Турные Услуги</h3>
               <p>
-                All caviar products are sold subject to availability. We guarantee the quality and freshness
-                of our products at the time of sale. Storage and handling instructions must be followed to
-                maintain product quality.
+                Экскурсии по хозяйству зависят от наличия мест и погодных условий. Мы оставляем за собой право
+                перенести или отменить туры по соображениям безопасности. Полные политики возврата изложены в нашем
+                подтверждении бронирования.
               </p>
 
-              <h3 className="text-xl font-display text-foreground mt-6 mb-3">3. Investment Services</h3>
+              <h3 className="text-xl font-display text-foreground mt-6 mb-3">2. Продажи Продукции</h3>
               <p>
-                Investment opportunities are available only to qualified investors who have completed KYC/AML
-                verification. All investments carry risk, and past performance does not guarantee future returns.
+                Вся икорная продукция продаётся в зависимости от наличия. Мы гарантируем качество и свежесть
+                наших продуктов на момент продажи. Инструкции по хранению и обращению должны соблюдаться для
+                поддержания качества продукции.
               </p>
 
-              <h3 className="text-xl font-display text-foreground mt-6 mb-3">4. Liability Limitations</h3>
+              <h3 className="text-xl font-display text-foreground mt-6 mb-3">3. Инвестиционные Услуги</h3>
               <p>
-                Royal Keta maintains comprehensive insurance and follows strict safety protocols. Visitors
-                participate in tours at their own risk and must follow all safety instructions provided by staff.
+                Инвестиционные возможности доступны только квалифицированным инвесторам, прошедшим верификацию KYC/AML.
+                Все инвестиции несут риск, и прошлая производительность не гарантирует будущие доходы.
+              </p>
+
+              <h3 className="text-xl font-display text-foreground mt-6 mb-3">4. Ограничения Ответственности</h3>
+              <p>
+                Роял Кета поддерживает комплексное страхование и следует строгим протоколам безопасности. Посетители
+                участвуют в турах на собственный риск и должны следовать всем инструкциям по безопасности, предоставляемым персоналом.
               </p>
             </div>
           </div>
 
           {/* Privacy Policy */}
           <div id="privacy" className="scroll-mt-20">
-            <Badge variant="gold" className="mb-4">Privacy Policy</Badge>
+            <Badge variant="gold" className="mb-4">Политика Конфиденциальности</Badge>
             <h2 className="text-3xl font-display font-bold text-gold mb-6">
-              Privacy Policy
+              Политика Конфиденциальности
             </h2>
             <div className="space-y-4 text-foreground-muted">
               <p>
-                Royal Keta respects your privacy and is committed to protecting your personal data.
+                Роял Кета уважает вашу конфиденциальность и стремится защитить ваши персональные данные.
               </p>
 
-              <h3 className="text-xl font-display text-foreground mt-6 mb-3">Information We Collect</h3>
+              <h3 className="text-xl font-display text-foreground mt-6 mb-3">Информация, Которую Мы Собираем</h3>
               <p>
-                We collect information you provide when booking tours, purchasing products, or inquiring
-                about investment opportunities. This includes name, contact details, payment information,
-                and preferences.
+                Мы собираем информацию, которую вы предоставляете при бронировании туров, покупке продукции или запросах
+                об инвестиционных возможностях. Это включает имя, контактные данные, платёжную информацию
+                и предпочтения.
               </p>
 
-              <h3 className="text-xl font-display text-foreground mt-6 mb-3">How We Use Your Data</h3>
+              <h3 className="text-xl font-display text-foreground mt-6 mb-3">Как Мы Используем Ваши Данные</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>Processing bookings and purchases</li>
-                <li>Communicating about your reservations or investments</li>
-                <li>Improving our services</li>
-                <li>Sending marketing communications (with your consent)</li>
-                <li>Complying with legal obligations (KYC/AML for investors)</li>
+                <li>Обработка бронирований и покупок</li>
+                <li>Коммуникация о ваших резервациях или инвестициях</li>
+                <li>Улучшение наших услуг</li>
+                <li>Отправка маркетинговых сообщений (с вашего согласия)</li>
+                <li>Соответствие правовым обязательствам (KYC/AML для инвесторов)</li>
               </ul>
 
-              <h3 className="text-xl font-display text-foreground mt-6 mb-3">Data Security</h3>
+              <h3 className="text-xl font-display text-foreground mt-6 mb-3">Безопасность Данных</h3>
               <p>
-                We implement industry-standard security measures to protect your personal information.
-                Payment processing is handled through secure, encrypted channels.
+                Мы применяем стандартные отраслевые меры безопасности для защиты вашей личной информации.
+                Обработка платежей осуществляется через безопасные, зашифрованные каналы.
               </p>
 
-              <h3 className="text-xl font-display text-foreground mt-6 mb-3">Your Rights</h3>
+              <h3 className="text-xl font-display text-foreground mt-6 mb-3">Ваши Права</h3>
               <p>
-                You have the right to access, correct, or delete your personal data. Contact us at
-                privacy@royalketa.com to exercise these rights.
+                У вас есть право доступа, исправления или удаления ваших персональных данных. Свяжитесь с нами по адресу
+                privacy@royalketa.com для реализации этих прав.
               </p>
             </div>
           </div>
 
           {/* Investment Disclaimer */}
           <div id="disclaimer" className="scroll-mt-20">
-            <Badge variant="gold" className="mb-4">Investment Disclaimer</Badge>
+            <Badge variant="gold" className="mb-4">Инвестиционное Предупреждение</Badge>
             <h2 className="text-3xl font-display font-bold text-gold mb-6">
-              Investment Risk Disclosure
+              Раскрытие Инвестиционных Рисков
             </h2>
             <div className="space-y-4 text-foreground-muted">
               <p className="font-semibold text-foreground">
-                IMPORTANT: All investments involve risk. Please read carefully.
+                ВАЖНО: Все инвестиции связаны с риском. Пожалуйста, внимательно прочитайте.
               </p>
 
-              <h3 className="text-xl font-display text-foreground mt-6 mb-3">Key Risks</h3>
+              <h3 className="text-xl font-display text-foreground mt-6 mb-3">Ключевые Риски</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li><strong>Biological Risk:</strong> Fish mortality due to disease, water quality, or environmental factors</li>
-                <li><strong>Market Risk:</strong> Fluctuations in caviar and salmon market prices</li>
-                <li><strong>Operational Risk:</strong> Equipment failure, supply chain disruptions</li>
-                <li><strong>Regulatory Risk:</strong> Changes in aquaculture regulations or environmental policies</li>
-                <li><strong>Seasonal Risk:</strong> Variability in breeding success across different seasons</li>
-                <li><strong>Liquidity Risk:</strong> Investments may have limited liquidity or lock-up periods</li>
+                <li><strong>Биологический Риск:</strong> Смертность рыб из-за болезней, качества воды или экологических факторов</li>
+                <li><strong>Рыночный Риск:</strong> Колебания цен на икру и лосось</li>
+                <li><strong>Операционный Риск:</strong> Поломка оборудования, нарушения цепочки поставок</li>
+                <li><strong>Регуляторный Риск:</strong> Изменения в регулировании аквакультуры или экологической политике</li>
+                <li><strong>Сезонный Риск:</strong> Изменчивость успеха разведения в разные сезоны</li>
+                <li><strong>Риск Ликвидности:</strong> Инвестиции могут иметь ограниченную ликвидность или периоды блокировки</li>
               </ul>
 
-              <h3 className="text-xl font-display text-foreground mt-6 mb-3">Not Financial Advice</h3>
+              <h3 className="text-xl font-display text-foreground mt-6 mb-3">Не Финансовый Совет</h3>
               <p>
-                Information provided on this website does not constitute financial, investment, or legal advice.
-                Consult with qualified professionals before making investment decisions.
+                Информация, предоставленная на этом сайте, не является финансовым, инвестиционным или правовым советом.
+                Консультируйтесь с квалифицированными специалистами перед принятием инвестиционных решений.
               </p>
 
-              <h3 className="text-xl font-display text-foreground mt-6 mb-3">KYC/AML Compliance</h3>
+              <h3 className="text-xl font-display text-foreground mt-6 mb-3">Соответствие KYC/AML</h3>
               <p>
-                All investors must complete Know Your Customer (KYC) and Anti-Money Laundering (AML) verification.
-                We reserve the right to reject any investment that does not meet our compliance standards.
+                Все инвесторы должны пройти верификацию "Знай Своего Клиента" (KYC) и Противодействие Отмыванию Денег (AML).
+                Мы оставляем за собой право отклонить любую инвестицию, не соответствующую нашим стандартам соответствия.
               </p>
 
-              <h3 className="text-xl font-display text-foreground mt-6 mb-3">No Guarantees</h3>
+              <h3 className="text-xl font-display text-foreground mt-6 mb-3">Никаких Гарантий</h3>
               <p>
-                Past performance does not guarantee future results. Projected returns are estimates based on
-                current operations and market conditions, which may change.
+                Прошлая производительность не гарантирует будущие результаты. Прогнозируемые доходы являются оценками на основе
+                текущих операций и рыночных условий, которые могут измениться.
               </p>
             </div>
           </div>
@@ -162,10 +162,10 @@ export default function Legal() {
           {/* Contact for Legal Questions */}
           <div className="mt-12 premium-card p-8 text-center">
             <h3 className="text-2xl font-display font-bold text-gold mb-4">
-              Legal Questions?
+              Правовые Вопросы?
             </h3>
             <p className="text-foreground-muted mb-6">
-              For legal inquiries, document requests, or compliance questions
+              По правовым запросам, документам или вопросам соответствия
             </p>
             <a
               href="mailto:legal@royalketa.com"

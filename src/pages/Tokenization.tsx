@@ -10,70 +10,70 @@ export default function Tokenization() {
   const benefits = [
     {
       icon: Shield,
-      title: 'Blockchain Transparency',
-      description: 'Every investment tracked on-chain with immutable records and real-time reporting',
+      title: 'Прозрачность Блокчейна',
+      description: 'Каждая инвестиция отслеживается в блокчейне с неизменными записями и отчётами в реальном времени',
     },
     {
       icon: TrendingUp,
-      title: 'Scalable Returns',
-      description: 'From caviar dividends to crypto payments, multiple return options for different investor profiles',
+      title: 'Масштабируемые Доходы',
+      description: 'От дивидендов икрой до криптоплатежей, множество вариантов доходов для разных инвесторских профилей',
     },
     {
       icon: Users,
-      title: 'Fractional Ownership',
-      description: 'Lower barriers to entry through tokenized shares in hatchery operations',
+      title: 'Долевое Владение',
+      description: 'Низкие барьеры входа через токенизированные доли в операциях хозяйства',
     },
     {
       icon: FileCheck,
-      title: 'Full Compliance',
-      description: 'KYC/AML verification, regulatory compliance, and legal framework for all investors',
+      title: 'Полное Соответствие',
+      description: 'Верификация KYC/AML, регуляторное соответствие и правовая рамка для всех инвесторов',
     },
   ];
 
   const franchiseFeatures = [
-    'Complete operational playbook',
-    'Breeding stock from Royal Keta genetics',
-    'Technology and equipment sourcing',
-    'Training for aquaculture team',
-    'Marketing and branding support',
-    'Ongoing technical consultation',
+    'Полный операционный справочник',
+    'Племенное поголовье с генетикой Роял Кета',
+    'Технологии и поставка оборудования',
+    'Обучение команды по аквакультуре',
+    'Поддержка маркетинга и брендинга',
+    'Постоянные технические консультации',
   ];
 
   return (
     <>
       <Seo
-        title="Tokenization & Franchise"
-        description="Royal Keta tokenized investment platform and franchise opportunities. Blockchain-verified returns and scalable aquaculture business model."
+        title="Токенизация и Франчайзинг"
+        description="Платформа токенизированных инвестиций Роял Кета и франчайзинговые возможности. Верифицируемые блокчейном доходы и масштабируемая бизнес-модель аквакультуры."
         path="/tokenization"
         ogImage="/og/tokenization.svg"
       />
 
       <Hero
-        subtitle="From Rabbit to Fish"
-        title="Tokenization & Franchise"
-        description="Building the future of sustainable aquaculture through blockchain technology and proven business models"
-        primaryCta={{ text: 'Request Whitepaper', href: '#contact' }}
-        secondaryCta={{ text: 'View Investment Models', href: '/investment' }}
+        subtitle="От Кроликов к Рыбе"
+        title="Токенизация и Франчайзинг"
+        description="Строим будущее устойчивой аквакультуры через блокчейн-технологии и проверенные бизнес-модели"
+        primaryCta={{ text: 'Запросить Whitepaper', href: '#contact' }}
+        secondaryCta={{ text: 'Посмотреть Инвестиционные Модели', href: '/investment' }}
       />
 
       <section className="content-container py-20">
         {/* Origin Story */}
         <div className="max-w-3xl mx-auto mb-20">
-          <Badge variant="gold" className="mb-4">The Journey</Badge>
+          <Badge variant="gold" className="mb-4">Путешествие</Badge>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-6">
-            From Rabbit Breeding to Fish Farming
+            От Разведения Кроликов к Рыбоводству
           </h2>
           <div className="space-y-4 text-foreground-muted">
             <p>
-              Royal Keta's tokenization model emerged from successful experience in rabbit breeding operations.
-              We recognized that the same principles of transparent investment, biological asset management,
-              and structured returns could revolutionize aquaculture.
+              Модель токенизации Роял Кета возникла из успешного опыта в операциях по разведению кроликов.
+              Мы осознали, что те же принципы прозрачных инвестиций, управления биологическими активами
+              и структурированных доходов могут революционизировать аквакультуру.
             </p>
             <p>
-              By applying blockchain technology to salmon breeding, we've created an investment vehicle that
-              combines tangible biological assets with modern financial infrastructure. Investors can track
-              their holdings in real-time, receive dividends in caviar or cryptocurrency, and participate in
-              a truly sustainable food production system.
+              Применяя блокчейн-технологии к разведению лосося, мы создали инвестиционный инструмент, который
+              сочетает осязаемые биологические активы с современной финансовой инфраструктурой. Инвесторы могут отслеживать
+              свои активы в реальном времени, получать дивиденды в виде икры или криптовалюты и участвовать в
+              действительно устойчивой системе производства продуктов питания.
             </p>
           </div>
         </div>
@@ -81,9 +81,9 @@ export default function Tokenization() {
         {/* Benefits Grid */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <Badge variant="ocean" className="mb-4">Why Tokenization</Badge>
+            <Badge variant="ocean" className="mb-4">Почему Токенизация</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
-              The Advantages
+              Преимущества
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -101,39 +101,39 @@ export default function Tokenization() {
 
         {/* How It Works */}
         <div className="mb-20 premium-card p-8 md:p-12">
-          <Badge variant="gold" className="mb-4">The Mechanism</Badge>
+          <Badge variant="gold" className="mb-4">Механизм</Badge>
           <h2 className="text-3xl font-display font-bold text-gold mb-8">
-            How Tokenization Works
+            Как Работает Токенизация
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="text-4xl font-bold text-gold mb-3">1</div>
               <h3 className="text-xl font-display font-semibold text-foreground mb-2">
-                Targeted Investment
+                Целевые Инвестиции
               </h3>
               <p className="text-foreground-muted">
-                Funds are allocated to specific assets: land acquisition, breeding equipment,
-                staff training, or infrastructure development.
+                Средства направляются на конкретные активы: приобретение земли, оборудование для разведения,
+                обучение персонала или развитие инфраструктуры.
               </p>
             </div>
             <div>
               <div className="text-4xl font-bold text-gold mb-3">2</div>
               <h3 className="text-xl font-display font-semibold text-foreground mb-2">
-                On-Chain Tracking
+                Отслеживание в Блокчейне
               </h3>
               <p className="text-foreground-muted">
-                Every investment creates a blockchain token representing fractional ownership.
-                Track your holdings and returns in real-time.
+                Каждая инвестиция создаёт блокчейн-токен, представляющий долевое владение.
+                Отслеживайте свои активы и доходы в реальном времени.
               </p>
             </div>
             <div>
               <div className="text-4xl font-bold text-gold mb-3">3</div>
               <h3 className="text-xl font-display font-semibold text-foreground mb-2">
-                Flexible Returns
+                Гибкие Доходы
               </h3>
               <p className="text-foreground-muted">
-                Choose your return structure: caviar dividends, cryptocurrency payments,
-                or hybrid models combining both.
+                Выбирайте свою структуру доходов: дивиденды икрой, криптовалютные платежи
+                или гибридные модели, сочетающие оба варианта.
               </p>
             </div>
           </div>
@@ -142,19 +142,19 @@ export default function Tokenization() {
         {/* Franchise Opportunity */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <Badge variant="ocean" className="mb-4">Expansion Model</Badge>
+            <Badge variant="ocean" className="mb-4">Модель Расширения</Badge>
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
-              Royal Keta Franchise
+              Франчайзинг Роял Кета
             </h2>
             <p className="text-foreground-muted max-w-2xl mx-auto">
-              Replicate our success with comprehensive support and proven methodology
+              Повторите наш успех с комплексной поддержкой и проверенной методологией
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="premium-card p-8">
               <h3 className="text-2xl font-display font-bold text-gold mb-6">
-                What You Receive
+                Что Вы Получаете
               </h3>
               <ul className="space-y-3">
                 {franchiseFeatures.map((feature) => (
@@ -168,23 +168,23 @@ export default function Tokenization() {
 
             <div className="premium-card p-8">
               <h3 className="text-2xl font-display font-bold text-gold mb-6">
-                Partner Requirements
+                Требования к Партнёрам
               </h3>
               <div className="space-y-4 text-foreground-muted">
                 <p>
-                  <strong className="text-foreground">Minimum Investment:</strong> ₽10,000,000
+                  <strong className="text-foreground">Минимальные Инвестиции:</strong> ₽10,000,000
                 </p>
                 <p>
-                  <strong className="text-foreground">Location:</strong> Access to clean water source
-                  and suitable land for hatchery construction
+                  <strong className="text-foreground">Местоположение:</strong> Доступ к чистому водному источнику
+                  и подходящей земле для строительства хозяйства
                 </p>
                 <p>
-                  <strong className="text-foreground">Commitment:</strong> 3-year minimum partnership
-                  with performance KPIs
+                  <strong className="text-foreground">Обязательства:</strong> Минимально договор на 3 года
+                  с ключевыми показателями эффективности
                 </p>
                 <p>
-                  <strong className="text-foreground">Team:</strong> Willingness to hire and train
-                  local aquaculture specialists
+                  <strong className="text-foreground">Команда:</strong> Готовность нанимать и обучать
+                  местных специалистов по аквакультуре
                 </p>
               </div>
             </div>
@@ -194,22 +194,22 @@ export default function Tokenization() {
         {/* CTA */}
         <div id="contact" className="premium-card p-8 md:p-12 text-center bg-gradient-to-br from-gold/10 to-ocean/10">
           <h2 className="text-3xl md:text-4xl font-display font-bold gradient-gold mb-6">
-            Ready to Participate?
+            Готовы Принять Участие?
           </h2>
           <p className="text-foreground-muted max-w-2xl mx-auto mb-8">
-            Whether you're interested in tokenized investment or franchise partnership,
-            our team is ready to provide detailed information and documentation.
+            Независимо от того, заинтересованы ли вы в токенизированных инвестициях или франчайзинговом партнёрстве,
+            наша команда готова предоставить подробную информацию и документацию.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild variant="premium" size="lg">
-              <a href="mailto:invest@royalketa.com">Request Franchise Package</a>
+              <a href="mailto:invest@royalketa.com">Запросить Франчайзинговый Пакет</a>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link to="/investment">View Investment Models</Link>
+              <Link to="/investment">Посмотреть Инвестиционные Модели</Link>
             </Button>
           </div>
           <p className="text-sm text-foreground-muted mt-6">
-            All investments subject to KYC/AML verification and accredited investor status
+            Все инвестиции подлежат верификации KYC/AML и статусу аккредитованного инвестора
           </p>
         </div>
       </section>

@@ -20,18 +20,18 @@ export default function Gallery() {
 
   // Placeholder gallery items
   const galleryItems: GalleryItem[] = [
-    { id: 1, title: 'Roe Selection Process', category: 'science', thumbnail: '🥚', description: 'Careful selection of premium genetic stock' },
-    { id: 2, title: 'Family Tour Group', category: 'family', thumbnail: '👨‍👩‍👧‍👦', description: 'Families learning about salmon breeding' },
-    { id: 3, title: 'Premium Red Caviar', category: 'caviar', thumbnail: '🫙', description: 'Freshly processed keta caviar' },
-    { id: 4, title: 'Incubation Facility', category: 'science', thumbnail: '🔬', description: 'State-of-the-art incubation chambers' },
-    { id: 5, title: 'Children Feeding Fish', category: 'family', thumbnail: '🐟', description: 'Interactive feeding experience' },
-    { id: 6, title: 'Caviar Tasting', category: 'caviar', thumbnail: '🍽️', description: 'Guests enjoying premium caviar' },
-    { id: 7, title: 'Smolt Release', category: 'science', thumbnail: '🌊', description: 'Healthy smolts entering the ocean' },
-    { id: 8, title: 'Tour Guide Explaining', category: 'family', thumbnail: '👨‍🏫', description: 'Expert guides sharing knowledge' },
-    { id: 9, title: 'Gift Caviar Jars', category: 'caviar', thumbnail: '🎁', description: 'Beautifully packaged gift sets' },
-    { id: 10, title: 'Fry Development', category: 'science', thumbnail: '🐠', description: 'Young salmon in development tanks' },
-    { id: 11, title: 'Fishing Session', category: 'family', thumbnail: '🎣', description: 'Catch and release experience' },
-    { id: 12, title: 'Caviar Production', category: 'caviar', thumbnail: '⚙️', description: 'Processing facility overview' },
+    { id: 1, title: 'Процесс Отбора Икры', category: 'science', thumbnail: '🥚', description: 'Тщательный отбор премиального генетического материала' },
+    { id: 2, title: 'Семейная Группа Тура', category: 'family', thumbnail: '👨‍👩‍👧‍👦', description: 'Семьи изучают разведение лосося' },
+    { id: 3, title: 'Премиальная Красная Икра', category: 'caviar', thumbnail: '🫙', description: 'Свежеприготовленная икра кеты' },
+    { id: 4, title: 'Инкубационное Оборудование', category: 'science', thumbnail: '🔬', description: 'Современные инкубационные камеры' },
+    { id: 5, title: 'Дети Кормят Рыб', category: 'family', thumbnail: '🐟', description: 'Интерактивное кормление' },
+    { id: 6, title: 'Дегустация Икры', category: 'caviar', thumbnail: '🍽️', description: 'Гости наслаждаются премиальной икрой' },
+    { id: 7, title: 'Выпуск Смолтов', category: 'science', thumbnail: '🌊', description: 'Здоровые смолты попадают в океан' },
+    { id: 8, title: 'Гид Объясняет', category: 'family', thumbnail: '👨‍🏫', description: 'Эксперт-гиды делятся знаниями' },
+    { id: 9, title: 'Подарочные Банки Икры', category: 'caviar', thumbnail: '🎁', description: 'Красиво упакованные подарочные наборы' },
+    { id: 10, title: 'Развитие Мальков', category: 'science', thumbnail: '🐠', description: 'Молодой лосось в развитийных ёмкостях' },
+    { id: 11, title: 'Рыболовная Сессия', category: 'family', thumbnail: '🎣', description: 'Поймал-отпустил' },
+    { id: 12, title: 'Производство Икры', category: 'caviar', thumbnail: '⚙️', description: 'Обзор производственного цеха' },
   ];
 
   const filteredItems = activeCategory === 'all'
@@ -39,25 +39,25 @@ export default function Gallery() {
     : galleryItems.filter(item => item.category === activeCategory);
 
   const categories = [
-    { value: 'all' as Category, label: 'All Photos' },
-    { value: 'science' as Category, label: 'Science' },
-    { value: 'family' as Category, label: 'Family Tours' },
-    { value: 'caviar' as Category, label: 'Caviar' },
+    { value: 'all' as Category, label: 'Все Фото' },
+    { value: 'science' as Category, label: 'Наука' },
+    { value: 'family' as Category, label: 'Семейные Туры' },
+    { value: 'caviar' as Category, label: 'Икра' },
   ];
 
   return (
     <>
       <Seo
-        title="Gallery"
-        description="Photo gallery of Royal Keta hatchery: breeding process, family tours, and premium caviar production."
+        title="Галерея"
+        description="Фотогалерея хозяйства Роял Кета: процесс разведения, семейные туры и производство премиальной икры."
         path="/gallery"
         ogImage="/og/gallery.svg"
       />
 
       <Hero
-        subtitle="Visual Stories"
-        title="Gallery"
-        description="Explore our hatchery through photos of science, family experiences, and premium products"
+        subtitle="Визуальные Истории"
+        title="Галерея"
+        description="Изучите наше хозяйство через фотографии науки, семейного опыта и премиальной продукции"
       />
 
       <section className="content-container py-20">
@@ -111,20 +111,20 @@ export default function Gallery() {
 
         {filteredItems.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-foreground-muted">No photos in this category yet.</p>
+            <p className="text-foreground-muted">Пока нет фотографий в этой категории.</p>
           </div>
         )}
 
         <div className="mt-16 premium-card p-8 text-center">
           <h3 className="text-2xl font-display font-bold text-gold mb-4">
-            Real Photos Coming Soon
+            Настоящие Фото Скоро
           </h3>
           <p className="text-foreground-muted mb-6 max-w-2xl mx-auto">
-            We're preparing a comprehensive photo gallery showcasing our breeding process,
-            family tour experiences, and premium caviar products. Check back soon for high-quality imagery.
+            Мы готовим обширную фотогалерею, демонстрирующую наш процесс разведения,
+            семейные туры и премиальную икорную продукцию. Загляните сюда вскоре за качественными изображениями.
           </p>
           <p className="text-sm text-foreground-muted">
-            Note: Current placeholders will be replaced with professional photography.
+            Примечание: Текущие заглушки будут заменены профессиональной фотографией.
           </p>
         </div>
       </section>

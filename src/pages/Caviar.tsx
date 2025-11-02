@@ -7,42 +7,42 @@ import { Award } from 'lucide-react';
 export default function Caviar() {
   const products = [
     {
-      name: 'Red Caviar - Classic',
-      weight: '250g',
-      description: 'Premium Pacific salmon roe, delicate flavor',
+      name: 'Красная Икра - Классик',
+      weight: '250г',
+      description: 'Премиальная икра тихоокеанского лосося, деликатный вкус',
     },
     {
-      name: 'Red Caviar - Gift Set',
-      weight: '500g',
-      description: 'Luxury packaging, perfect for gifting',
+      name: 'Красная Икра - Подарочный Набор',
+      weight: '500г',
+      description: 'Роскошная упаковка, идеально для подарка',
     },
     {
-      name: 'Tasting Set',
-      weight: '3x100g',
-      description: 'Experience the full flavor spectrum',
+      name: 'Дегустационный Набор',
+      weight: '3x100г',
+      description: 'Откройте для себя полный спектр вкуса',
     },
   ];
 
   return (
     <>
       <Seo
-        title="Premium Caviar"
-        description="Royal Keta premium red caviar. Sustainably produced, exquisite taste. Available for wholesale orders."
+        title="Премиальная Икра"
+        description="Премиальная красная икра Роял Кета. Устойчивое производство, изысканный вкус. Доступна для оптовых заказов."
         path="/caviar"
         ogImage="/og/caviar.svg"
       />
 
       <Hero
-        subtitle="Keta Royal Caviar"
-        title="Excellence in Every Jar"
-        description="Premium red caviar from sustainably bred Pacific salmon"
+        subtitle="Царская Кета Икра"
+        title="Совершенство в Каждой Баночке"
+        description="Премиальная красная икра из устойчиво разводимого тихоокеанского лосося"
       />
 
       <section className="content-container py-20">
         <div className="text-center mb-12">
-          <Badge variant="gold" className="mb-4">Our Products</Badge>
+          <Badge variant="gold" className="mb-4">Наша Продукция</Badge>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
-            Caviar Collection
+            Коллекция Икры
           </h2>
         </div>
 
@@ -63,10 +63,10 @@ export default function Caviar() {
 
         <div className="premium-card p-8 text-center">
           <h3 className="text-2xl font-display font-bold text-gold mb-4">
-            Wholesale Inquiries
+            Оптовые Запросы
           </h3>
           <p className="text-foreground-muted mb-6">
-            Contact us for wholesale pricing and availability
+            Свяжитесь с нами для получения оптовых цен и наличия
           </p>
           <a
             href="mailto:hello@royalketa.com"

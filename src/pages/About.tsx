@@ -6,44 +6,44 @@ export default function About() {
   return (
     <>
       <Seo
-        title="About Us"
-        description="Royal Keta: pioneering sustainable salmon breeding on Sakhalin Island. Our mission, team, and partners."
+        title="О Нас"
+        description="Роял Кета: пионеры устойчивого разведения лосося на острове Сахалин. Наша миссия, команда и партнёры."
         path="/about"
         ogImage="/og/about.svg"
       />
 
       <Hero
-        subtitle="Our Story"
-        title="Excellence Through Innovation"
-        description="Combining traditional knowledge with modern technology to create sustainable aquaculture"
+        subtitle="Наша История"
+        title="Совершенство Через Инновации"
+        description="Сочетаем традиционные знания с современными технологиями для создания устойчивой аквакультуры"
       />
 
       <section className="content-container py-20">
         <div className="max-w-3xl mx-auto prose-content">
-          <Badge variant="gold" className="mb-6">Our Mission</Badge>
+          <Badge variant="gold" className="mb-6">Наша Миссия</Badge>
           <h2 className="text-3xl font-display font-bold text-gold mb-6">
-            Sustainable Salmon Breeding
+            Устойчивое Разведение Лосося
           </h2>
           <p className="text-foreground-muted mb-6">
-            Royal Keta was founded with a vision: to create the most sustainable and scientifically
-            advanced salmon hatchery in Russia. Located on Sakhalin Island, we combine traditional
-            fishing knowledge with cutting-edge aquaculture techniques.
+            Роял Кета была основана с видением: создать самое устойчивое и научно 
+            продвинутое лососёвое хозяйство в России. Расположенные на острове Сахалин, 
+            мы сочетаем традиционные рыболовецкие знания с передовыми техниками аквакультуры.
           </p>
           <p className="text-foreground-muted mb-6">
-            Our team of experienced scientists and fishery specialists works tirelessly to ensure
-            the health and quality of our salmon stocks, while maintaining the highest standards of
-            environmental responsibility.
+            Наша команда опытных учёных и специалистов по рыбному хозяйству неустанно 
+            работает для обеспечения здоровья и качества наших лососёвых запасов, 
+            поддерживая при этом высочайшие стандарты экологической ответственности.
           </p>
 
           <div className="mt-12 premium-card p-8">
-            <h3 className="text-2xl font-display font-bold text-gold mb-4">Our Values</h3>
+            <h3 className="text-2xl font-display font-bold text-gold mb-4">Наши Ценности</h3>
             <ul className="space-y-3">
               {[
-                'Scientific Excellence',
-                'Environmental Sustainability',
-                'Transparency',
-                'Community Education',
-                'Quality Products',
+                'Научное Совершенство',
+                'Экологическая Устойчивость',
+                'Прозрачность',
+                'Образование Сообщества',
+                'Качественная Продукция',
               ].map((value) => (
                 <li key={value} className="flex items-center gap-2">
                   <div className="h-2 w-2 rounded-full bg-gold" />

@@ -11,86 +11,86 @@ import {
 export default function FAQ() {
   const faqSections = [
     {
-      category: 'Tours & Visits',
+      category: 'Туры и Посещения',
       questions: [
         {
-          q: 'What should I wear for the hatchery tour?',
-          a: 'Wear comfortable, weather-appropriate clothing and closed-toe shoes. We provide protective gear when necessary. During fishing sessions, waterproof boots are recommended.',
+          q: 'Что одеть на экскурсию по хозяйству?',
+          a: 'Наденьте удобную, подходящую по погоде одежду и закрытую обувь. Мы предоставляем защитное снаряжение при необходимости. Во время рыбалки рекомендуется водонепроницаемая обувь.',
         },
         {
-          q: 'Are children allowed on tours?',
-          a: 'Absolutely! Our tours are family-friendly and educational for all ages. Children under 12 must be accompanied by an adult. We have special activities designed for young visitors.',
+          q: 'Можно ли привести детей на тур?',
+          a: 'Конечно! Наши туры семейные и образовательные для всех возрастов. Дети до 12 лет должны находиться в сопровождении взрослых. У нас есть специальные активности для юных посетителей.',
         },
         {
-          q: 'How far in advance should I book?',
-          a: 'We recommend booking at least 1-2 weeks in advance, especially during peak season (June-September). Corporate packages should be booked 3-4 weeks ahead.',
+          q: 'За сколько времени нужно бронировать?',
+          a: 'Рекомендуем бронировать за 1-2 недели, особенно в пиковый сезон (июнь-сентябрь). Корпоративные пакеты стоит бронировать за 3-4 недели.',
         },
         {
-          q: 'What is included in the gift caviar jar?',
-          a: 'Every guest receives a 100g jar of premium red caviar (Family package) or larger jars for Premium/Corporate packages. The caviar is freshly processed from our sustainable hatchery.',
+          q: 'Что входит в подарочную баночку икры?',
+          a: 'Каждый гость получает баночку премиальной красной икры 100г (Семейный пакет) или большие банки для Премиум/Корпоративных пакетов. Икра свежеприготовленная из нашего устойчивого хозяйства.',
         },
         {
-          q: 'Can we fish and keep what we catch?',
-          a: 'Fishing sessions are catch-and-release to maintain our sustainable breeding program. However, you will receive generous caviar gifts as part of your package.',
+          q: 'Можно ли рыбачить и забрать улов домой?',
+          a: 'Рыбалка проводится по принципу "поймал-отпустил" для поддержания нашей устойчивой программы разведения. Однако вы получите щедрые подарки икры как часть вашего пакета.',
         },
       ],
     },
     {
-      category: 'Caviar Products',
+      category: 'Икорная Продукция',
       questions: [
         {
-          q: 'Do you ship caviar products?',
-          a: 'Currently, we sell caviar primarily through our on-site store and wholesale partners. Shipping options are being developed. Contact us for wholesale inquiries.',
+          q: 'Доставляете ли вы икру?',
+          a: 'В настоящее время мы продаём икру в основном через магазин на территории и оптовых партнеров. Варианты доставки находятся в разработке. Обращайтесь к нам по оптовым вопросам.',
         },
         {
-          q: 'What makes Royal Keta caviar premium?',
-          a: 'Our caviar comes from sustainably bred Pacific salmon raised in pristine Sakhalin waters. We use advanced aquaculture techniques and strict quality control at every stage from roe to jar.',
+          q: 'Чем икра Роял Кета особенная?',
+          a: 'Наша икра производится из устойчиво разводимого тихоокеанского лосося в чистых водах Сахалина. Мы используем передовые техники аквакультуры и строгий контроль качества на каждом этапе от икры до банки.',
         },
         {
-          q: 'How should I store caviar?',
-          a: 'Store unopened jars in the coldest part of your refrigerator (0-2°C). Once opened, consume within 3 days. Never freeze caviar as it damages the delicate roe structure.',
+          q: 'Как правильно хранить икру?',
+          a: 'Храните нераскрытые банки в самой холодной части холодильника (0-2°C). После вскрытия употребите в течение 3 дней. Никогда не замораживайте икру, это повреждает деликатную структуру зёрен.',
         },
       ],
     },
     {
-      category: 'Investment Opportunities',
+      category: 'Инвестиционные Возможности',
       questions: [
         {
-          q: 'What are the minimum investment amounts?',
-          a: 'Model A starts from ₽100,000, Model B from ₽500,000, Model C from ₽2,000,000, and Model D is customizable for larger investments. Contact our investment team for detailed terms.',
+          q: 'Каковы минимальные суммы инвестиций?',
+          a: 'Модель А начинается от ₽100,000, Модель Б от ₽500,000, Модель В от ₽2,000,000, а Модель Г настраивается для крупных инвестиций. Обратитесь к нашей инвестиционной команде за подробными условиями.',
         },
         {
-          q: 'How is the tokenization verified?',
-          a: 'All investments are recorded on blockchain with transparent tracking. We provide regular reports on fish stocks, production, and returns. KYC/AML procedures are mandatory for all investors.',
+          q: 'Как проверяется токенизация?',
+          a: 'Все инвестиции записываются в блокчейн с прозрачным отслеживанием. Мы предоставляем регулярные отчёты о рыбных запасах, производстве и доходах. Процедуры KYC/AML обязательны для всех инвесторов.',
         },
         {
-          q: 'Can I visit the hatchery as an investor?',
-          a: 'Yes! Investors receive priority access and exclusive tours. Larger investors (Models C/D) can schedule private consultations with our aquaculture team.',
+          q: 'Могу ли я посетить хозяйство как инвестор?',
+          a: 'Да! Инвесторы получают приоритетный доступ и эксклюзивные туры. Крупные инвесторы (Модели В/Г) могут назначить частные консультации с нашей командой аквакультурологов.',
         },
         {
-          q: 'What are the risks?',
-          a: 'Aquaculture investments carry natural risks including fish mortality, market price fluctuations, and seasonal variations. We maintain insurance and diversified operations to mitigate risks. See full disclosure in investment documentation.',
+          q: 'Каковы риски?',
+          a: 'Инвестиции в аквакультуру несут природные риски, включая смертность рыб, колебания рыночных цен и сезонные изменения. Мы поддерживаем страхование и диверсифицированные операции для снижения рисков. Полное раскрытие см. в инвестиционной документации.',
         },
       ],
     },
     {
-      category: 'General',
+      category: 'Общие Вопросы',
       questions: [
         {
-          q: 'Where exactly is the hatchery located?',
-          a: 'We are located in Nevelsky District, Sakhalin Oblast, Russia. Detailed directions are provided upon booking. The facility is approximately 2 hours from Yuzhno-Sakhalinsk.',
+          q: 'Где именно находится хозяйство?',
+          a: 'Мы расположены в Невельском районе, Сахалинская область, Россия. Подробные направления предоставляются при бронировании. Объект находится примерно в 2 часах от Южно-Сахалинска.',
         },
         {
-          q: 'Do you offer tours in English?',
-          a: 'Tours are primarily conducted in Russian, but English-speaking guides can be arranged with advance notice (48 hours). Educational materials are available in both languages.',
+          q: 'Проводите ли туры на английском языке?',
+          a: 'Туры проводятся в основном на русском языке, но англоговорящие гиды могут быть организованы при предварительном уведомлении (48 часов). Образовательные материалы доступны на обоих языках.',
         },
         {
-          q: 'What is your cancellation policy?',
-          a: 'Cancellations made 7+ days before the tour receive a full refund. 3-6 days: 50% refund. Less than 3 days: no refund. Corporate packages have separate terms.',
+          q: 'Какова политика отмены?',
+          a: 'Отмены, сделанные за 7+ дней до тура, получают полный возврат. 3-6 дней: 50% возврат. Менее 3 дней: без возврата. Корпоративные пакеты имеют отдельные условия.',
         },
         {
-          q: 'Is the hatchery open year-round?',
-          a: 'Yes! While breeding cycles are seasonal, tours operate year-round. Different seasons offer unique educational experiences (spawning in fall, fry development in spring, release in summer).',
+          q: 'Хозяйство работает круглый год?',
+          a: 'Да! Хотя циклы разведения сезонные, туры проводятся круглый год. Разные сезоны предлагают уникальные образовательные возможности (нерест осенью, развитие мальков весной, выпуск летом).',
         },
       ],
     },
@@ -100,15 +100,15 @@ export default function FAQ() {
     <>
       <Seo
         title="FAQ"
-        description="Frequently asked questions about Royal Keta hatchery tours, caviar products, and investment opportunities. Get answers to all your questions."
+        description="Часто задаваемые вопросы о турах по хозяйству Роял Кета, икорной продукции и инвестиционных возможностях. Получите ответы на все ваши вопросы."
         path="/faq"
         ogImage="/og/faq.svg"
       />
 
       <Hero
-        subtitle="Help Center"
-        title="Frequently Asked Questions"
-        description="Everything you need to know about tours, caviar, and investments"
+        subtitle="Центр Помощи"
+        title="Часто Задаваемые Вопросы"
+        description="Всё, что вам нужно знать о турах, икре и инвестициях"
       />
 
       <section className="content-container py-20">
@@ -137,10 +137,10 @@ export default function FAQ() {
 
           <div className="mt-16 premium-card p-8 text-center">
             <h3 className="text-2xl font-display font-bold text-gold mb-4">
-              Still Have Questions?
+              Остались Вопросы?
             </h3>
             <p className="text-foreground-muted mb-6">
-              Our team is here to help. Reach out via email, Telegram, or WhatsApp.
+              Наша команда готова помочь. Свяжитесь с нами через email, Telegram или WhatsApp.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

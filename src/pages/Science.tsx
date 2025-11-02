@@ -7,32 +7,32 @@ export default function Science() {
   return (
     <>
       <Seo
-        title="Our Science"
-        description="Advanced aquaculture methodology: from roe selection to smolt release. Learn about our sustainable salmon breeding practices."
+        title="Наша Наука"
+        description="Передовая методология аквакультуры: от отбора икры до выпуска смолтов. Изучите наши практики устойчивого разведения лосося."
         path="/science"
         ogImage="/og/science.svg"
       />
 
       <Hero
-        subtitle="Research & Innovation"
-        title="The Science Behind Excellence"
-        description="Our methodology combines traditional knowledge with modern aquaculture techniques"
+        subtitle="Исследования и Инновации"
+        title="Наука за Совершенством"
+        description="Наша методология сочетает традиционные знания с современными техниками аквакультуры"
       />
 
       <section className="content-container py-20">
         <div className="text-center mb-12">
-          <Badge variant="ocean" className="mb-4">The Process</Badge>
+          <Badge variant="ocean" className="mb-4">Процесс</Badge>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
-            Breeding Cycle
+            Цикл Разведения
           </h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { stage: '1. Roe Selection', desc: 'Careful selection of premium genetic stock' },
-            { stage: '2. Incubation', desc: 'Controlled temperature and oxygen levels' },
-            { stage: '3. Feeding', desc: 'Nutritionally optimized diet for growth' },
-            { stage: '4. Release', desc: 'Healthy smolts released into natural waters' },
+            { stage: '1. Отбор Икры', desc: 'Тщательный отбор премиального генетического материала' },
+            { stage: '2. Инкубация', desc: 'Контролируемая температура и уровень кислорода' },
+            { stage: '3. Кормление', desc: 'Оптимизированное питание для роста' },
+            { stage: '4. Выпуск', desc: 'Здоровые смолты выпускаются в естественные воды' },
           ].map((item, idx) => (
             <Card key={idx}>
               <CardHeader>
@@ -45,9 +45,9 @@ export default function Science() {
         </div>
 
         <div className="mt-16 premium-card p-8">
-          <h3 className="text-2xl font-display font-bold text-gold mb-4">Our Team</h3>
+          <h3 className="text-2xl font-display font-bold text-gold mb-4">Наша Команда</h3>
           <p className="text-foreground-muted">
-            Led by experienced aquaculture scientists and fishery specialists with decades of combined expertise in salmon breeding and conservation.
+            Возглавляется опытными учёными-аквакультурологами и специалистами по рыбному хозяйству с десятилетиями совместного опыта в разведении лосося и природоохранной деятельности.
           </p>
         </div>
       </section>
