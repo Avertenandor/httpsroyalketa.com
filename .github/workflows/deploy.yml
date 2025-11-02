@@ -35,6 +35,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Ensure GitHub Pages files
+        run: |
+          echo "royalketa.com" > dist/CNAME
+          touch dist/.nojekyll
+          echo "✅ CNAME and .nojekyll explicitly created in dist/"
+          ls -la dist/ | grep -E "(CNAME|nojekyll|index.html)"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
