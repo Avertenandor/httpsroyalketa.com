@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Keta</title>
+  <script>
+    // GitHub Pages SPA redirect hack
+    // This script takes the current URL path and redirects to index.html
+    // with the path stored in the query string for React Router to handle
+    (function() {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+
+    // Store current path and redirect to index.html
+    sessionStorage.redirect = location.href;
+    location.replace(
+      location.pathname.split('/').slice(0, -1).join('/') +
+      '/?/' +
+      location.pathname.slice(1) +
+      location.search
+    );
+  </script>
+</head>
+<body>
+  <!-- GitHub Pages SPA Redirect -->
+</body>
+</html>
