@@ -4,6 +4,7 @@ import { Statistics } from '@/components/Statistics';
 import { Testimonials } from '@/components/Testimonials';
 import { InvestmentCalculator } from '@/components/InvestmentCalculator';
 import { Partners } from '@/components/Partners';
+import { IndustryPartners } from '@/components/IndustryPartners';
 import { ShareButtons } from '@/components/ShareButtons';
 import { ParticlesCanvas } from '@/components/ParticlesCanvas';
 import { organizationJsonLd } from '@/seo/ld/organization';
@@ -159,6 +160,9 @@ export default function Home() {
 
       {/* Partners Section */}
       <Partners />
+
+      {/* Industry Partners Section */}
+      <IndustryPartners />
 
       {/* Share Section */}
       <section className="content-container py-12">

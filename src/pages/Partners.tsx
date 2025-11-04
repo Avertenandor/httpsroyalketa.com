@@ -1,6 +1,7 @@
 import { Seo } from '@/seo/Seo';
 import { Hero } from '@/components/Hero';
 import { Partners as PartnersSection } from '@/components/Partners';
+import { IndustryPartners } from '@/components/IndustryPartners';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -34,16 +35,16 @@ export default function PartnersPage() {
   return (
     <>
       <Seo
-        title="Партнеры по логистике"
-        description="Наши надежные партнеры по доставке продукции ROYAL KETA по всей территории России. Работаем с проверенными транспортными компаниями Дальнего Востока."
+        title="Партнеры"
+        description="Наши партнеры: логистические компании для доставки по РФ и рыбопромышленные предприятия Сахалинской области. ROYAL KETA — часть рыбопромышленного сообщества региона."
         path="/partners"
         ogImage="/og/partners.svg"
       />
 
       <Hero
-        subtitle="Логистика и доставка"
+        subtitle="Партнерская сеть"
         title="Наши партнеры"
-        description="Мы сотрудничаем с ведущими транспортными компаниями для надежной доставки нашей продукции по всей России"
+        description="Логистические компании для надежной доставки по России и рыбопромышленные предприятия Сахалина"
       />
 
       {/* Benefits Section */}
@@ -87,6 +88,9 @@ export default function PartnersPage() {
 
       {/* Partners List */}
       <PartnersSection />
+
+      {/* Industry Partners */}
+      <IndustryPartners />
 
       {/* Delivery Info Section */}
       <section className="content-container py-20">
