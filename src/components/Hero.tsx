@@ -30,7 +30,7 @@ export function Hero({
   };
 
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       {backgroundImage && (
         <>
@@ -43,7 +43,7 @@ export function Hero({
             <img
               src={backgroundImage}
               alt="Hero background"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
               loading="eager"
             />
           </motion.div>

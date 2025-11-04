@@ -55,7 +55,7 @@ export function ImageShowcase() {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {showcaseItems.map((item, index) => (
           <motion.div
             key={item.title}
@@ -66,11 +66,11 @@ export function ImageShowcase() {
             className="group relative overflow-hidden rounded-xl"
           >
             {/* Background Image */}
-            <div className="relative h-[400px] overflow-hidden">
+            <div className="relative h-[320px] md:h-[400px] overflow-hidden">
               <img
                 src={item.imageUrl}
                 alt={item.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
               />
               {/* Overlay */}
@@ -109,31 +109,31 @@ export function ImageShowcase() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mt-16 relative overflow-hidden rounded-2xl"
+        className="mt-12 md:mt-16 relative overflow-hidden rounded-2xl"
       >
-        <div className="relative h-[500px]">
+        <div className="relative h-[400px] md:h-[500px]">
           <img
             src={caviarProductImages[3].urlLarge}
             alt="Премиальная красная икра Royal Keta"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 md:via-background/60 to-transparent" />
 
           {/* Content overlay */}
           <div className="absolute inset-0 flex items-center">
             <div className="content-container">
               <div className="max-w-2xl">
-                <Badge variant="gold" className="mb-4">Премиум Икра</Badge>
-                <h2 className="text-4xl md:text-5xl font-display font-bold text-gold mb-6">
+                <Badge variant="gold" className="mb-3 md:mb-4">Премиум Икра</Badge>
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-bold text-gold mb-4 md:mb-6">
                   От природы к вашему столу
                 </h2>
-                <p className="text-lg text-foreground-muted mb-8">
+                <p className="text-base md:text-lg text-foreground-muted mb-6 md:mb-8">
                   Наша икра проходит строгий контроль качества на каждом этапе —
                   от выращивания лосося до упаковки готового продукта.
                   Результат: икра премиум-класса с идеальным вкусом и текстурой.
                 </p>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
                   <Button asChild variant="premium" size="lg">
                     <Link to="/caviar">Наша продукция</Link>
                   </Button>

@@ -40,7 +40,7 @@ export function CaviarGallery() {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {galleryImages.map((image, index) => (
           <motion.div
             key={image.id}
@@ -54,7 +54,7 @@ export function CaviarGallery() {
             <img
               src={image.url}
               alt={image.alt}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -72,26 +72,27 @@ export function CaviarGallery() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 p-4 md:p-8"
           onClick={() => setSelectedImage(null)}
         >
           <motion.div
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}
-            className="relative max-w-4xl w-full"
+            className="relative max-w-4xl w-full max-h-[90vh] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={selectedImage.urlLarge}
               alt={selectedImage.alt}
-              className="w-full h-auto rounded-lg shadow-glow-gold"
+              className="w-full h-auto max-h-[70vh] object-contain rounded-lg shadow-glow-gold"
             />
-            <div className="mt-4 text-center">
-              <p className="text-gold text-xl font-semibold">{selectedImage.description}</p>
+            <div className="mt-3 md:mt-4 text-center">
+              <p className="text-gold text-base md:text-xl font-semibold">{selectedImage.description}</p>
             </div>
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-background/80 hover:bg-background rounded-full text-gold text-2xl"
+              className="absolute -top-2 -right-2 md:top-4 md:right-4 w-10 h-10 flex items-center justify-center bg-background/90 hover:bg-background rounded-full text-gold text-2xl border border-gold/20"
+              aria-label="Закрыть"
             >
               ×
             </button>

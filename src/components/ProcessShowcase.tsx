@@ -47,7 +47,7 @@ export function ProcessShowcase() {
       </motion.div>
 
       {/* Main process images grid */}
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
+      <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
         {processImages.map((image, index) => (
           <motion.div
             key={image.id}
@@ -60,7 +60,7 @@ export function ProcessShowcase() {
             <img
               src={image.urlLarge}
               alt={image.alt}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
               loading="lazy"
             />
             {/* Dark overlay */}
