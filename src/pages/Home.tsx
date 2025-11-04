@@ -8,6 +8,7 @@ import { InvestmentCalculator } from '@/components/InvestmentCalculator';
 import { Partners } from '@/components/Partners';
 import { IndustryPartners } from '@/components/IndustryPartners';
 import { ShareButtons } from '@/components/ShareButtons';
+import { MercuryBadge } from '@/components/MercuryBadge';
 import { organizationJsonLd } from '@/seo/ld/organization';
 import { heroBackgrounds } from '@/config/images';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
@@ -107,6 +108,17 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
+
+        {/* Mercury Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="flex justify-center mt-12"
+        >
+          <MercuryBadge />
+        </motion.div>
       </section>
 
       {/* Image Showcase */}

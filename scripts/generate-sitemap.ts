@@ -25,6 +25,7 @@ const routes = [
   { path: '/crabbing', priority: '0.8', changefreq: 'monthly' },
   { path: '/salmon-info', priority: '0.7', changefreq: 'monthly' },
   { path: '/sturgeon-info', priority: '0.7', changefreq: 'monthly' },
+  { path: '/mercury/', priority: '0.8', changefreq: 'monthly' },
   { path: '/legal', priority: '0.5', changefreq: 'yearly' },
 ];
 

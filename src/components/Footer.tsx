@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, MessageCircle, Send } from 'lucide-react';
+import { MercuryBadge } from './MercuryBadge';
 
 const footerLinks = {
   company: [
@@ -21,6 +22,7 @@ const footerLinks = {
     { name: 'FAQ', href: '/faq' },
     { name: 'Контакты', href: '/contacts' },
     { name: 'Партнеры', href: '/partners' },
+    { name: 'Меркурий (эВСД)', href: '/mercury/' },
     { name: 'Правовая информация', href: '/legal' },
   ],
 };
@@ -135,6 +137,11 @@ export function Footer() {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* Mercury Badge */}
+        <div className="mt-8 flex justify-center">
+          <MercuryBadge />
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-foreground-muted">

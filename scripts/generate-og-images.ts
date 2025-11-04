@@ -29,6 +29,7 @@ const pages: OGImage[] = [
   { slug: 'crabbing', title: 'Crabbing on Sakhalin', subtitle: 'King Crab Fishing & Tours', icon: '🦀' },
   { slug: 'salmon-info', title: 'Salmon & Red Caviar', subtitle: 'Pacific Salmon Species Guide', icon: '🐟' },
   { slug: 'sturgeon-info', title: 'Sturgeon & Black Caviar', subtitle: 'Premium Caviar Encyclopedia', icon: '🐠' },
+  { slug: 'mercury', title: 'Mercury eVSD System', subtitle: 'Electronic Veterinary Certification', icon: '✓' },
   { slug: 'legal', title: 'Legal Information', subtitle: 'Terms, Privacy & Disclosures', icon: '⚖️' },
 ];
 
