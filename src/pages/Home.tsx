@@ -1,6 +1,7 @@
 import { Seo } from '@/seo/Seo';
 import { Hero } from '@/components/Hero';
 import { ImageShowcase } from '@/components/ImageShowcase';
+import { ProcessShowcase } from '@/components/ProcessShowcase';
 import { Statistics } from '@/components/Statistics';
 import { Testimonials } from '@/components/Testimonials';
 import { InvestmentCalculator } from '@/components/InvestmentCalculator';
@@ -8,6 +9,7 @@ import { Partners } from '@/components/Partners';
 import { IndustryPartners } from '@/components/IndustryPartners';
 import { ShareButtons } from '@/components/ShareButtons';
 import { organizationJsonLd } from '@/seo/ld/organization';
+import { heroBackgrounds } from '@/config/images';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -59,6 +61,8 @@ export default function Home() {
         description="Познакомьтесь с искусством разведения лосося на острове Сахалин. Семейные туры, премиальная икра и инвестиционные возможности в устойчивой аквакультуре."
         primaryCta={{ text: 'Забронировать семейный тур', href: '/hatchery-tour' }}
         secondaryCta={{ text: 'Презентация для инвесторов', href: '/investment' }}
+        backgroundImage={heroBackgrounds[1].urlLarge}
+        backgroundOverlay="dark"
       />
 
       {/* Three Pillars */}
@@ -107,6 +111,9 @@ export default function Home() {
 
       {/* Image Showcase */}
       <ImageShowcase />
+
+      {/* Process Showcase */}
+      <ProcessShowcase />
 
       {/* Breeding Cycle */}
       <section className="content-container py-20">

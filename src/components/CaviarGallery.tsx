@@ -1,61 +1,26 @@
 import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { useState } from 'react';
+import { caviarProductImages } from '@/config/images';
 
 interface GalleryImage {
   id: string;
   url: string;
+  urlLarge: string;
   alt: string;
   photographer?: string;
   description: string;
 }
 
-// Unsplash images - free to use, no attribution required for commercial use
-// These are curated high-quality red caviar images
-const galleryImages: GalleryImage[] = [
-  {
-    id: 'caviar-1',
-    url: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=80',
-    alt: 'Премиальная красная икра крупным планом',
-    photographer: 'Caroline Attwood',
-    description: 'Красная икра лосося премиум качества',
-  },
-  {
-    id: 'caviar-2',
-    url: 'https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=800&q=80',
-    alt: 'Икра в стеклянной банке',
-    photographer: 'Mariana Medvedeva',
-    description: 'Свежая икра в традиционной упаковке',
-  },
-  {
-    id: 'caviar-3',
-    url: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=800&q=80',
-    alt: 'Морепродукты и икра',
-    photographer: 'Toa Heftiba',
-    description: 'Икра как деликатес премиум класса',
-  },
-  {
-    id: 'caviar-4',
-    url: 'https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=800&q=80',
-    alt: 'Красная икра на ложке',
-    photographer: 'Kelsey Curtis',
-    description: 'Жемчужины океана - каждая икринка идеальна',
-  },
-  {
-    id: 'caviar-5',
-    url: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=800&q=80',
-    alt: 'Лосось и икра',
-    photographer: 'Caroline Attwood',
-    description: 'От лосося до икры - полный цикл качества',
-  },
-  {
-    id: 'caviar-6',
-    url: 'https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=800&q=80',
-    alt: 'Блюдо с икрой',
-    photographer: 'Jakub Kapusnak',
-    description: 'Кулинарное совершенство с нашей икрой',
-  },
-];
+// Convert config images to gallery format
+const galleryImages: GalleryImage[] = caviarProductImages.map((img) => ({
+  id: img.id,
+  url: img.urlMedium,
+  urlLarge: img.urlLarge,
+  alt: img.alt,
+  photographer: img.photographer,
+  description: img.alt, // Use alt as description
+}));
 
 export function CaviarGallery() {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
@@ -124,7 +89,7 @@ export function CaviarGallery() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={selectedImage.url.replace('w=800', 'w=1600')}
+              src={selectedImage.urlLarge}
               alt={selectedImage.alt}
               className="w-full h-auto rounded-lg shadow-glow-gold"
             />

@@ -9,6 +9,8 @@ interface HeroProps {
   primaryCta?: { text: string; href: string };
   secondaryCta?: { text: string; href: string };
   backgroundPattern?: boolean;
+  backgroundImage?: string; // URL to background image
+  backgroundOverlay?: 'dark' | 'medium' | 'light'; // Overlay intensity
 }
 
 export function Hero({
@@ -18,11 +20,40 @@ export function Hero({
   primaryCta,
   secondaryCta,
   backgroundPattern = true,
+  backgroundImage,
+  backgroundOverlay = 'dark',
 }: HeroProps) {
+  const overlayClasses = {
+    dark: 'bg-gradient-to-b from-background/95 via-background/80 to-background/95',
+    medium: 'bg-gradient-to-b from-background/80 via-background/60 to-background/80',
+    light: 'bg-gradient-to-b from-background/60 via-background/40 to-background/60',
+  };
+
   return (
     <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      {backgroundImage && (
+        <>
+          <motion.div
+            className="absolute inset-0"
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.5, ease: 'easeOut' }}
+          >
+            <img
+              src={backgroundImage}
+              alt="Hero background"
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+          </motion.div>
+          {/* Overlay */}
+          <div className={`absolute inset-0 ${overlayClasses[backgroundOverlay]}`} />
+        </>
+      )}
+
       {/* Background Pattern */}
-      {backgroundPattern && (
+      {backgroundPattern && !backgroundImage && (
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-b from-ocean/20 to-transparent" />
 
