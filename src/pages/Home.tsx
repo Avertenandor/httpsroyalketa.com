@@ -6,7 +6,6 @@ import { InvestmentCalculator } from '@/components/InvestmentCalculator';
 import { Partners } from '@/components/Partners';
 import { IndustryPartners } from '@/components/IndustryPartners';
 import { ShareButtons } from '@/components/ShareButtons';
-import { ParticlesCanvas } from '@/components/ParticlesCanvas';
 import { organizationJsonLd } from '@/seo/ld/organization';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -45,9 +44,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Floating caviar roe particles effect */}
-      <ParticlesCanvas count={40} />
-
       <Seo
         title="От икринки к королевской"
         description="Премиальный рыбоводный завод и производство икры на острове Сахалин. Семейные туры, совершенство вкуса, инвестиции в будущее."

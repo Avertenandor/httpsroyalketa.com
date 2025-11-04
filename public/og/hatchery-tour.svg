@@ -2,6 +2,7 @@
   <defs>
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0B0F14;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0F1619;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#0F1922;stop-opacity:1" />
     </linearGradient>
     <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -9,66 +10,128 @@
       <stop offset="50%" style="stop-color:#CFAE58;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#B89842;stop-opacity:1" />
     </linearGradient>
+    <radialGradient id="oceanGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4FD1C5;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1E90A0;stop-opacity:0.05" />
+    </radialGradient>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
     </filter>
   </defs>
 
   <!-- Background -->
   <rect width="1200" height="630" fill="url(#bgGradient)"/>
 
-  <!-- Decorative patterns -->
-  <circle cx="1000" cy="100" r="150" fill="#CFAE58" opacity="0.05"/>
-  <circle cx="200" cy="530" r="120" fill="#1E90A0" opacity="0.05"/>
-  <circle cx="1100" cy="500" r="100" fill="#CFAE58" opacity="0.03"/>
+  <!-- Decorative ocean gradients -->
+  <ellipse cx="1000" cy="150" rx="300" ry="200" fill="url(#oceanGradient)" opacity="0.4"/>
+  <ellipse cx="200" cy="530" rx="250" ry="180" fill="url(#oceanGradient)" opacity="0.3"/>
 
-  <!-- Wave pattern -->
-  <path d="M 0 400 Q 300 350 600 400 T 1200 400 L 1200 630 L 0 630 Z" fill="#1E90A0" opacity="0.05"/>
+  <!-- Wave patterns -->
+  <path d="M 0 400 Q 300 350 600 400 T 1200 400 L 1200 630 L 0 630 Z" fill="#1E90A0" opacity="0.08"/>
+  <path d="M 0 450 Q 250 420 500 450 T 1000 450 T 1200 450 L 1200 630 L 0 630 Z" fill="#4FD1C5" opacity="0.05"/>
 
-  <!-- Border -->
-  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="url(#goldGradient)" stroke-width="2" rx="8"/>
+  <!-- Caviar roe particles -->
+  <circle cx="39.57370726464164" cy="160.90715679179172" r="5.612856235660815" fill="#CFAE58" opacity="0.11649212947778137"/>
+  <circle cx="565.6513473155425" cy="12.196494037191819" r="2.4974705643113895" fill="#CFAE58" opacity="0.2478383523944185"/>
+  <circle cx="564.8762448253574" cy="559.3935622527907" r="3.8828844489727725" fill="#CFAE58" opacity="0.18964532636043335"/>
+  <circle cx="433.6985690393757" cy="330.7940140474226" r="5.577933903928647" fill="#CFAE58" opacity="0.17794193454846152"/>
+  <circle cx="976.1761227947434" cy="330.5275201027755" r="2.4811870023010396" fill="#CFAE58" opacity="0.15084768782348118"/>
+  <circle cx="910.9140215507639" cy="246.16524243992293" r="4.374765488661797" fill="#CFAE58" opacity="0.1382105117758306"/>
+  <circle cx="30.248281765362428" cy="111.3317682769227" r="2.140265531289759" fill="#CFAE58" opacity="0.10879251659685295"/>
+  <circle cx="99.1131411155588" cy="485.20181642840834" r="5.815223284308555" fill="#CFAE58" opacity="0.22727991772609704"/>
+  <circle cx="664.301580544819" cy="236.61831493263801" r="3.777471833538776" fill="#CFAE58" opacity="0.17937930682303777"/>
+  <circle cx="910.1134594022739" cy="405.62592207949336" r="2.3830540151754462" fill="#CFAE58" opacity="0.13967561125053463"/>
+  <circle cx="1019.1160453629283" cy="370.60481431737844" r="2.3331667681031387" fill="#CFAE58" opacity="0.2232561824077428"/>
+  <circle cx="251.05675898048716" cy="607.3586740581129" r="3.0018847051338" fill="#CFAE58" opacity="0.22582845765354015"/>
+  <circle cx="1109.0488639978018" cy="608.4872848355271" r="5.871539078869244" fill="#CFAE58" opacity="0.23422573024185162"/>
+  <circle cx="420.14054699560984" cy="258.5260982455005" r="3.9722115072995594" fill="#CFAE58" opacity="0.23678134071669982"/>
+  <circle cx="732.2480742793934" cy="625.917879609666" r="3.68346311498465" fill="#CFAE58" opacity="0.22281848074389435"/>
+  <circle cx="370.5747067111217" cy="27.29566192168782" r="3.7571488403201165" fill="#CFAE58" opacity="0.10935963014648423"/>
+  <circle cx="621.0647083518668" cy="470.5466162795798" r="3.6087004500316953" fill="#CFAE58" opacity="0.18171743732274437"/>
+  <circle cx="555.093327859775" cy="54.262133656310226" r="3.134083824139239" fill="#CFAE58" opacity="0.15983724392910686"/>
+  <circle cx="64.4871950337718" cy="256.5625540574271" r="4.160312145500223" fill="#CFAE58" opacity="0.17472274211608463"/>
+  <circle cx="366.74119009011923" cy="626.7912589897106" r="4.886390701316273" fill="#CFAE58" opacity="0.1528493006873311"/>
+  <circle cx="519.1090890467453" cy="130.40670646376202" r="4.105812006676659" fill="#CFAE58" opacity="0.24875909051740033"/>
+  <circle cx="1068.1235214558715" cy="35.5439841889392" r="4.845278910752581" fill="#CFAE58" opacity="0.11262350700946139"/>
+  <circle cx="365.3755089507226" cy="614.6618459261151" r="4.634602600091071" fill="#CFAE58" opacity="0.21790262332983387"/>
+  <circle cx="656.2406895792965" cy="369.63087726614845" r="3.537309407596986" fill="#CFAE58" opacity="0.22654342304333402"/>
+  <circle cx="546.9670421801062" cy="289.8264477431883" r="3.472485719887408" fill="#CFAE58" opacity="0.23696397707465394"/>
+  <circle cx="257.4321991316819" cy="270.99119259276927" r="5.880106271515878" fill="#CFAE58" opacity="0.14137494830581324"/>
+  <circle cx="727.53412461485" cy="624.6078467054621" r="5.728853956561475" fill="#CFAE58" opacity="0.19352393538929719"/>
+  <circle cx="41.92793022088708" cy="369.79641471520125" r="2.1138613708036678" fill="#CFAE58" opacity="0.24624536172042685"/>
+  <circle cx="96.15710956808279" cy="102.67593073864262" r="5.431064081705728" fill="#CFAE58" opacity="0.19581090782298788"/>
+  <circle cx="623.9225847834919" cy="461.2370966311736" r="3.9597164450516207" fill="#CFAE58" opacity="0.17335844751497598"/>
 
-  <!-- Icon circle -->
-  <circle cx="150" cy="200" r="70" fill="#CFAE58" opacity="0.2"/>
-  <text x="150" y="230" font-size="80" text-anchor="middle" fill="#CFAE58">🎣</text>
+  <!-- Border with glow -->
+  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="url(#goldGradient)" stroke-width="3" rx="12" filter="url(#softGlow)"/>
 
-  <!-- Logo (crown) -->
+  <!-- Icon circle with premium background -->
+  <circle cx="150" cy="200" r="75" fill="#CFAE58" opacity="0.15" filter="url(#softGlow)"/>
+  <circle cx="150" cy="200" r="70" fill="#CFAE58" opacity="0.25"/>
+  <text x="150" y="235" font-size="90" text-anchor="middle" fill="#CFAE58" filter="url(#glow)">🎣</text>
+
+  <!-- Premium logo (crown) with enhanced styling -->
   <g transform="translate(100, 70)">
     <path d="M 30 20 L 40 35 L 35 35 Z M 50 15 L 60 35 L 45 35 Z M 65 20 L 75 35 L 70 35 Z M 30 35 L 75 35 L 73 45 L 32 45 Z"
-          fill="url(#goldGradient)" filter="url(#glow)"/>
-    <circle cx="40" cy="25" r="3" fill="#4FD1C5"/>
-    <circle cx="52" cy="20" r="4" fill="#4FD1C5"/>
-    <circle cx="65" cy="25" r="3" fill="#4FD1C5"/>
+          fill="url(#goldGradient)" filter="url(#glow)" stroke="#B89842" stroke-width="0.5"/>
+    <circle cx="40" cy="25" r="3" fill="#4FD1C5" filter="url(#glow)"/>
+    <circle cx="52" cy="20" r="4" fill="#4FD1C5" filter="url(#glow)"/>
+    <circle cx="65" cy="25" r="3" fill="#4FD1C5" filter="url(#glow)"/>
   </g>
 
-  <!-- Title -->
+  <!-- Title with shadow -->
   <text x="280" y="180" font-family="Georgia, serif" font-size="72" font-weight="bold"
-        fill="url(#goldGradient)" filter="url(#glow)">Hatchery Tours</text>
+        fill="url(#goldGradient)" filter="url(#shadow)">Hatchery Tours</text>
 
-  <!-- Subtitle -->
+  <!-- Subtitle with subtle glow -->
   <text x="280" y="230" font-family="Arial, sans-serif" font-size="36"
-        fill="#D6DEE6" opacity="0.9">Family Experiences & Caviar Tasting</text>
+        fill="#D6DEE6" opacity="0.95" filter="url(#softGlow)">Family Experiences & Caviar Tasting</text>
 
-  <!-- Brand name -->
-  <text x="280" y="300" font-family="Georgia, serif" font-size="28" font-weight="bold"
-        fill="#CFAE58" letter-spacing="3">ROYAL KETA</text>
+  <!-- Brand name with letter spacing -->
+  <text x="280" y="300" font-family="Georgia, serif" font-size="32" font-weight="bold"
+        fill="#CFAE58" letter-spacing="4" filter="url(#glow)">ROYAL KETA</text>
+
+  <!-- Russian tagline -->
+  <text x="280" y="340" font-family="Arial, sans-serif" font-size="22" font-style="italic"
+        fill="#8B95A1" opacity="0.8">От икринки к королевской</text>
 
   <!-- Location -->
-  <text x="280" y="340" font-family="Arial, sans-serif" font-size="24"
-        fill="#8B95A1">Nevelsky District, Sakhalin</text>
+  <text x="280" y="380" font-family="Arial, sans-serif" font-size="20"
+        fill="#8B95A1" opacity="0.7">Невельский район, Сахалин</text>
 
-  <!-- Website -->
-  <text x="100" y="570" font-family="Arial, sans-serif" font-size="28"
-        fill="#4FD1C5" opacity="0.8">royalketa.com</text>
+  <!-- Website with glow -->
+  <text x="100" y="570" font-family="Arial, sans-serif" font-size="30" font-weight="bold"
+        fill="#4FD1C5" filter="url(#glow)">royalketa.com</text>
 
-  <!-- Decorative fish silhouette -->
-  <g transform="translate(950, 480)" opacity="0.15">
-    <ellipse cx="0" cy="0" rx="80" ry="30" fill="#CFAE58"/>
-    <path d="M 80 0 L 110 -15 L 120 0 L 110 15 Z" fill="#CFAE58"/>
-    <path d="M -20 -30 L 0 -40 L 20 -30 Z" fill="#CFAE58"/>
+  <!-- Enhanced decorative salmon silhouette -->
+  <g transform="translate(950, 480)" opacity="0.2" filter="url(#softGlow)">
+    <ellipse cx="0" cy="0" rx="90" ry="35" fill="#CFAE58"/>
+    <path d="M 90 0 L 120 -18 L 130 0 L 120 18 Z" fill="#CFAE58"/>
+    <path d="M -25 -35 L 0 -45 L 25 -35 Z" fill="#CFAE58"/>
+    <ellipse cx="-50" cy="0" rx="15" ry="12" fill="#0B0F14"/>
+  </g>
+
+  <!-- Additional decorative caviar clusters -->
+  <g opacity="0.2">
+    <circle cx="1050" cy="120" r="6" fill="#CFAE58"/>
+    <circle cx="1065" cy="115" r="5" fill="#CFAE58"/>
+    <circle cx="1058" cy="130" r="4" fill="#CFAE58"/>
+    <circle cx="150" cy="500" r="5" fill="#4FD1C5"/>
+    <circle cx="165" cy="508" r="4" fill="#4FD1C5"/>
+    <circle cx="140" cy="512" r="5" fill="#4FD1C5"/>
   </g>
 </svg>
