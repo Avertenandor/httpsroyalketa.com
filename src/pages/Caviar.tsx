@@ -1,5 +1,6 @@
 import { Seo } from '@/seo/Seo';
 import { Hero } from '@/components/Hero';
+import { CaviarGallery } from '@/components/CaviarGallery';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -48,7 +49,7 @@ export default function Caviar() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-3 gap-6">
           {products.map((product) => (
             <Card key={product.name}>
               <CardHeader>
@@ -62,7 +63,12 @@ export default function Caviar() {
             </Card>
           ))}
         </div>
+      </section>
 
+      {/* Caviar Gallery */}
+      <CaviarGallery />
+
+      <section className="content-container py-20">
         {/* Delivery Section */}
         <div className="premium-card p-8 mb-8 bg-gradient-to-br from-gold/5 to-ocean/5">
           <div className="flex flex-col md:flex-row items-center gap-6">

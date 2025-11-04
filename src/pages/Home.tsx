@@ -1,5 +1,6 @@
 import { Seo } from '@/seo/Seo';
 import { Hero } from '@/components/Hero';
+import { ImageShowcase } from '@/components/ImageShowcase';
 import { Statistics } from '@/components/Statistics';
 import { Testimonials } from '@/components/Testimonials';
 import { InvestmentCalculator } from '@/components/InvestmentCalculator';
@@ -103,6 +104,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Image Showcase */}
+      <ImageShowcase />
 
       {/* Breeding Cycle */}
       <section className="content-container py-20">
