@@ -17,28 +17,28 @@ export function Statistics() {
       icon: Fish,
       value: 500000,
       suffix: '+',
-      label: 'Smolts Released Annually',
+      label: 'Смолтов выпущено ежегодно',
       decimals: 0,
     },
     {
       icon: Award,
       value: 95,
       suffix: '%',
-      label: 'Survival Rate',
+      label: 'Показатель выживаемости',
       decimals: 0,
     },
     {
       icon: Users,
       value: 5000,
       suffix: '+',
-      label: 'Happy Visitors',
+      label: 'Довольных посетителей',
       decimals: 0,
     },
     {
       icon: TrendingUp,
       value: 15,
       suffix: '+',
-      label: 'Years of Excellence',
+      label: 'Лет совершенства',
       decimals: 0,
     },
   ];
@@ -53,10 +53,10 @@ export function Statistics() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold gradient-gold mb-4">
-            Our Impact in Numbers
+            Наше влияние в цифрах
           </h2>
           <p className="text-foreground-muted max-w-2xl mx-auto">
-            Building sustainable aquaculture excellence on Sakhalin Island
+            Создаём устойчивое превосходство в аквакультуре на острове Сахалин
           </p>
         </motion.div>
 

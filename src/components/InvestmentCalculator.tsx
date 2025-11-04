@@ -17,31 +17,31 @@ interface ModelDetails {
 
 const models: Record<InvestmentModel, ModelDetails> = {
   A: {
-    name: 'Caviar Dividends',
+    name: 'Икорные дивиденды',
     minInvestment: 100000,
     caviarReturn: 2.5,
-    description: 'Receive premium caviar as dividends',
+    description: 'Получайте премиальную икру в виде дивидендов',
   },
   B: {
-    name: 'Caviar + Crypto',
+    name: 'Икра + Крипто',
     minInvestment: 500000,
     caviarReturn: 2.0,
     cryptoReturn: 8,
-    description: 'Hybrid returns: caviar + cryptocurrency',
+    description: 'Гибридные доходы: икра + криптовалюта',
   },
   C: {
-    name: 'Premium Returns',
+    name: 'Премиальные доходы',
     minInvestment: 2000000,
     caviarReturn: 3.5,
     cryptoReturn: 12,
-    description: 'Enhanced returns for larger investments',
+    description: 'Повышенные доходы для крупных инвестиций',
   },
   D: {
-    name: 'Full Spectrum',
+    name: 'Полный спектр',
     minInvestment: 5000000,
     caviarReturn: 5.0,
     cryptoReturn: 15,
-    description: 'Maximum returns with exclusive benefits',
+    description: 'Максимальная прибыль с эксклюзивными привилегиями',
   },
 };
 
@@ -66,12 +66,12 @@ export function InvestmentCalculator() {
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <Badge variant="gold" className="mb-4">Calculate Returns</Badge>
+        <Badge variant="gold" className="mb-4">Рассчитать доходность</Badge>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
-          Investment Calculator
+          Инвестиционный калькулятор
         </h2>
         <p className="text-foreground-muted max-w-2xl mx-auto">
-          Estimate your potential returns across different investment models
+          Оцените потенциальную доходность по различным инвестиционным моделям
         </p>
       </motion.div>
 
@@ -84,13 +84,13 @@ export function InvestmentCalculator() {
         >
           <Card>
             <CardHeader>
-              <CardTitle>Select Your Investment</CardTitle>
+              <CardTitle>Выберите ваши инвестиции</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               {/* Model Selection */}
               <div>
                 <label className="text-sm font-medium text-foreground mb-3 block">
-                  Investment Model
+                  Инвестиционная модель
                 </label>
                 <div className="grid grid-cols-2 gap-3">
                   {(Object.keys(models) as InvestmentModel[]).map((key) => (
@@ -108,7 +108,7 @@ export function InvestmentCalculator() {
                           : 'border-border hover:border-gold/50'
                       }`}
                     >
-                      <div className="font-bold text-gold mb-1">Model {key}</div>
+                      <div className="font-bold text-gold mb-1">Модель {key}</div>
                       <div className="text-xs text-foreground-muted">
                         {models[key].name}
                       </div>
@@ -120,7 +120,7 @@ export function InvestmentCalculator() {
               {/* Amount Input */}
               <div>
                 <label className="text-sm font-medium text-foreground mb-3 block">
-                  Investment Amount (₽)
+                  Сумма инвестиций (₽)
                 </label>
                 <input
                   type="range"
@@ -169,7 +169,7 @@ export function InvestmentCalculator() {
         >
           <Card className="h-full bg-gradient-to-br from-gold/5 to-ocean/5">
             <CardHeader>
-              <CardTitle>Estimated Annual Returns</CardTitle>
+              <CardTitle>Ожидаемая годовая доходность</CardTitle>
               <p className="text-sm text-foreground-muted">
                 {model.description}
               </p>
@@ -178,7 +178,7 @@ export function InvestmentCalculator() {
               {/* Caviar Returns */}
               <div className="p-4 rounded-lg bg-background/50">
                 <div className="text-sm text-foreground-muted mb-1">
-                  Caviar Dividends
+                  Икорные дивиденды
                 </div>
                 <div className="text-2xl font-bold text-gold mb-1">
                   {caviarAmount.toFixed(1)} kg
@@ -192,7 +192,7 @@ export function InvestmentCalculator() {
               {model.cryptoReturn && (
                 <div className="p-4 rounded-lg bg-background/50">
                   <div className="text-sm text-foreground-muted mb-1">
-                    Cryptocurrency Returns ({model.cryptoReturn}% APY)
+                    Доход в криптовалюте ({model.cryptoReturn}% годовых)
                   </div>
                   <div className="text-2xl font-bold text-ocean">
                     ₽ {cryptoValue.toLocaleString()}
@@ -203,24 +203,24 @@ export function InvestmentCalculator() {
               {/* Total */}
               <div className="p-6 rounded-lg bg-gradient-to-br from-gold/10 to-ocean/10 border-2 border-gold/20">
                 <div className="text-sm text-foreground-muted mb-2">
-                  Total Annual Return
+                  Общая годовая доходность
                 </div>
                 <div className="text-3xl font-display font-bold gradient-gold mb-2">
                   ₽ {totalAnnualReturn.toLocaleString()}
                 </div>
                 <div className="text-sm text-gold">
-                  ROI: {roi.toFixed(2)}% per year
+                  ROI: {roi.toFixed(2)}% в год
                 </div>
               </div>
 
               {/* CTA */}
               <Button asChild variant="premium" size="lg" className="w-full">
-                <Link to="/investment">View Full Investment Details</Link>
+                <Link to="/investment">Подробности инвестиций</Link>
               </Button>
 
               <p className="text-xs text-foreground-muted text-center">
-                * Estimates based on current market conditions. Actual returns may vary.
-                See full disclosure in investment documentation.
+                * Расчёты основаны на текущих рыночных условиях. Фактическая доходность может отличаться.
+                Полная информация в инвестиционной документации.
               </p>
             </CardContent>
           </Card>

@@ -63,12 +63,12 @@ export function Testimonials() {
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <Badge variant="gold" className="mb-4">Testimonials</Badge>
+        <Badge variant="gold" className="mb-4">Отзывы</Badge>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
-          What Our Clients Say
+          Что говорят наши клиенты
         </h2>
         <p className="text-foreground-muted max-w-2xl mx-auto">
-          Trusted by investors, families, and business partners across the region
+          Нам доверяют инвесторы, семьи и деловые партнёры по всему региону
         </p>
       </motion.div>
 

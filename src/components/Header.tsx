@@ -5,16 +5,16 @@ import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 
 const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Tours', href: '/hatchery-tour' },
-  { name: 'Science', href: '/science' },
-  { name: 'Caviar', href: '/caviar' },
-  { name: 'Investment', href: '/investment' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Gallery', href: '/gallery' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Главная', href: '/' },
+  { name: 'Туры', href: '/hatchery-tour' },
+  { name: 'Наука', href: '/science' },
+  { name: 'Икра', href: '/caviar' },
+  { name: 'Инвестиции', href: '/investment' },
+  { name: 'Цены', href: '/pricing' },
+  { name: 'Галерея', href: '/gallery' },
+  { name: 'Блог', href: '/blog' },
   { name: 'FAQ', href: '/faq' },
-  { name: 'Contacts', href: '/contacts' },
+  { name: 'Контакты', href: '/contacts' },
 ];
 
 export function Header() {
@@ -47,17 +47,17 @@ export function Header() {
         href="#main-content"
         className="skip-link"
       >
-        Skip to main content
+        Перейти к основному содержанию
       </a>
       <nav
         className="content-container flex items-center justify-between py-4"
-        aria-label="Main navigation"
+        aria-label="Основная навигация"
       >
         {/* Logo */}
         <Link
           to="/"
           className="flex items-center gap-2 text-xl font-display font-bold text-gold hover:text-gold-light transition-colors"
-          aria-label="Royal Keta - Home"
+          aria-label="ROYAL KETA - Главная"
         >
           <span className="text-2xl">👑</span>
           <span className="gradient-gold">ROYAL KETA</span>
@@ -84,7 +84,7 @@ export function Header() {
             variant="premium"
             size="sm"
           >
-            <Link to="/hatchery-tour">Book Tour</Link>
+            <Link to="/hatchery-tour">Забронировать тур</Link>
           </Button>
         </div>
 
@@ -93,7 +93,7 @@ export function Header() {
           type="button"
           className="lg:hidden rounded-md p-2 text-foreground hover:text-gold"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
+          aria-label="Переключить меню"
           aria-expanded={mobileMenuOpen}
         >
           {mobileMenuOpen ? (
@@ -123,7 +123,7 @@ export function Header() {
               </Link>
             ))}
             <Button asChild variant="premium" className="w-full mt-4">
-              <Link to="/hatchery-tour">Book Tour</Link>
+              <Link to="/hatchery-tour">Забронировать тур</Link>
             </Button>
           </div>
         </div>

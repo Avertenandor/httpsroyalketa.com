@@ -10,7 +10,7 @@ interface ShareButtonsProps {
 
 export function ShareButtons({ title, url, className = '' }: ShareButtonsProps) {
   const shareUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
-  const shareTitle = title || 'Royal Keta — Premium Salmon Hatchery';
+  const shareTitle = title || 'ROYAL KETA — Премиальный рыбоводный завод';
 
   const handleShare = async (platform?: 'telegram' | 'whatsapp' | 'native') => {
     const encodedUrl = encodeURIComponent(shareUrl);
@@ -45,7 +45,7 @@ export function ShareButtons({ title, url, className = '' }: ShareButtonsProps) 
           // Fallback: copy to clipboard
           try {
             await navigator.clipboard.writeText(shareUrl);
-            alert('Link copied to clipboard!');
+            alert('Ссылка скопирована в буфер обмена!');
           } catch (err) {
             console.error('Failed to copy:', err);
           }
@@ -60,7 +60,7 @@ export function ShareButtons({ title, url, className = '' }: ShareButtonsProps) 
       animate={{ opacity: 1, y: 0 }}
       className={`flex items-center gap-2 ${className}`}
     >
-      <span className="text-sm text-foreground-muted mr-2">Share:</span>
+      <span className="text-sm text-foreground-muted mr-2">Поделиться:</span>
 
       <Button
         variant="ghost"

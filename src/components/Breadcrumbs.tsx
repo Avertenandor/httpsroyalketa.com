@@ -7,19 +7,19 @@ interface BreadcrumbItem {
 }
 
 const routeLabels: Record<string, string> = {
-  '/': 'Home',
-  '/hatchery-tour': 'Hatchery Tour',
-  '/science': 'Our Science',
-  '/caviar': 'Premium Caviar',
-  '/investment': 'Investment',
-  '/tokenization': 'Tokenization',
-  '/pricing': 'Pricing',
-  '/gallery': 'Gallery',
-  '/blog': 'Blog',
+  '/': 'Главная',
+  '/hatchery-tour': 'Экскурсия на завод',
+  '/science': 'Наша наука',
+  '/caviar': 'Премиальная икра',
+  '/investment': 'Инвестиции',
+  '/tokenization': 'Токенизация',
+  '/pricing': 'Цены',
+  '/gallery': 'Галерея',
+  '/blog': 'Блог',
   '/faq': 'FAQ',
-  '/about': 'About Us',
-  '/contacts': 'Contacts',
-  '/legal': 'Legal',
+  '/about': 'О нас',
+  '/contacts': 'Контакты',
+  '/legal': 'Правовая информация',
 };
 
 export function Breadcrumbs() {
@@ -32,7 +32,7 @@ export function Breadcrumbs() {
   }
 
   const breadcrumbs: BreadcrumbItem[] = [
-    { label: 'Home', path: '/' },
+    { label: 'Главная', path: '/' },
   ];
 
   let currentPath = '';
@@ -46,7 +46,7 @@ export function Breadcrumbs() {
   });
 
   return (
-    <nav aria-label="Breadcrumb" className="content-container py-4">
+    <nav aria-label="Хлебные крошки" className="content-container py-4">
       <ol className="flex items-center gap-2 text-sm">
         {breadcrumbs.map((crumb, index) => {
           const isLast = index === breadcrumbs.length - 1;
