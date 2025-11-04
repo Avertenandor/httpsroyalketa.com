@@ -14,6 +14,7 @@ import FAQ from './pages/FAQ';
 import Contacts from './pages/Contacts';
 import About from './pages/About';
 import Partners from './pages/Partners';
+import Crabbing from './pages/Crabbing';
 import Legal from './pages/Legal';
 import NotFound from './pages/NotFound';
 
@@ -77,6 +78,10 @@ export const router = createBrowserRouter([
       {
         path: 'partners',
         element: <Partners />,
+      },
+      {
+        path: 'crabbing',
+        element: <Crabbing />,
       },
       {
         path: 'legal',

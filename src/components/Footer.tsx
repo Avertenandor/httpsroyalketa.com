@@ -11,6 +11,7 @@ const footerLinks = {
   services: [
     { name: 'Экскурсия на завод', href: '/hatchery-tour' },
     { name: 'Премиальная икра', href: '/caviar' },
+    { name: 'Крабалка', href: '/crabbing' },
     { name: 'Инвестиции', href: '/investment' },
     { name: 'Цены', href: '/pricing' },
   ],

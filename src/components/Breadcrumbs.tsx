@@ -20,6 +20,7 @@ const routeLabels: Record<string, string> = {
   '/about': 'О нас',
   '/contacts': 'Контакты',
   '/partners': 'Партнеры',
+  '/crabbing': 'Крабалка',
   '/legal': 'Правовая информация',
 };
 

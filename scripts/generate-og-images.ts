@@ -26,6 +26,7 @@ const pages: OGImage[] = [
   { slug: 'about', title: 'About Royal Keta', subtitle: 'Our Mission, Team & Values', icon: 'ℹ️' },
   { slug: 'contacts', title: 'Contact Us', subtitle: 'Visit Us on Sakhalin Island', icon: '📍' },
   { slug: 'partners', title: 'Logistics Partners', subtitle: 'Reliable Delivery Across Russia', icon: '🚚' },
+  { slug: 'crabbing', title: 'Crabbing on Sakhalin', subtitle: 'King Crab Fishing & Tours', icon: '🦀' },
   { slug: 'legal', title: 'Legal Information', subtitle: 'Terms, Privacy & Disclosures', icon: '⚖️' },
 ];
 
