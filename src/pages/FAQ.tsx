@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { faqImages } from '@/config/images';
 
 export default function FAQ() {
   const faqSections = [
@@ -109,6 +110,8 @@ export default function FAQ() {
         subtitle="Центр Помощи"
         title="Часто Задаваемые Вопросы"
         description="Всё, что вам нужно знать о турах, икре и инвестициях"
+        backgroundImage={faqImages[0].urlLarge}
+        backgroundOverlay="dark"
       />
 
       <section className="content-container py-20">

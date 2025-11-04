@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Truck, Package, Shield, Clock } from 'lucide-react';
+import { partnersB2BImages } from '@/config/images';
 
 export default function PartnersPage() {
   const benefits = [
@@ -45,6 +46,8 @@ export default function PartnersPage() {
         subtitle="Партнерская сеть"
         title="Наши партнеры"
         description="Логистические компании для надежной доставки по России и рыбопромышленные предприятия Сахалина"
+        backgroundImage={partnersB2BImages[0].urlLarge}
+        backgroundOverlay="dark"
       />
 
       {/* Benefits Section */}

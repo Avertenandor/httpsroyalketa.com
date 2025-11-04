@@ -1,6 +1,7 @@
 import { Seo } from '@/seo/Seo';
 import { Hero } from '@/components/Hero';
 import { Badge } from '@/components/ui/badge';
+import { aboutImages } from '@/config/images';
 
 export default function About() {
   return (
@@ -16,6 +17,8 @@ export default function About() {
         subtitle="Наша История"
         title="Совершенство Через Инновации"
         description="Сочетаем традиционные знания с современными технологиями для создания устойчивой аквакультуры"
+        backgroundImage={aboutImages[0].urlLarge}
+        backgroundOverlay="dark"
       />
 
       <section className="content-container py-20">

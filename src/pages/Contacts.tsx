@@ -3,6 +3,7 @@ import { Hero } from '@/components/Hero';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { LeafletMap } from '@/components/LeafletMap';
 import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
+import { contactsImages } from '@/config/images';
 
 export default function Contacts() {
   return (
@@ -18,6 +19,8 @@ export default function Contacts() {
         subtitle="Свяжитесь с Нами"
         title="Контакты"
         description="Мы готовы ответить на ваши вопросы о турах, икре и инвестиционных возможностях"
+        backgroundImage={contactsImages[0].urlLarge}
+        backgroundOverlay="dark"
       />
 
       <section className="content-container py-20">

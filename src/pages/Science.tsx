@@ -2,6 +2,7 @@ import { Seo } from '@/seo/Seo';
 import { Hero } from '@/components/Hero';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { productionImages } from '@/config/images';
 
 export default function Science() {
   return (
@@ -17,6 +18,8 @@ export default function Science() {
         subtitle="Исследования и Инновации"
         title="Наука за Совершенством"
         description="Наша методология сочетает традиционные знания с современными техниками аквакультуры"
+        backgroundImage={productionImages[0].urlLarge}
+        backgroundOverlay="dark"
       />
 
       <section className="content-container py-20">

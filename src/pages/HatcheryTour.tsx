@@ -4,6 +4,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Clock, Users, Gift, Fish } from 'lucide-react';
+import { tourismImages } from '@/config/images';
 
 export default function HatcheryTour() {
   const packages = [
@@ -45,6 +46,8 @@ export default function HatcheryTour() {
         title="Семейные туры на завод"
         description="Покормите рыб, исследуйте объекты, попробуйте премиальную икру. Образовательное приключение для всей семьи."
         primaryCta={{ text: 'Забронировать сейчас', href: '#booking' }}
+        backgroundImage={tourismImages[0].urlLarge}
+        backgroundOverlay="dark"
       />
 
       <section className="content-container py-20">
