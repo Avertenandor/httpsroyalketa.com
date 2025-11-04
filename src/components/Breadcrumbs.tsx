@@ -21,6 +21,8 @@ const routeLabels: Record<string, string> = {
   '/contacts': 'Контакты',
   '/partners': 'Партнеры',
   '/crabbing': 'Крабалка',
+  '/salmon-info': 'О лососевых',
+  '/sturgeon-info': 'О осетровых',
   '/legal': 'Правовая информация',
 };
 

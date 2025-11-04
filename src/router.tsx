@@ -15,6 +15,8 @@ import Contacts from './pages/Contacts';
 import About from './pages/About';
 import Partners from './pages/Partners';
 import Crabbing from './pages/Crabbing';
+import SalmonInfo from './pages/SalmonInfo';
+import SturgeonInfo from './pages/SturgeonInfo';
 import Legal from './pages/Legal';
 import NotFound from './pages/NotFound';
 
@@ -82,6 +84,14 @@ export const router = createBrowserRouter([
       {
         path: 'crabbing',
         element: <Crabbing />,
+      },
+      {
+        path: 'salmon-info',
+        element: <SalmonInfo />,
+      },
+      {
+        path: 'sturgeon-info',
+        element: <SturgeonInfo />,
       },
       {
         path: 'legal',

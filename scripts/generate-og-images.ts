@@ -27,6 +27,8 @@ const pages: OGImage[] = [
   { slug: 'contacts', title: 'Contact Us', subtitle: 'Visit Us on Sakhalin Island', icon: '📍' },
   { slug: 'partners', title: 'Logistics Partners', subtitle: 'Reliable Delivery Across Russia', icon: '🚚' },
   { slug: 'crabbing', title: 'Crabbing on Sakhalin', subtitle: 'King Crab Fishing & Tours', icon: '🦀' },
+  { slug: 'salmon-info', title: 'Salmon & Red Caviar', subtitle: 'Pacific Salmon Species Guide', icon: '🐟' },
+  { slug: 'sturgeon-info', title: 'Sturgeon & Black Caviar', subtitle: 'Premium Caviar Encyclopedia', icon: '🐠' },
   { slug: 'legal', title: 'Legal Information', subtitle: 'Terms, Privacy & Disclosures', icon: '⚖️' },
 ];
 

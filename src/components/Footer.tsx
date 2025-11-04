@@ -7,6 +7,8 @@ const footerLinks = {
     { name: 'Наука', href: '/science' },
     { name: 'Галерея', href: '/gallery' },
     { name: 'Блог', href: '/blog' },
+    { name: 'О лососевых', href: '/salmon-info' },
+    { name: 'О осетровых', href: '/sturgeon-info' },
   ],
   services: [
     { name: 'Экскурсия на завод', href: '/hatchery-tour' },
