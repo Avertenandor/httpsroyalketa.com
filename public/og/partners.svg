@@ -1,36 +1,4 @@
-import { writeFileSync, mkdirSync } from 'fs';
-import { resolve, dirname } from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-interface OGImage {
-  slug: string;
-  title: string;
-  subtitle: string;
-  icon: string;
-}
-
-const pages: OGImage[] = [
-  { slug: 'home', title: 'From Roe to Royal', subtitle: 'Premium Salmon Hatchery & Caviar', icon: '🏠' },
-  { slug: 'hatchery-tour', title: 'Hatchery Tours', subtitle: 'Family Experiences & Caviar Tasting', icon: '🎣' },
-  { slug: 'science', title: 'Our Science', subtitle: 'Advanced Aquaculture Methodology', icon: '🔬' },
-  { slug: 'caviar', title: 'Premium Caviar', subtitle: 'Excellence in Every Jar', icon: '🫙' },
-  { slug: 'investment', title: 'Investment Opportunities', subtitle: 'Models A/B/C/D Returns', icon: '📈' },
-  { slug: 'tokenization', title: 'Tokenization & Franchise', subtitle: 'Blockchain-Verified Returns', icon: '⛓️' },
-  { slug: 'pricing', title: 'Tour Pricing', subtitle: 'Family, Premium & Corporate Packages', icon: '💰' },
-  { slug: 'gallery', title: 'Photo Gallery', subtitle: 'Science, Family Tours & Caviar Production', icon: '📸' },
-  { slug: 'blog', title: 'News & Insights', subtitle: 'Updates from Royal Keta Hatchery', icon: '📰' },
-  { slug: 'faq', title: 'FAQ', subtitle: 'Frequently Asked Questions', icon: '❓' },
-  { slug: 'about', title: 'About Royal Keta', subtitle: 'Our Mission, Team & Values', icon: 'ℹ️' },
-  { slug: 'contacts', title: 'Contact Us', subtitle: 'Visit Us on Sakhalin Island', icon: '📍' },
-  { slug: 'partners', title: 'Logistics Partners', subtitle: 'Reliable Delivery Across Russia', icon: '🚚' },
-  { slug: 'legal', title: 'Legal Information', subtitle: 'Terms, Privacy & Disclosures', icon: '⚖️' },
-];
-
-function generateSVG(page: OGImage): string {
-  return `<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0B0F14;stop-opacity:1" />
@@ -66,7 +34,7 @@ function generateSVG(page: OGImage): string {
 
   <!-- Icon circle -->
   <circle cx="150" cy="200" r="70" fill="#CFAE58" opacity="0.2"/>
-  <text x="150" y="230" font-size="80" text-anchor="middle" fill="#CFAE58">${page.icon}</text>
+  <text x="150" y="230" font-size="80" text-anchor="middle" fill="#CFAE58">🚚</text>
 
   <!-- Logo (crown) -->
   <g transform="translate(100, 70)">
@@ -79,11 +47,11 @@ function generateSVG(page: OGImage): string {
 
   <!-- Title -->
   <text x="280" y="180" font-family="Georgia, serif" font-size="72" font-weight="bold"
-        fill="url(#goldGradient)" filter="url(#glow)">${page.title}</text>
+        fill="url(#goldGradient)" filter="url(#glow)">Logistics Partners</text>
 
   <!-- Subtitle -->
   <text x="280" y="230" font-family="Arial, sans-serif" font-size="36"
-        fill="#D6DEE6" opacity="0.9">${page.subtitle}</text>
+        fill="#D6DEE6" opacity="0.9">Reliable Delivery Across Russia</text>
 
   <!-- Brand name -->
   <text x="280" y="300" font-family="Georgia, serif" font-size="28" font-weight="bold"
@@ -103,24 +71,4 @@ function generateSVG(page: OGImage): string {
     <path d="M 80 0 L 110 -15 L 120 0 L 110 15 Z" fill="#CFAE58"/>
     <path d="M -20 -30 L 0 -40 L 20 -30 Z" fill="#CFAE58"/>
   </g>
-</svg>`;
-}
-
-// Generate all OG images
-const outputDir = resolve(__dirname, '../public/og');
-
-try {
-  mkdirSync(outputDir, { recursive: true });
-} catch (e) {
-  // Directory exists
-}
-
-pages.forEach((page) => {
-  const svg = generateSVG(page);
-  const outputPath = resolve(outputDir, `${page.slug}.svg`);
-  writeFileSync(outputPath, svg, 'utf-8');
-  console.log(`✅ Generated: ${page.slug}.svg`);
-});
-
-console.log(`\n🎨 Total OG images generated: ${pages.length}`);
-console.log('📝 Note: SVG files created. For production, convert to PNG (1200x630) using imagemagick or online tools.');
+</svg>

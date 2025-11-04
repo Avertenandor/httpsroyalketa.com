@@ -19,6 +19,7 @@ const routeLabels: Record<string, string> = {
   '/faq': 'FAQ',
   '/about': 'О нас',
   '/contacts': 'Контакты',
+  '/partners': 'Партнеры',
   '/legal': 'Правовая информация',
 };
 

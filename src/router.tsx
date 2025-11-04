@@ -13,6 +13,7 @@ import BlogPost from './pages/BlogPost';
 import FAQ from './pages/FAQ';
 import Contacts from './pages/Contacts';
 import About from './pages/About';
+import Partners from './pages/Partners';
 import Legal from './pages/Legal';
 import NotFound from './pages/NotFound';
 
@@ -72,6 +73,10 @@ export const router = createBrowserRouter([
       {
         path: 'about',
         element: <About />,
+      },
+      {
+        path: 'partners',
+        element: <Partners />,
       },
       {
         path: 'legal',

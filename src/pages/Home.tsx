@@ -3,6 +3,7 @@ import { Hero } from '@/components/Hero';
 import { Statistics } from '@/components/Statistics';
 import { Testimonials } from '@/components/Testimonials';
 import { InvestmentCalculator } from '@/components/InvestmentCalculator';
+import { Partners } from '@/components/Partners';
 import { ShareButtons } from '@/components/ShareButtons';
 import { ParticlesCanvas } from '@/components/ParticlesCanvas';
 import { organizationJsonLd } from '@/seo/ld/organization';
@@ -155,6 +156,9 @@ export default function Home() {
 
       {/* Testimonials */}
       <Testimonials />
+
+      {/* Partners Section */}
+      <Partners />
 
       {/* Share Section */}
       <section className="content-container py-12">

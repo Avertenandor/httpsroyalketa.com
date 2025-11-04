@@ -17,6 +17,7 @@ const footerLinks = {
   support: [
     { name: 'FAQ', href: '/faq' },
     { name: 'Контакты', href: '/contacts' },
+    { name: 'Партнеры', href: '/partners' },
     { name: 'Правовая информация', href: '/legal' },
   ],
 };

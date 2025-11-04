@@ -2,7 +2,9 @@ import { Seo } from '@/seo/Seo';
 import { Hero } from '@/components/Hero';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Award } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { Award, Truck } from 'lucide-react';
 
 export default function Caviar() {
   const products = [
@@ -59,6 +61,27 @@ export default function Caviar() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Delivery Section */}
+        <div className="premium-card p-8 mb-8 bg-gradient-to-br from-gold/5 to-ocean/5">
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="flex-shrink-0">
+              <Truck className="w-16 h-16 text-gold" />
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="text-2xl font-display font-bold text-gold mb-3">
+                Доставка по всей России
+              </h3>
+              <p className="text-foreground-muted mb-4">
+                Мы работаем с надежными транспортными компаниями для доставки нашей продукции
+                в любой регион России. Специализированная упаковка гарантирует сохранность икры при транспортировке.
+              </p>
+              <Button asChild variant="outline">
+                <Link to="/partners">Наши партнеры по логистике →</Link>
+              </Button>
+            </div>
+          </div>
         </div>
 
         <div className="premium-card p-8 text-center">
