@@ -23,7 +23,7 @@ export default function Legal() {
         title="Правовая Информация"
         description="Условия обслуживания, политика конфиденциальности и правовые раскрытия для хозяйства Роял Кета и инвестиционных услуг."
         path="/legal"
-        ogImage="/og/legal.svg"
+        ogImage="/og/legal.png"
       />
 
       <Hero

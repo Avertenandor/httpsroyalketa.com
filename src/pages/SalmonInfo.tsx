@@ -122,7 +122,7 @@ export default function SalmonInfo() {
         title="Лососевые рыбы и красная икра | Виды, польза, применение"
         description="Полное руководство по семейству лососевых: кета, горбуша, нерка, чавыча, кижуч. Виды красной икры, отличия, польза для детей и способы употребления."
         path="/salmon-info"
-        ogImage="/og/salmon-info.svg"
+        ogImage="/og/salmon-info.png"
       />
 
       <Breadcrumbs />

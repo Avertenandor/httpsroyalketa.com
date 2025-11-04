@@ -103,7 +103,7 @@ export default function FAQ() {
         title="FAQ"
         description="Часто задаваемые вопросы о турах по хозяйству Роял Кета, икорной продукции и инвестиционных возможностях. Получите ответы на все ваши вопросы."
         path="/faq"
-        ogImage="/og/faq.svg"
+        ogImage="/og/faq.png"
       />
 
       <Hero

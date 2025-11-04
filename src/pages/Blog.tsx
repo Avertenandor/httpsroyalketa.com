@@ -73,7 +73,7 @@ export default function Blog() {
         title="Блог"
         description="Последние новости, обновления и взгляды из хозяйства Роял Кета. Изучайте техники разведения, моменты туров и инвестиционные обновления."
         path="/blog"
-        ogImage="/og/blog.svg"
+        ogImage="/og/blog.png"
       />
 
       <Hero

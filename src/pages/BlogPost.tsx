@@ -36,7 +36,7 @@ export default function BlogPost() {
         title={post.title}
         description="Последние обновления сезона разведения от хозяйства Роял Кета"
         path={`/blog/${slug}`}
-        ogImage="/og/blog.svg"
+        ogImage="/og/blog.png"
         type="article"
       />
 

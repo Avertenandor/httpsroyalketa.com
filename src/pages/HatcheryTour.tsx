@@ -38,7 +38,7 @@ export default function HatcheryTour() {
         title="Экскурсия на завод"
         description="Познакомьтесь с разведением лосося вблизи. Семейные туры с дегустацией икры и подарочными баночками. Забронируйте визит на завод ROYAL KETA."
         path="/hatchery-tour"
-        ogImage="/og/hatchery-tour.svg"
+        ogImage="/og/hatchery-tour.png"
       />
 
       <Hero

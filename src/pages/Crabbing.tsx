@@ -31,7 +31,7 @@ export default function Crabbing() {
         title="Крабалка на Сахалине"
         description="Промысловые предприятия и туристические туры по ловле камчатского краба. Крабалка зимой и летом на Сахалине и Курилах."
         path="/crabbing"
-        ogImage="/og/crabbing.svg"
+        ogImage="/og/crabbing.png"
       />
 
       <Hero

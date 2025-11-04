@@ -32,7 +32,7 @@ export default function Caviar() {
         title="Премиальная Икра"
         description="Премиальная красная икра Роял Кета. Устойчивое производство, изысканный вкус. Доступна для оптовых заказов."
         path="/caviar"
-        ogImage="/og/caviar.svg"
+        ogImage="/og/caviar.png"
       />
 
       <Hero

@@ -70,7 +70,7 @@ export default function Pricing() {
         title="Тарифы"
         description="Пакеты туров и тарифы Роял Кета. Семейные, Премиум и Корпоративные варианты. Сравните возможности и забронируйте визит."
         path="/pricing"
-        ogImage="/og/pricing.svg"
+        ogImage="/og/pricing.png"
       />
 
       <Hero

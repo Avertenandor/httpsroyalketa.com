@@ -138,7 +138,7 @@ export default function SturgeonInfo() {
         title="Осетровые рыбы и черная икра | Виды, отличия, польза"
         description="Полное руководство по семейству осетровых: белуга, калуга, осетр, севрюга, стерлядь. Виды черной икры, сравнение с красной, польза для детей."
         path="/sturgeon-info"
-        ogImage="/og/sturgeon-info.svg"
+        ogImage="/og/sturgeon-info.png"
       />
 
       <Breadcrumbs />

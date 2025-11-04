@@ -39,7 +39,7 @@ export default function PartnersPage() {
         title="Партнеры"
         description="Наши партнеры: логистические компании для доставки по РФ и рыбопромышленные предприятия Сахалинской области. ROYAL KETA — часть рыбопромышленного сообщества региона."
         path="/partners"
-        ogImage="/og/partners.svg"
+        ogImage="/og/partners.png"
       />
 
       <Hero

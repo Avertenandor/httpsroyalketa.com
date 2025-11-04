@@ -33,7 +33,20 @@ const pages: OGImage[] = [
   { slug: 'legal', title: 'Legal Information', subtitle: 'Terms, Privacy & Disclosures', icon: '⚖️' },
 ];
 
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 function generateSVG(page: OGImage): string {
+  // Escape HTML entities in title and subtitle
+  const safeTitle = escapeHtml(page.title);
+  const safeSubtitle = escapeHtml(page.subtitle);
+
   // Generate caviar particles for background
   const particles = Array.from({ length: 30 }, (_, i) => {
     const x = Math.random() * 1200;
@@ -111,11 +124,11 @@ function generateSVG(page: OGImage): string {
 
   <!-- Title with shadow -->
   <text x="280" y="180" font-family="Georgia, serif" font-size="72" font-weight="bold"
-        fill="url(#goldGradient)" filter="url(#shadow)">${page.title}</text>
+        fill="url(#goldGradient)" filter="url(#shadow)">${safeTitle}</text>
 
   <!-- Subtitle with subtle glow -->
   <text x="280" y="230" font-family="Arial, sans-serif" font-size="36"
-        fill="#D6DEE6" opacity="0.95" filter="url(#softGlow)">${page.subtitle}</text>
+        fill="#D6DEE6" opacity="0.95" filter="url(#softGlow)">${safeSubtitle}</text>
 
   <!-- Brand name with letter spacing -->
   <text x="280" y="300" font-family="Georgia, serif" font-size="32" font-weight="bold"

@@ -8,7 +8,6 @@ interface GalleryImage {
   url: string;
   urlLarge: string;
   alt: string;
-  photographer?: string;
   description: string;
 }
 
@@ -18,8 +17,7 @@ const galleryImages: GalleryImage[] = caviarProductImages.map((img) => ({
   url: img.urlMedium,
   urlLarge: img.urlLarge,
   alt: img.alt,
-  photographer: img.photographer,
-  description: img.alt, // Use alt as description
+  description: img.alt,
 }));
 
 export function CaviarGallery() {
@@ -62,11 +60,6 @@ export function CaviarGallery() {
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="absolute bottom-0 left-0 right-0 p-4">
                 <p className="text-gold font-semibold">{image.description}</p>
-                {image.photographer && (
-                  <p className="text-xs text-foreground-muted mt-1">
-                    Фото: {image.photographer}
-                  </p>
-                )}
               </div>
             </div>
           </motion.div>
@@ -95,11 +88,6 @@ export function CaviarGallery() {
             />
             <div className="mt-4 text-center">
               <p className="text-gold text-xl font-semibold">{selectedImage.description}</p>
-              {selectedImage.photographer && (
-                <p className="text-foreground-muted mt-2">
-                  Фотограф: {selectedImage.photographer}
-                </p>
-              )}
             </div>
             <button
               onClick={() => setSelectedImage(null)}
@@ -110,25 +98,6 @@ export function CaviarGallery() {
           </motion.div>
         </motion.div>
       )}
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="mt-8 text-center text-sm text-foreground-muted"
-      >
-        <p>
-          Фотографии предоставлены бесплатно сервисом{' '}
-          <a
-            href="https://unsplash.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-ocean hover:text-gold transition-colors"
-          >
-            Unsplash
-          </a>
-        </p>
-      </motion.div>
     </section>
   );
 }

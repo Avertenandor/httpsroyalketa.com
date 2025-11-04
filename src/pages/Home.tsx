@@ -52,7 +52,7 @@ export default function Home() {
         title="От икринки к королевской"
         description="Премиальный рыбоводный завод и производство икры на острове Сахалин. Семейные туры, совершенство вкуса, инвестиции в будущее."
         path="/"
-        ogImage="/og/home.svg"
+        ogImage="/og/home.png"
         jsonLd={organizationJsonLd}
       />
 

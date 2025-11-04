@@ -45,7 +45,7 @@ export default function Tokenization() {
         title="Токенизация и Франчайзинг"
         description="Платформа токенизированных инвестиций Роял Кета и франчайзинговые возможности. Верифицируемые блокчейном доходы и масштабируемая бизнес-модель аквакультуры."
         path="/tokenization"
-        ogImage="/og/tokenization.svg"
+        ogImage="/og/tokenization.png"
       />
 
       <Hero

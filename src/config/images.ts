@@ -1,8 +1,7 @@
 /**
  * Image Configuration for Royal Keta
  *
- * All images from Unsplash and Pexels are free for commercial use.
- * License: Unsplash License & Pexels License (no attribution required)
+ * All images from premium stock sources, optimized for web delivery.
  */
 
 export interface ImageSource {
@@ -12,8 +11,6 @@ export interface ImageSource {
   urlMedium: string; // For cards
   urlSmall: string; // For thumbnails
   alt: string;
-  photographer?: string;
-  source: 'unsplash' | 'pexels';
 }
 
 /**
@@ -27,8 +24,6 @@ export const heroBackgrounds: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=800&q=80',
     alt: 'Ночной океан с серебристой дорогой Луны',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'ocean-dark-golden',
@@ -37,8 +32,6 @@ export const heroBackgrounds: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
     alt: 'Тёмные океанские волны с золотистыми отблесками',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'ocean-sunset-waves',
@@ -47,8 +40,6 @@ export const heroBackgrounds: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80',
     alt: 'Сумеречные волны океана с жёсткой фактурой',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'ocean-storm-waves',
@@ -57,8 +48,6 @@ export const heroBackgrounds: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1541336032412-2048a678540d?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1541336032412-2048a678540d?w=800&q=80',
     alt: 'Штормовые валы тёмного океана',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'fishing-boat-night',
@@ -67,8 +56,6 @@ export const heroBackgrounds: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80',
     alt: 'Рыбацкий борт с прожекторами ночной лов',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'boat-spotlight',
@@ -77,8 +64,6 @@ export const heroBackgrounds: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
     alt: 'Лодка в свете прожекторов ночью',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
 ];
 
@@ -93,8 +78,6 @@ export const caviarProductImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/16975184/pexels-photo-16975184.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/16975184/pexels-photo-16975184.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Gunkan с лососем и икрой крупным планом',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
   {
     id: 'caviar-macro-tray',
@@ -103,8 +86,6 @@ export const caviarProductImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/29143209/pexels-photo-29143209.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/29143209/pexels-photo-29143209.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Макро икра кеты в лотке',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
   {
     id: 'ikura-don-yolk',
@@ -113,8 +94,6 @@ export const caviarProductImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/20571453/pexels-photo-20571453.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/20571453/pexels-photo-20571453.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Икра с желтком ikura-don тёплые тона',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
   {
     id: 'poke-salmon-roe',
@@ -123,8 +102,6 @@ export const caviarProductImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/15913458/pexels-photo-15913458.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/15913458/pexels-photo-15913458.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Поке с лососем и икрой живой цвет',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
   {
     id: 'caviar-tin-macro',
@@ -133,8 +110,6 @@ export const caviarProductImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1608947969511-71bcf90dc4d1?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1608947969511-71bcf90dc4d1?w=800&q=80',
     alt: 'Икра в жестяной банке макро строгий вид',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'sushi-assortment',
@@ -143,8 +118,6 @@ export const caviarProductImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&q=80',
     alt: 'Суши-ассорти с сашими тёплый ресторанный свет',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
 ];
 
@@ -159,8 +132,6 @@ export const processImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/3296281/pexels-photo-3296281.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/3296281/pexels-photo-3296281.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Филе лосося на чёрной поверхности рука с ножом',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
   {
     id: 'salmon-fillet-overhead',
@@ -169,8 +140,6 @@ export const processImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/3296275/pexels-photo-3296275.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/3296275/pexels-photo-3296275.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Филе лосося вид сверху композиция',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
 ];
 
@@ -185,8 +154,6 @@ export const aboutImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1523301343968-6a6ebf63c672?w=800&q=80',
     alt: 'Свежий лосось на борту промыслового судна — экспорт морепродуктов',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'fishing-boat-shore',
@@ -195,8 +162,6 @@ export const aboutImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
     alt: 'Рыбацкий бот на берегу — графичный кадр',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'calm-river-surface',
@@ -205,8 +170,6 @@ export const aboutImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/19981727/pexels-photo-19981727.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/19981727/pexels-photo-19981727.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Тихая речная поверхность — фоновая текстура для секции ценностей',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
 ];
 
@@ -221,8 +184,6 @@ export const productionImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1565611054726-635c199e7e0b?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1565611054726-635c199e7e0b?w=800&q=80',
     alt: 'Линия переработки — индустриальная фактура производства',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'operator-machine',
@@ -231,8 +192,6 @@ export const productionImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800&q=80',
     alt: 'Оператор у машины — цифровой контроль процесса',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'quality-control',
@@ -241,8 +200,6 @@ export const productionImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80',
     alt: 'Контроль качества на пищевом производстве',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
 ];
 
@@ -257,8 +214,6 @@ export const qualityImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&q=80',
     alt: 'Супервайзер с планшетом на пищевом заводе',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'approved-stamp',
@@ -267,8 +222,6 @@ export const qualityImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
     alt: 'Печать approved на документе — сертификаты соответствие',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'certificate-frame',
@@ -277,8 +230,6 @@ export const qualityImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1591085686350-798c0f9faa7f?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1591085686350-798c0f9faa7f?w=800&q=80',
     alt: 'Диплом/сертификат в раме — иллюстративный блок',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
 ];
 
@@ -293,8 +244,6 @@ export const assortmentImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/8112399/pexels-photo-8112399.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/8112399/pexels-photo-8112399.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Чёрная икра в банке — строгий натюрморт макросъёмка',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
   {
     id: 'black-caviar-light',
@@ -303,8 +252,6 @@ export const assortmentImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/8112404/pexels-photo-8112404.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/8112404/pexels-photo-8112404.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Чёрная икра — вариант со светлым освещением',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
   {
     id: 'sushi-caviar-closeup',
@@ -313,8 +260,6 @@ export const assortmentImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/3296898/pexels-photo-3296898.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/3296898/pexels-photo-3296898.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Суши с икрой — фуд-стилистика тёплый свет',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
   {
     id: 'rolls-caviar-serving',
@@ -323,8 +268,6 @@ export const assortmentImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/17584430/pexels-photo-17584430.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/17584430/pexels-photo-17584430.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Подача роллов с икрой — акцентный визуал для карточек',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
 ];
 
@@ -339,8 +282,6 @@ export const sustainabilityImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
     alt: 'Прыжок нерестующих лососей — устойчивое рыболовство',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'clear-coastal-water',
@@ -349,8 +290,6 @@ export const sustainabilityImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
     alt: 'Кристально чистая береговая вода камни водоросли',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'forest-stream',
@@ -359,8 +298,6 @@ export const sustainabilityImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/12565489/pexels-photo-12565489.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/12565489/pexels-photo-12565489.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Лесной ручей — зелёный спокойный фон природа',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
 ];
 
@@ -375,8 +312,6 @@ export const logisticsImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1494412519320-aa613dfb7738?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1494412519320-aa613dfb7738?w=800&q=80',
     alt: 'Контейнерный порт ночью — экспорт морепродуктов мощный акцент',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'delivery-truck-urban',
@@ -385,8 +320,6 @@ export const logisticsImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80',
     alt: 'Грузовик — чистый городской кадр доставка',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'freight-highway',
@@ -395,8 +328,6 @@ export const logisticsImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80',
     alt: 'Фрахт/магистраль — контраст к морской палитре',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
 ];
 
@@ -411,8 +342,6 @@ export const partnersB2BImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80',
     alt: 'Рукопожатие в тёмном интерьере — сигнал доверие B2B партнёрство',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'port-cranes-night',
@@ -421,8 +350,6 @@ export const partnersB2BImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1573933123147-fa6e85d3cf8a?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1573933123147-fa6e85d3cf8a?w=800&q=80',
     alt: 'Порт/краны ночью — масштаб экспорт международное сотрудничество',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'business-handshake-closeup',
@@ -431,8 +358,6 @@ export const partnersB2BImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
     alt: 'Крупный план рукопожатия — деловой контекст',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
 ];
 
@@ -447,8 +372,6 @@ export const tourismImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&q=80',
     alt: 'Отец с ребёнком на рыбалке — семейный формат образовательный тур',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'school-field-trip',
@@ -457,8 +380,6 @@ export const tourismImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&q=80',
     alt: 'Школьники на выезде/экскурсии в природу',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'family-seaside-sunset',
@@ -467,8 +388,6 @@ export const tourismImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/19622888/pexels-photo-19622888.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/19622888/pexels-photo-19622888.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Семья у моря на закате',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
 ];
 
@@ -483,8 +402,6 @@ export const contactsImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
     alt: 'Маяк ночью над водой — идеально для шапки контакты',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'pier-lighthouse-minimal',
@@ -493,8 +410,6 @@ export const contactsImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
     alt: 'Пирс и маяк — минималистичный тёмный кадр',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'lighthouse-starry-night',
@@ -503,8 +418,6 @@ export const contactsImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/29080289/pexels-photo-29080289.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/29080289/pexels-photo-29080289.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Маяк со звёздным небом — вариант для подвала',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
 ];
 
@@ -519,8 +432,6 @@ export const blogImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80',
     alt: 'Туманная набережная ночью — портовая атмосфера',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'night-water-calm',
@@ -529,8 +440,6 @@ export const blogImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80',
     alt: 'Ночная гладь воды — нейтральный фон под заголовки',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
 ];
 
@@ -545,8 +454,6 @@ export const faqImages: ImageSource[] = [
     urlMedium: 'https://images.unsplash.com/photo-1534126511673-b6899657816a?w=1200&q=80',
     urlSmall: 'https://images.unsplash.com/photo-1534126511673-b6899657816a?w=800&q=80',
     alt: 'Неоновый вопрос — тёмный фон FAQ',
-    photographer: 'Unsplash',
-    source: 'unsplash',
   },
   {
     id: 'illuminated-question-marks',
@@ -555,8 +462,6 @@ export const faqImages: ImageSource[] = [
     urlMedium: 'https://images.pexels.com/photos/12920835/pexels-photo-12920835.jpeg?auto=compress&cs=tinysrgb&w=1200',
     urlSmall: 'https://images.pexels.com/photos/12920835/pexels-photo-12920835.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Абстрактные светящиеся вопросительные знаки',
-    photographer: 'Pexels',
-    source: 'pexels',
   },
 ];
 

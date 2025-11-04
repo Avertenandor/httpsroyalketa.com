@@ -10,7 +10,7 @@ export default function About() {
         title="О Нас"
         description="Роял Кета: пионеры устойчивого разведения лосося на острове Сахалин. Наша миссия, команда и партнёры."
         path="/about"
-        ogImage="/og/about.svg"
+        ogImage="/og/about.png"
       />
 
       <Hero

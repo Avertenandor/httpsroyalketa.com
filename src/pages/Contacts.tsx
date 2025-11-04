@@ -12,7 +12,7 @@ export default function Contacts() {
         title="Контакты"
         description="Свяжитесь с Роял Кета. Посетите нас в Невельском районе Сахалина. Email, телефон, Telegram, WhatsApp."
         path="/contacts"
-        ogImage="/og/contacts.svg"
+        ogImage="/og/contacts.png"
       />
 
       <Hero

@@ -51,7 +51,7 @@ export default function Gallery() {
         title="Галерея"
         description="Фотогалерея хозяйства Роял Кета: процесс разведения, семейные туры и производство премиальной икры."
         path="/gallery"
-        ogImage="/og/gallery.svg"
+        ogImage="/og/gallery.png"
       />
 
       <Hero

@@ -11,7 +11,7 @@ export default function Science() {
         title="Наша Наука"
         description="Передовая методология аквакультуры: от отбора икры до выпуска смолтов. Изучите наши практики устойчивого разведения лосося."
         path="/science"
-        ogImage="/og/science.svg"
+        ogImage="/og/science.png"
       />
 
       <Hero

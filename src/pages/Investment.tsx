@@ -38,7 +38,7 @@ export default function Investment() {
         title="Инвестиционные Возможности"
         description="Прозрачные токенизированные инвестиции в устойчивую аквакультуру. Четыре модели от дивидендов икрой до полного спектра доходов."
         path="/investment"
-        ogImage="/og/investment.svg"
+        ogImage="/og/investment.png"
       />
 
       <Hero
