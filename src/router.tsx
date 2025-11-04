@@ -19,6 +19,12 @@ import SalmonInfo from './pages/SalmonInfo';
 import SturgeonInfo from './pages/SturgeonInfo';
 import Legal from './pages/Legal';
 import NotFound from './pages/NotFound';
+import PinkSalmon from './pages/species/PinkSalmon';
+import ChumSalmon from './pages/species/ChumSalmon';
+import SockeyeSalmon from './pages/species/SockeyeSalmon';
+import KingSalmon from './pages/species/KingSalmon';
+import CohoSalmon from './pages/species/CohoSalmon';
+import CherrySalmon from './pages/species/CherrySalmon';
 
 export const router = createBrowserRouter([
   {
@@ -88,6 +94,30 @@ export const router = createBrowserRouter([
       {
         path: 'salmon-info',
         element: <SalmonInfo />,
+      },
+      {
+        path: 'species/pink-salmon',
+        element: <PinkSalmon />,
+      },
+      {
+        path: 'species/keta',
+        element: <ChumSalmon />,
+      },
+      {
+        path: 'species/nerka',
+        element: <SockeyeSalmon />,
+      },
+      {
+        path: 'species/chavycha',
+        element: <KingSalmon />,
+      },
+      {
+        path: 'species/kizhuch',
+        element: <CohoSalmon />,
+      },
+      {
+        path: 'species/sima',
+        element: <CherrySalmon />,
       },
       {
         path: 'sturgeon-info',

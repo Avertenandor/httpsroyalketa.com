@@ -466,6 +466,126 @@ export const faqImages: ImageSource[] = [
 ];
 
 /**
+ * Salmon Species Images - Individual Fish Species
+ */
+export const salmonSpeciesImages: Record<string, ImageSource[]> = {
+  // Кета (Chum Salmon)
+  keta: [
+    {
+      id: 'chum-salmon-underwater',
+      url: 'https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=1920&q=80',
+      urlLarge: 'https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=1920&q=80',
+      urlMedium: 'https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=1200&q=80',
+      urlSmall: 'https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=800&q=80',
+      alt: 'Кета в естественной среде обитания',
+    },
+    {
+      id: 'chum-salmon-spawning',
+      url: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=1920&q=80',
+      urlLarge: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=1920&q=80',
+      urlMedium: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=1200&q=80',
+      urlSmall: 'https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=800&q=80',
+      alt: 'Кета в период нереста',
+    },
+  ],
+  // Горбуша (Pink Salmon)
+  gorbuscha: [
+    {
+      id: 'pink-salmon-swimming',
+      url: 'https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=1920&q=80',
+      urlLarge: 'https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=1920&q=80',
+      urlMedium: 'https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=1200&q=80',
+      urlSmall: 'https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=800&q=80',
+      alt: 'Горбуша плывущая в реке',
+    },
+    {
+      id: 'pink-salmon-market',
+      url: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=1920&q=80',
+      urlLarge: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=1920&q=80',
+      urlMedium: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=1200&q=80',
+      urlSmall: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=80',
+      alt: 'Свежая горбуша на рынке',
+    },
+  ],
+  // Нерка (Sockeye Salmon)
+  nerka: [
+    {
+      id: 'sockeye-salmon-red',
+      url: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80',
+      urlLarge: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80',
+      urlMedium: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80',
+      urlSmall: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80',
+      alt: 'Нерка с характерной красной окраской',
+    },
+    {
+      id: 'sockeye-salmon-river',
+      url: 'https://images.unsplash.com/photo-1534043464124-3be32fe000c9?w=1920&q=80',
+      urlLarge: 'https://images.unsplash.com/photo-1534043464124-3be32fe000c9?w=1920&q=80',
+      urlMedium: 'https://images.unsplash.com/photo-1534043464124-3be32fe000c9?w=1200&q=80',
+      urlSmall: 'https://images.unsplash.com/photo-1534043464124-3be32fe000c9?w=800&q=80',
+      alt: 'Нерка в горной реке',
+    },
+  ],
+  // Чавыча (King Salmon)
+  chavycha: [
+    {
+      id: 'king-salmon-large',
+      url: 'https://images.unsplash.com/photo-1498654077810-12c21d4d6dc3?w=1920&q=80',
+      urlLarge: 'https://images.unsplash.com/photo-1498654077810-12c21d4d6dc3?w=1920&q=80',
+      urlMedium: 'https://images.unsplash.com/photo-1498654077810-12c21d4d6dc3?w=1200&q=80',
+      urlSmall: 'https://images.unsplash.com/photo-1498654077810-12c21d4d6dc3?w=800&q=80',
+      alt: 'Крупная чавыча - король лососей',
+    },
+    {
+      id: 'king-salmon-fillet',
+      url: 'https://images.unsplash.com/photo-1580459781994-ce6d1798f47b?w=1920&q=80',
+      urlLarge: 'https://images.unsplash.com/photo-1580459781994-ce6d1798f47b?w=1920&q=80',
+      urlMedium: 'https://images.unsplash.com/photo-1580459781994-ce6d1798f47b?w=1200&q=80',
+      urlSmall: 'https://images.unsplash.com/photo-1580459781994-ce6d1798f47b?w=800&q=80',
+      alt: 'Премиальное филе чавычи',
+    },
+  ],
+  // Кижуч (Coho Salmon)
+  kizhuch: [
+    {
+      id: 'coho-salmon-silver',
+      url: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1920&q=80',
+      urlLarge: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1920&q=80',
+      urlMedium: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200&q=80',
+      urlSmall: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80',
+      alt: 'Кижуч с серебристой чешуей',
+    },
+    {
+      id: 'coho-salmon-swimming',
+      url: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1920&q=80',
+      urlLarge: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1920&q=80',
+      urlMedium: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1200&q=80',
+      urlSmall: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=800&q=80',
+      alt: 'Кижуч в океанских водах',
+    },
+  ],
+  // Сима (Cherry Salmon)
+  sima: [
+    {
+      id: 'cherry-salmon-asia',
+      url: 'https://images.unsplash.com/photo-1524704797642-f273da85b9b3?w=1920&q=80',
+      urlLarge: 'https://images.unsplash.com/photo-1524704797642-f273da85b9b3?w=1920&q=80',
+      urlMedium: 'https://images.unsplash.com/photo-1524704797642-f273da85b9b3?w=1200&q=80',
+      urlSmall: 'https://images.unsplash.com/photo-1524704797642-f273da85b9b3?w=800&q=80',
+      alt: 'Сима - редкий азиатский вид',
+    },
+    {
+      id: 'cherry-salmon-river',
+      url: 'https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=1920&q=80',
+      urlLarge: 'https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=1920&q=80',
+      urlMedium: 'https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=1200&q=80',
+      urlSmall: 'https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=800&q=80',
+      alt: 'Сима в чистой горной реке',
+    },
+  ],
+};
+
+/**
  * Get random hero background
  */
 export function getRandomHeroBackground(): ImageSource {

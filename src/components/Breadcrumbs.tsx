@@ -24,6 +24,13 @@ const routeLabels: Record<string, string> = {
   '/salmon-info': 'О лососевых',
   '/sturgeon-info': 'О осетровых',
   '/legal': 'Правовая информация',
+  '/species': 'Виды',
+  '/species/keta': 'Кета',
+  '/species/pink-salmon': 'Горбуша',
+  '/species/nerka': 'Нерка',
+  '/species/chavycha': 'Чавыча',
+  '/species/kizhuch': 'Кижуч',
+  '/species/sima': 'Сима',
 };
 
 export function Breadcrumbs() {

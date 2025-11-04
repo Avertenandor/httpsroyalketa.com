@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Fish, Heart, Baby, Brain, Shield } from 'lucide-react';
-import { aboutImages, caviarProductImages } from '@/config/images';
+import { Fish, Heart, Baby, Brain, Shield, ArrowRight } from 'lucide-react';
+import { aboutImages, caviarProductImages, salmonSpeciesImages } from '@/config/images';
 
 export default function SalmonInfo() {
   const salmonSpecies = [
@@ -18,6 +18,8 @@ export default function SalmonInfo() {
       taste: 'Нежный сливочный вкус, лопается на языке',
       popularity: 'Самая популярная и ценная',
       icon: '👑',
+      slug: 'keta',
+      image: salmonSpeciesImages.keta[0],
     },
     {
       name: 'Горбуша (Pink Salmon)',
@@ -27,6 +29,8 @@ export default function SalmonInfo() {
       taste: 'Легкий, нежный вкус, мягкая оболочка',
       popularity: 'Самая доступная по цене',
       icon: '🐟',
+      slug: 'pink-salmon',
+      image: salmonSpeciesImages.gorbuscha[0],
     },
     {
       name: 'Нерка (Sockeye Salmon)',
@@ -36,6 +40,8 @@ export default function SalmonInfo() {
       taste: 'Насыщенный, пикантный вкус',
       popularity: 'Редкая, премиум сегмент',
       icon: '💎',
+      slug: 'nerka',
+      image: salmonSpeciesImages.nerka[0],
     },
     {
       name: 'Чавыча (King Salmon)',
@@ -45,6 +51,8 @@ export default function SalmonInfo() {
       taste: 'Интенсивный, маслянистый',
       popularity: 'Самая редкая и дорогая',
       icon: '👑💎',
+      slug: 'chavycha',
+      image: salmonSpeciesImages.chavycha[0],
     },
     {
       name: 'Кижуч (Coho Salmon)',
@@ -54,6 +62,8 @@ export default function SalmonInfo() {
       taste: 'Деликатный, с легкой горчинкой',
       popularity: 'Средний премиум сегмент',
       icon: '🌟',
+      slug: 'kizhuch',
+      image: salmonSpeciesImages.kizhuch[0],
     },
     {
       name: 'Сима (Cherry Salmon)',
@@ -63,6 +73,8 @@ export default function SalmonInfo() {
       taste: 'Нежный, сладковатый',
       popularity: 'Редкая, азиатский вид',
       icon: '🌸',
+      slug: 'sima',
+      image: salmonSpeciesImages.sima[0],
     },
   ];
 
@@ -191,30 +203,53 @@ export default function SalmonInfo() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="premium-card p-6 hover:shadow-glow-gold transition-all duration-300"
+              className="premium-card overflow-hidden group cursor-pointer hover:shadow-glow-gold transition-all duration-300"
             >
-              <div className="text-4xl mb-3">{species.icon}</div>
-              <h3 className="text-xl font-display font-bold text-gold mb-2">
-                {species.name}
-              </h3>
-              <p className="text-sm italic text-foreground-muted mb-4">{species.latinName}</p>
+              {/* Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={species.image.urlMedium}
+                  alt={species.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+                <div className="absolute bottom-4 left-4 text-5xl">{species.icon}</div>
+              </div>
 
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between border-b border-border/30 pb-2">
-                  <span className="text-foreground-muted">Размер икры:</span>
-                  <span className="text-foreground font-semibold">{species.caviarSize}</span>
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-display font-bold text-gold mb-2 group-hover:text-gold-light transition-colors">
+                  {species.name}
+                </h3>
+                <p className="text-sm italic text-foreground-muted mb-4">{species.latinName}</p>
+
+                <div className="space-y-2 text-sm mb-6">
+                  <div className="flex justify-between border-b border-border/30 pb-2">
+                    <span className="text-foreground-muted">Размер икры:</span>
+                    <span className="text-foreground font-semibold">{species.caviarSize}</span>
+                  </div>
+                  <div className="flex justify-between border-b border-border/30 pb-2">
+                    <span className="text-foreground-muted">Цвет:</span>
+                    <span className="text-foreground font-semibold">{species.caviarColor}</span>
+                  </div>
+                  <div className="pt-2">
+                    <span className="text-foreground-muted block mb-1">Вкус:</span>
+                    <p className="text-foreground text-sm">{species.taste}</p>
+                  </div>
+                  <div className="pt-2">
+                    <Badge variant="outline" className="text-xs">{species.popularity}</Badge>
+                  </div>
                 </div>
-                <div className="flex justify-between border-b border-border/30 pb-2">
-                  <span className="text-foreground-muted">Цвет:</span>
-                  <span className="text-foreground font-semibold">{species.caviarColor}</span>
-                </div>
-                <div className="pt-2">
-                  <span className="text-foreground-muted block mb-1">Вкус:</span>
-                  <p className="text-foreground text-sm">{species.taste}</p>
-                </div>
-                <div className="pt-2">
-                  <Badge variant="outline" className="text-xs">{species.popularity}</Badge>
-                </div>
+
+                {/* Link button */}
+                <Link
+                  to={`/species/${species.slug}`}
+                  className="flex items-center justify-between w-full px-4 py-2 rounded-lg bg-gold/10 hover:bg-gold/20 transition-colors text-gold group/link"
+                >
+                  <span className="text-sm font-semibold">Подробнее о виде</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
+                </Link>
               </div>
             </motion.div>
           ))}
