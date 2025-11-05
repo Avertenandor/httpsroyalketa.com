@@ -15,7 +15,7 @@ interface NavGroup {
   items: NavItem[];
 }
 
-const navigation: (NavItem | NavGroup)[] = [
+        const navigation: (NavItem | NavGroup)[] = [
   { name: 'Главная', href: '/' },
   {
     name: 'Продукция',
@@ -25,7 +25,6 @@ const navigation: (NavItem | NavGroup)[] = [
       { name: 'О осетровых', href: '/sturgeon-info' },
     ],
   },
-  { name: 'Туры на завод', href: '/hatchery-tour' },
           { name: 'Сахалин', href: '/sakhalin' },
           { name: 'Туризм', href: '/tourism' },
   {
@@ -35,13 +34,14 @@ const navigation: (NavItem | NavGroup)[] = [
       { name: 'Наука', href: '/science' },
       { name: 'Галерея', href: '/gallery' },
       { name: 'Блог', href: '/blog' },
+              { name: 'Туры на завод', href: '/hatchery-tour' },
+              { name: 'Меркурий (эВСД)', href: '/mercury' },
     ],
   },
-  { name: 'Инвестиции', href: '/investment' },
+          { name: 'Инвестиции', href: '/investment' },
   { name: 'Доставка', href: '/delivery' },
   { name: 'Цены', href: '/pricing' },
   { name: 'FAQ', href: '/faq' },
-  { name: 'Меркурий (эВСД)', href: '/mercury' },
   { name: 'Контакты', href: '/contacts' },
 ];
 

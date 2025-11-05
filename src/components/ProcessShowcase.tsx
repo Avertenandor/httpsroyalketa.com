@@ -66,15 +66,7 @@ export function ProcessShowcase() {
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
 
-            {/* Text overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6">
-              <p className="text-base sm:text-lg font-semibold text-gold mb-1 sm:mb-2">
-                {index === 0 ? 'Профессиональная подготовка' : 'Мастерство в каждом движении'}
-              </p>
-              <p className="text-xs sm:text-sm text-foreground-muted leading-relaxed">
-                {image.alt}
-              </p>
-            </div>
+            {/* Без текстовой подписи поверх фото по требованию дизайна */}
           </motion.div>
         ))}
       </div>
