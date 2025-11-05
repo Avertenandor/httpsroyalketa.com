@@ -26,6 +26,7 @@ import SockeyeSalmon from './pages/species/SockeyeSalmon';
 import KingSalmon from './pages/species/KingSalmon';
 import CohoSalmon from './pages/species/CohoSalmon';
 import CherrySalmon from './pages/species/CherrySalmon';
+import FishSpeciesPage from './components/FishSpeciesPage';
 
 export const router = createBrowserRouter([
   {
@@ -119,6 +120,44 @@ export const router = createBrowserRouter([
       {
         path: 'species/sima',
         element: <CherrySalmon />,
+      },
+      // Additional salmon species using universal component
+      {
+        path: 'species/semga',
+        element: <FishSpeciesPage speciesId="semga" />,
+      },
+      // Sturgeon species pages
+      {
+        path: 'species/beluga',
+        element: <FishSpeciesPage speciesId="beluga" />,
+      },
+      {
+        path: 'species/kaluga',
+        element: <FishSpeciesPage speciesId="kaluga" />,
+      },
+      {
+        path: 'species/russian-sturgeon',
+        element: <FishSpeciesPage speciesId="russian-sturgeon" />,
+      },
+      {
+        path: 'species/siberian-sturgeon',
+        element: <FishSpeciesPage speciesId="siberian-sturgeon" />,
+      },
+      {
+        path: 'species/sevruga',
+        element: <FishSpeciesPage speciesId="sevruga" />,
+      },
+      {
+        path: 'species/sterlet',
+        element: <FishSpeciesPage speciesId="sterlet" />,
+      },
+      {
+        path: 'species/amur-sturgeon',
+        element: <FishSpeciesPage speciesId="amur-sturgeon" />,
+      },
+      {
+        path: 'species/sakhalin-sturgeon',
+        element: <FishSpeciesPage speciesId="sakhalin-sturgeon" />,
       },
       {
         path: 'sturgeon-info',

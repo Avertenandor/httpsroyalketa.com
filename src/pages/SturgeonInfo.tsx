@@ -5,72 +5,12 @@ import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Award, Crown, Baby, Brain, Shield, Droplets } from 'lucide-react';
+import { Award, Crown, Baby, Brain, Shield, Droplets, Fish, MapPin, Clock, TrendingUp } from 'lucide-react';
 import { assortmentImages } from '@/config/images';
+import { sturgeonSpecies } from '@/config/fishSpecies';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 
 export default function SturgeonInfo() {
-  const sturgeonSpecies = [
-    {
-      name: 'Белуга (Beluga)',
-      latinName: 'Huso huso',
-      caviarSize: 'Крупнейшая (3.0-3.5 мм)',
-      caviarColor: 'Серо-черная, перламутровая',
-      taste: 'Маслянистый, ореховый, сливочный',
-      popularity: 'Самая дорогая в мире',
-      icon: '👑💎',
-      rarity: 'Критически редкая',
-    },
-    {
-      name: 'Калуга (Kaluga)',
-      latinName: 'Huso dauricus',
-      caviarSize: 'Крупная (2.8-3.2 мм)',
-      caviarColor: 'Темно-серая, почти черная',
-      taste: 'Близка к белужьей, маслянистая',
-      popularity: 'Дальневосточная альтернатива белуге',
-      icon: '👑',
-      rarity: 'Редкая',
-    },
-    {
-      name: 'Русский осетр (Russian Sturgeon)',
-      latinName: 'Acipenser gueldenstaedtii',
-      caviarSize: 'Средняя (2.5-3.0 мм)',
-      caviarColor: 'Черно-коричневая',
-      taste: 'Насыщенный, йодистый, морской',
-      popularity: 'Классическая черная икра',
-      icon: '💎',
-      rarity: 'Редкая',
-    },
-    {
-      name: 'Сибирский осетр (Siberian Sturgeon)',
-      latinName: 'Acipenser baerii',
-      caviarSize: 'Средняя (2.5-2.8 мм)',
-      caviarColor: 'Черно-коричневая',
-      taste: 'Деликатный, ореховый',
-      popularity: 'Популярна в аквакультуре',
-      icon: '🌟',
-      rarity: 'Доступная',
-    },
-    {
-      name: 'Севрюга (Sevruga)',
-      latinName: 'Acipenser stellatus',
-      caviarSize: 'Мелкая (2.0-2.5 мм)',
-      caviarColor: 'Черная, глянцевая',
-      taste: 'Упругая, интенсивный вкус',
-      popularity: 'Традиционная каспийская',
-      icon: '⚫',
-      rarity: 'Редкая',
-    },
-    {
-      name: 'Стерлядь (Sterlet)',
-      latinName: 'Acipenser ruthenus',
-      caviarSize: 'Мелкая (1.5-2.0 мм)',
-      caviarColor: 'Темно-серая',
-      taste: 'Нежный, деликатный',
-      popularity: 'Царская рыба',
-      icon: '👑',
-      rarity: 'Редкая',
-    },
-  ];
 
   const healthBenefits = [
     {
@@ -200,50 +140,73 @@ export default function SturgeonInfo() {
         >
           <Badge variant="gold" className="mb-4">Виды и их икра</Badge>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
-            Шесть основных видов осетровых
+            Все виды осетровых рыб
           </h2>
           <p className="text-foreground-muted max-w-2xl mx-auto">
-            От белуги — самой дорогой икры в мире — до доступной икры сибирского осетра
+            От белуги — самой дорогой икры в мире — до доступной икры сибирского осетра. Нажмите на карточку для подробностей.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sturgeonSpecies.map((species, index) => (
             <motion.div
-              key={species.name}
+              key={species.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="premium-card p-6 hover:shadow-glow-gold transition-all duration-300"
             >
-              <div className="text-4xl mb-3">{species.icon}</div>
-              <h3 className="text-xl font-display font-bold text-gold mb-2">
-                {species.name}
-              </h3>
-              <p className="text-sm italic text-foreground-muted mb-4">{species.latinName}</p>
-
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between border-b border-border/30 pb-2">
-                  <span className="text-foreground-muted">Размер икры:</span>
-                  <span className="text-foreground font-semibold">{species.caviarSize}</span>
-                </div>
-                <div className="flex justify-between border-b border-border/30 pb-2">
-                  <span className="text-foreground-muted">Цвет:</span>
-                  <span className="text-foreground font-semibold">{species.caviarColor}</span>
-                </div>
-                <div className="flex justify-between border-b border-border/30 pb-2">
-                  <span className="text-foreground-muted">Редкость:</span>
-                  <Badge variant="outline" className="text-xs">{species.rarity}</Badge>
-                </div>
-                <div className="pt-2">
-                  <span className="text-foreground-muted block mb-1">Вкус:</span>
-                  <p className="text-foreground text-sm">{species.taste}</p>
-                </div>
-                <div className="pt-2 text-xs text-foreground-muted italic">
-                  {species.popularity}
-                </div>
-              </div>
+              <Link to={species.route}>
+                <Card className="premium-card h-full hover:shadow-glow-gold transition-all duration-300 cursor-pointer group">
+                  <div className="relative overflow-hidden rounded-t-lg">
+                    <img
+                      src={species.image}
+                      alt={species.commonName}
+                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 right-4">
+                      <Badge
+                        variant={species.status === 'common' ? 'ocean' : species.status === 'rare' ? 'gold' : 'destructive'}
+                        className="text-xs"
+                      >
+                        {species.status === 'common' ? 'Обычный' : species.status === 'rare' ? 'Редкий' : 'Под угрозой'}
+                      </Badge>
+                    </div>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-xl font-display text-gold mb-2 group-hover:text-gold-light transition-colors">
+                      {species.commonName}
+                    </CardTitle>
+                    <p className="text-sm italic text-foreground-muted mb-2">{species.scientificName}</p>
+                    <CardDescription className="text-sm">{species.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <div className="flex items-start gap-2 text-sm">
+                      <MapPin className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
+                      <span className="text-foreground-muted line-clamp-2">{species.habitat}</span>
+                    </div>
+                    <div className="flex items-center gap-4 text-xs text-foreground-muted">
+                      <div className="flex items-center gap-1">
+                        <Fish className="w-3 h-3 text-gold" />
+                        <span>{species.maxSize}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <TrendingUp className="w-3 h-3 text-gold" />
+                        <span>{species.maxWeight}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-3 h-3 text-gold" />
+                        <span>{species.lifespan}</span>
+                      </div>
+                    </div>
+                    <div className="pt-2 border-t border-border/30">
+                      <Button variant="ghost" size="sm" className="w-full group-hover:text-gold">
+                      Узнать больше →
+                    </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             </motion.div>
           ))}
         </div>

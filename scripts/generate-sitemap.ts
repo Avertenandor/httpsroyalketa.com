@@ -28,6 +28,23 @@ const routes = [
   { path: '/sturgeon-info', priority: '0.7', changefreq: 'monthly' },
   { path: '/mercury/', priority: '0.8', changefreq: 'monthly' },
   { path: '/legal', priority: '0.5', changefreq: 'yearly' },
+  // Salmon species
+  { path: '/species/keta', priority: '0.6', changefreq: 'monthly' },
+  { path: '/species/pink-salmon', priority: '0.6', changefreq: 'monthly' },
+  { path: '/species/nerka', priority: '0.6', changefreq: 'monthly' },
+  { path: '/species/chavycha', priority: '0.6', changefreq: 'monthly' },
+  { path: '/species/kizhuch', priority: '0.6', changefreq: 'monthly' },
+  { path: '/species/sima', priority: '0.6', changefreq: 'monthly' },
+  { path: '/species/semga', priority: '0.6', changefreq: 'monthly' },
+  // Sturgeon species
+  { path: '/species/beluga', priority: '0.6', changefreq: 'monthly' },
+  { path: '/species/kaluga', priority: '0.6', changefreq: 'monthly' },
+  { path: '/species/russian-sturgeon', priority: '0.6', changefreq: 'monthly' },
+  { path: '/species/siberian-sturgeon', priority: '0.6', changefreq: 'monthly' },
+  { path: '/species/sevruga', priority: '0.6', changefreq: 'monthly' },
+  { path: '/species/sterlet', priority: '0.6', changefreq: 'monthly' },
+  { path: '/species/amur-sturgeon', priority: '0.6', changefreq: 'monthly' },
+  { path: '/species/sakhalin-sturgeon', priority: '0.6', changefreq: 'monthly' },
 ];
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
