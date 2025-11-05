@@ -6,7 +6,6 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Award, Crown, Baby, Brain, Shield, Droplets, Fish, MapPin, Clock, TrendingUp } from 'lucide-react';
-import { assortmentImages } from '@/config/images';
 import { sturgeonSpecies } from '@/config/fishSpecies';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 
@@ -78,7 +77,7 @@ export default function SturgeonInfo() {
         title="Осетровые рыбы и черная икра | Виды, отличия, польза"
         description="Полное руководство по семейству осетровых: белуга, калуга, осетр, севрюга, стерлядь. Виды черной икры, сравнение с красной, польза для детей."
         path="/sturgeon-info"
-        ogImage="/og/sturgeon-info.png"
+        ogImage="/og/sturgeon.jpg"
       />
 
       <Breadcrumbs />
@@ -87,7 +86,7 @@ export default function SturgeonInfo() {
         subtitle="Энциклопедия"
         title="Осетровые рыбы и черная икра"
         description="Всё о древнейшем семействе рыб планеты, видах черной икры и их непревзойденной пищевой ценности"
-        backgroundImage={assortmentImages[0].urlLarge}
+        backgroundImage="/img/species/sturgeon/hero-sturgeon.webp"
         backgroundOverlay="dark"
       />
 
@@ -103,12 +102,13 @@ export default function SturgeonInfo() {
           <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-6">
             Осетровые — живые ископаемые
           </h2>
-          <div className="glass-card p-8 space-y-4 text-foreground-muted leading-relaxed">
-            <p>
-              <strong className="text-gold">Семейство Осетровые (Acipenseridae)</strong> — одно из древнейших
-              семейств рыб на Земле. Осетры появились более <strong>200 миллионов лет назад</strong> и пережили
-              динозавров. Сегодня это одни из самых ценных и охраняемых рыб планеты.
-            </p>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="glass-card p-8 space-y-4 text-foreground-muted leading-relaxed">
+              <p>
+                <strong className="text-gold">Семейство Осетровые (Acipenseridae)</strong> — одно из древнейших
+                семейств рыб на Земле. Осетры появились более <strong>200 миллионов лет назад</strong> и пережили
+                динозавров. Сегодня это одни из самых ценных и охраняемых рыб планеты.
+              </p>
             <p>
               Осетровые обитают в бассейнах Каспийского, Черного, Азовского морей, а также в реках Сибири
               и Дальнего Востока. Это <strong>анадромные рыбы</strong>: живут в море, нерестятся в реках.
@@ -120,11 +120,21 @@ export default function SturgeonInfo() {
               под угрозой исчезновения, поэтому промысел строго ограничен. Сегодня качественная черная икра
               производится на <strong className="text-ocean">аквакультурных фермах</strong>.
             </p>
-            <div className="bg-gold/10 border-l-4 border-gold p-4 rounded">
-              <p className="text-sm">
-                <strong className="text-gold">⚠️ Важно:</strong> Промысел диких осетровых в России запрещён
-                с 2007 года. Вся легальная черная икра производится на лицензированных рыбоводных предприятиях.
-              </p>
+              <div className="bg-gold/10 border-l-4 border-gold p-4 rounded">
+                <p className="text-sm">
+                  <strong className="text-gold">⚠️ Важно:</strong> Промысел диких осетровых в России запрещён
+                  с 2007 года. Вся легальная черная икра производится на лицензированных рыбоводных предприятиях.
+                </p>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden">
+              <img
+                src="/img/species/sturgeon/sturgeon-bottom.webp"
+                alt="Осётр у гравийного дна"
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
         </motion.div>
@@ -163,6 +173,8 @@ export default function SturgeonInfo() {
                       src={species.image}
                       alt={species.commonName}
                       className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute top-4 right-4">
                       <Badge
@@ -324,6 +336,23 @@ export default function SturgeonInfo() {
           ))}
         </div>
 
+        {/* Caviar scoop image */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative rounded-2xl overflow-hidden mb-12"
+        >
+          <img
+            src="/img/species/sturgeon/scoop-caviar.webp"
+            alt="Забор икры ложкой из банки"
+            className="w-full h-80 object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -442,10 +471,11 @@ export default function SturgeonInfo() {
           className="relative rounded-2xl overflow-hidden aspect-[21/9] max-h-[500px]"
         >
           <img
-            src={assortmentImages[1].urlLarge}
+            src="/img/species/sturgeon/caviar-jar.jpg"
             alt="Черная икра премиум качества"
             className="w-full h-full object-cover"
             loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">

@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Fish, MapPin, Clock, Shield, TrendingUp, Sparkles } from 'lucide-react';
 import { salmonSpecies } from '@/config/fishSpecies';
-import { aboutImages } from '@/config/images';
 
 export default function SalmonInfo() {
   return (
@@ -17,14 +16,14 @@ export default function SalmonInfo() {
         title="Лососевые рыбы и красная икра | Виды, польза, применение"
         description="Полное руководство по семейству лососевых: кета, горбуша, нерка, чавыча, кижуч, сима, сёмга. Виды красной икры, отличия, польза для детей и способы употребления."
         path="/salmon-info"
-        ogImage="/og/salmon-info.png"
+        ogImage="/og/salmon.jpg"
       />
       <Breadcrumbs />
       <Hero
         subtitle="Энциклопедия"
         title="Лососевые рыбы и красная икра"
         description="Всё о семействе тихоокеанских лососей, видах красной икры, их отличиях и пользе для здоровья"
-        backgroundImage={aboutImages[0].urlLarge}
+        backgroundImage="/img/species/salmon/hero-salmon.webp"
         backgroundOverlay="dark"
       />
 
@@ -95,6 +94,8 @@ export default function SalmonInfo() {
                       src={species.image}
                       alt={species.commonName}
                       className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute top-4 right-4">
                       <Badge
@@ -164,11 +165,13 @@ export default function SalmonInfo() {
               title: 'Нерест',
               description: 'Взрослые особи возвращаются в пресноводные реки для нереста. Самки откладывают икру в гнёзда (redds), которые они создают в гравийном дне.',
               icon: '🐟',
+              image: '/img/species/salmon/icon-salmon.webp',
             },
             {
               title: 'Икра',
               description: 'Икринки развиваются в течение 2-5 месяцев. В этот период критически важны температура воды и уровень кислорода.',
               icon: '🥚',
+              image: '/img/species/salmon/icon-ikura.jpg',
             },
             {
               title: 'Мальки',
@@ -184,6 +187,7 @@ export default function SalmonInfo() {
               title: 'Взрослые особи',
               description: 'В океане лососи активно питаются и растут. Через 2-7 лет они возвращаются в родные реки для нереста.',
               icon: '🐟',
+              image: '/img/species/salmon/icon-salmon.webp',
             },
             {
               title: 'Возвращение',
@@ -200,7 +204,17 @@ export default function SalmonInfo() {
             >
               <Card className="h-full">
                 <CardHeader>
-                  <div className="text-4xl mb-4">{item.icon}</div>
+                  {item.image ? (
+                    <img 
+                      src={item.image} 
+                      alt={item.title} 
+                      className="w-10 h-10 rounded-md object-cover mb-4"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ) : (
+                    <div className="text-4xl mb-4">{item.icon}</div>
+                  )}
                   <CardTitle>{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -249,37 +263,46 @@ export default function SalmonInfo() {
                 </li>
               </ul>
             </div>
-            <div>
-              <Badge variant="ocean" className="mb-4">Экологическая ответственность</Badge>
-              <h3 className="text-2xl font-display font-bold text-gold mb-4">
-                Сохранение природы
-              </h3>
-              <p className="text-foreground-muted mb-4">
-                Мы понимаем важность сохранения природных популяций лосося. Наша деятельность направлена
-                на поддержание баланса экосистемы и обеспечение устойчивого будущего для этого
-                удивительного вида.
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <Sparkles className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">Устойчивое разведение</p>
-                    <p className="text-sm text-foreground-muted">
-                      Мы не истощаем природные ресурсы, выращивая рыбу в контролируемых условиях
-                    </p>
-                  </div>
+              <div className="relative">
+                <div className="relative rounded-2xl overflow-hidden mb-6">
+                  <img
+                    src="/img/species/salmon/ikura-don-1.jpg"
+                    alt="Икра лосося в чаше с яйцом (ikura don)"
+                    className="w-full h-64 object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
-                <div className="flex items-start gap-3">
-                  <Sparkles className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">Защита экосистемы</p>
-                    <p className="text-sm text-foreground-muted">
-                      Наш подход минимизирует воздействие на природные популяции лососей
-                    </p>
+                <Badge variant="ocean" className="mb-4">Экологическая ответственность</Badge>
+                <h3 className="text-2xl font-display font-bold text-gold mb-4">
+                  Сохранение природы
+                </h3>
+                <p className="text-foreground-muted mb-4">
+                  Мы понимаем важность сохранения природных популяций лосося. Наша деятельность направлена
+                  на поддержание баланса экосистемы и обеспечение устойчивого будущего для этого
+                  удивительного вида.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <Sparkles className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Устойчивое разведение</p>
+                      <p className="text-sm text-foreground-muted">
+                        Мы не истощаем природные ресурсы, выращивая рыбу в контролируемых условиях
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Sparkles className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-foreground">Защита экосистемы</p>
+                      <p className="text-sm text-foreground-muted">
+                        Наш подход минимизирует воздействие на природные популяции лососей
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </motion.div>
       </section>

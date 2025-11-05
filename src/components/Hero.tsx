@@ -44,10 +44,13 @@ export function Hero({
               src={backgroundImage}
               alt="Hero background"
               className="w-full h-full object-cover object-center"
+              style={{ objectPosition: '50% 45%' }}
               loading="eager"
+              decoding="async"
             />
           </motion.div>
-          {/* Overlay */}
+          {/* Overlay with gradient mask */}
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, #0b0f1acc, transparent 40%)' }} />
           <div className={`absolute inset-0 ${overlayClasses[backgroundOverlay]}`} />
         </>
       )}
