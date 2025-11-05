@@ -80,8 +80,19 @@ export default function Investment() {
         </div>
       </section>
 
-      {/* Investment Calculator */}
-      <InvestmentCalculator />
+      {/* Investment Calculator Section */}
+      <section className="content-container py-20 bg-gradient-to-b from-background/50 to-background">
+        <div className="text-center mb-12">
+          <Badge variant="gold" className="mb-4">Калькулятор Инвестиций</Badge>
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
+            Рассчитайте Свой Доход
+          </h2>
+          <p className="text-foreground-muted max-w-2xl mx-auto">
+            Узнайте, сколько икры и дохода вы получите при различных моделях инвестирования
+          </p>
+        </div>
+        <InvestmentCalculator />
+      </section>
 
       <section className="content-container py-20">
         <div id="contact" className="premium-card p-8 text-center">
