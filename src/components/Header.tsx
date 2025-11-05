@@ -41,6 +41,7 @@ interface NavGroup {
           { name: 'Инвестиции', href: '/investment' },
   { name: 'Доставка', href: '/delivery' },
   { name: 'Цены', href: '/pricing' },
+          { name: 'Договоры', href: '/agreements' },
   { name: 'FAQ', href: '/faq' },
   { name: 'Контакты', href: '/contacts' },
 ];

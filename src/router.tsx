@@ -12,6 +12,7 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Tourism from './pages/Tourism';
 import Sakhalin from './pages/Sakhalin';
+import Agreements from './pages/Agreements';
 import FAQ from './pages/FAQ';
 import Contacts from './pages/Contacts';
 import About from './pages/About';
@@ -63,6 +64,10 @@ export const router = createBrowserRouter([
       {
         path: 'pricing',
         element: <Pricing />,
+      },
+      {
+        path: 'agreements',
+        element: <Agreements />,
       },
       {
         path: 'gallery',
