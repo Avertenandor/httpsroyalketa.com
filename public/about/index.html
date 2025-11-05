@@ -50,8 +50,8 @@
       }
     })();
   </script>
-  <!-- Vite will inject the correct script tags during build -->
-  <script type="module" crossorigin src="/assets/index.js"></script>
+  <!-- Static HTML for SEO bots only - actual app loads via SPA routing -->
+  <!-- These files are NOT copied to dist - they're for pre-rendering bots only -->
 </head>
 <body>
   <div id="root"></div>

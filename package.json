@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate:all && npm run generate:static && tsc -b && vite build",
+    "build": "npm run generate:all && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "check:types": "tsc --noEmit",
