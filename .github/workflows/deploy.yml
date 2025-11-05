@@ -35,6 +35,23 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Remove static HTML files from dist
+        run: |
+          # Remove static HTML files that were copied from public/ - they conflict with SPA routing
+          # These files are for SEO bots only and shouldn't be in production build
+          find dist -type d -name "hatchery-tour" -o -name "science" -o -name "caviar" -o -name "investment" \
+            -o -name "tokenization" -o -name "pricing" -o -name "gallery" -o -name "blog" \
+            -o -name "faq" -o -name "about" -o -name "contacts" -o -name "partners" \
+            -o -name "crabbing" -o -name "salmon-info" -o -name "sturgeon-info" \
+            -o -name "legal" -o -name "mercury" | while read dir; do
+            if [ -f "$dir/index.html" ]; then
+              rm -f "$dir/index.html"
+              # Remove empty directory
+              rmdir "$dir" 2>/dev/null || true
+            fi
+          done
+          echo "✅ Static HTML files removed from dist/"
+
       - name: Ensure GitHub Pages files
         run: |
           echo "royalketa.com" > dist/CNAME
