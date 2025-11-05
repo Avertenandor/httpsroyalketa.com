@@ -11,14 +11,11 @@
     var search = window.location.search;
     var hash = window.location.hash;
     
-    // Redirect to index.html with the original path
-    window.location.replace(
-      window.location.origin + 
-      '/index.html' + 
-      path + 
-      search + 
-      hash
-    );
+    // Store the path in sessionStorage for React Router
+    sessionStorage.setItem('redirect', path + search + hash);
+    
+    // Redirect to index.html - React Router will handle the path
+    window.location.replace(window.location.origin + '/index.html');
   </script>
 </head>
 <body>

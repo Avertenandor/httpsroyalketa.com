@@ -55,25 +55,24 @@ jobs:
           # Copy 404.html for SPA routing support
           cp public/404.html dist/404.html || echo "404.html not found in public, will be created"
           if [ ! -f dist/404.html ]; then
-            cat > dist/404.html << 'EOF'
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Royal Keta</title>
-  <script>
-    var path = window.location.pathname;
-    var search = window.location.search;
-    var hash = window.location.hash;
-    window.location.replace(window.location.origin + '/index.html' + path + search + hash);
-  </script>
-</head>
-<body>
-  <p>Redirecting...</p>
-</body>
-</html>
-EOF
+            echo '<!DOCTYPE html>' > dist/404.html
+            echo '<html lang="en">' >> dist/404.html
+            echo '<head>' >> dist/404.html
+            echo '  <meta charset="UTF-8">' >> dist/404.html
+            echo '  <meta name="viewport" content="width=device-width, initial-scale=1.0">' >> dist/404.html
+            echo '  <title>Royal Keta</title>' >> dist/404.html
+            echo '  <script>' >> dist/404.html
+            echo '    var path = window.location.pathname;' >> dist/404.html
+            echo '    var search = window.location.search;' >> dist/404.html
+            echo '    var hash = window.location.hash;' >> dist/404.html
+            echo '    sessionStorage.setItem("redirect", path + search + hash);' >> dist/404.html
+            echo '    window.location.replace(window.location.origin + "/index.html");' >> dist/404.html
+            echo '  </script>' >> dist/404.html
+            echo '</head>' >> dist/404.html
+            echo '<body>' >> dist/404.html
+            echo '  <p>Redirecting...</p>' >> dist/404.html
+            echo '</body>' >> dist/404.html
+            echo '</html>' >> dist/404.html
           fi
           echo "✅ CNAME, .nojekyll, and 404.html explicitly created in dist/"
           ls -la dist/ | grep -E "(CNAME|nojekyll|index.html|404.html)"
