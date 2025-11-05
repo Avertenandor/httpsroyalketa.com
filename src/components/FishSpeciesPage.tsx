@@ -45,7 +45,6 @@ export default function FishSpeciesPage({ speciesId: propSpeciesId }: FishSpecie
   // Get hero image from SPECIES if available
   const speciesData = SPECIES[species.id as SpeciesId];
   const heroImage = speciesData?.hero || species.imageLarge;
-  const heroAlt = speciesData?.altHero || `${species.commonName} (${species.scientificName})`;
 
   return (
     <>
