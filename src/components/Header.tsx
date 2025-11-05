@@ -143,18 +143,18 @@ export function Header() {
         aria-label="Основная навигация"
       >
         {/* Logo */}
-        <Link
-          to="/"
-          className="flex items-center gap-2 text-lg md:text-xl font-display font-bold text-gold hover:text-gold-light transition-colors flex-shrink-0"
-          aria-label="ROYAL KETA - Главная"
-        >
+                <Link
+                  to="/"
+                  className="flex items-center gap-2 text-lg md:text-xl font-display font-bold text-gold hover:text-gold-light transition-colors flex-shrink-0 whitespace-nowrap mr-3 sm:mr-4 lg:mr-6"
+                  aria-label="ROYAL KETA - Главная"
+                >
           <span className="text-xl md:text-2xl">👑</span>
           <span className="gradient-gold hidden sm:inline">ROYAL KETA</span>
           <span className="gradient-gold sm:hidden">RK</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-3 xl:gap-4 2xl:gap-6">
+                <div className="hidden lg:flex items-center gap-4 xl:gap-5 2xl:gap-6">
           {navigation.map((item) =>
             isNavGroup(item) ? (
               <div
