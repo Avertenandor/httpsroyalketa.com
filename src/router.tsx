@@ -19,6 +19,7 @@ import SalmonInfo from './pages/SalmonInfo';
 import SturgeonInfo from './pages/SturgeonInfo';
 import Legal from './pages/Legal';
 import Mercury from './pages/Mercury';
+import Delivery from './pages/Delivery';
 import NotFound from './pages/NotFound';
 import PinkSalmon from './pages/species/PinkSalmon';
 import ChumSalmon from './pages/species/ChumSalmon';
@@ -170,6 +171,10 @@ export const router = createBrowserRouter([
       {
         path: 'mercury',
         element: <Mercury />,
+      },
+      {
+        path: 'delivery',
+        element: <Delivery />,
       },
       {
         path: '*',
