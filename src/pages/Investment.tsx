@@ -1,5 +1,6 @@
 import { Seo } from '@/seo/Seo';
 import { Hero } from '@/components/Hero';
+import { InvestmentCalculator } from '@/components/InvestmentCalculator';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -77,7 +78,12 @@ export default function Investment() {
             </Card>
           ))}
         </div>
+      </section>
 
+      {/* Investment Calculator */}
+      <InvestmentCalculator />
+
+      <section className="content-container py-20">
         <div id="contact" className="premium-card p-8 text-center">
           <h3 className="text-2xl font-display font-bold text-gold mb-4">
             Готовы Инвестировать?
