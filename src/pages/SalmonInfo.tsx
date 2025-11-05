@@ -171,7 +171,7 @@ export default function SalmonInfo() {
               title: 'Икра',
               description: 'Икринки развиваются в течение 2-5 месяцев. В этот период критически важны температура воды и уровень кислорода.',
               icon: '🥚',
-              image: '/img/species/salmon/icon-ikura.jpg',
+              image: '/img/species/salmon/icon-ikura.webp',
             },
             {
               title: 'Мальки',
