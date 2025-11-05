@@ -13,7 +13,6 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-  const testimonials: Testimonial[] = [
     {
       name: 'Александр Петров',
       role: 'CEO',
