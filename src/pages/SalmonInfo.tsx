@@ -98,6 +98,8 @@ export default function SalmonInfo() {
                         species.id === 'nerka' ? 'Нерка (Oncorhynchus nerka), самец и самка (брачная окраска)' :
                         species.id === 'kizhuch' ? 'Кижуч (Oncorhynchus kisutch), нерестовая окраска' :
                         species.id === 'chavycha' ? 'Чавыча (Oncorhynchus tshawytscha) прыжок на перекате' :
+                        species.id === 'sima' ? 'Сима (Oncorhynchus masou)' :
+                        species.id === 'semga' ? 'Сёмга (Salmo salar), атлантический лосось' :
                         `${species.commonName} (${species.scientificName})`
                       }
                       className="w-full h-48 object-cover object-[50%_45%] group-hover:scale-110 transition-transform duration-300 rounded-xl"
