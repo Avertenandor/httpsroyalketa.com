@@ -24,6 +24,8 @@ const targets = [
   { url: 'https://unsplash.com/photos/yNI8fxTUUrs/download?force=true', out: 'public/img/caviar/black/card-2.webp', fmt: 'webp' },
   { url: 'https://unsplash.com/photos/mwFc2qcty_E/download?force=true', out: 'public/img/caviar/black/card-3.webp', fmt: 'webp' },
   { url: 'https://unsplash.com/photos/BT6AXIbfIYo/download?force=true', out: 'public/img/caviar/black/premium-1.webp', fmt: 'webp' },
+  // SCIENCE specific
+  { url: 'https://images.pexels.com/photos/1615180/pexels-photo-1615180.jpeg?cs=srgb&fm=jpg', out: 'public/img/science/smolt-release.webp', fmt: 'webp' },
 ];
 
 async function downloadToBuffer(url) {

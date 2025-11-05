@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import {
   processImages,
   productionImages,
-  sustainabilityImages,
+  // sustainabilityImages,
   qualityImages,
 } from '@/config/images';
 import { Beaker, Microscope, Cpu, Activity, Droplets, ShieldCheck, BookOpen, FlaskRound, Sparkles, Radar } from 'lucide-react';
@@ -116,7 +116,7 @@ export default function Science() {
             { stage: 'Отбор икры', desc: 'Премиальный генетический материал и санитарные протоколы', img: productionImages[0].urlMedium },
             { stage: 'Инкубация', desc: 'Температурные кривые, кислород и бережный стресс‑контроль', img: processImages[0].urlMedium },
             { stage: 'Выращивание', desc: 'Питание, вода, поведенческий мониторинг и биобезопасность', img: processImages[1].urlMedium },
-            { stage: 'Выпуск смолтов', desc: 'Здоровые смолты уходят в естественную среду', img: sustainabilityImages[0].urlMedium },
+            { stage: 'Выпуск смолтов', desc: 'Здоровые смолты уходят в естественную среду', img: '/img/science/smolt-release.webp' },
           ].map((item, idx) => (
             <Card key={idx}>
               <CardHeader>

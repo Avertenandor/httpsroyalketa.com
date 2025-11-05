@@ -4,7 +4,7 @@ import { Hero } from '@/components/Hero';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { productionImages, processImages, sustainabilityImages, caviarProductImages } from '@/config/images';
+import { productionImages, processImages, sustainabilityImages } from '@/config/images';
 
 type Category = 'all' | 'science' | 'family' | 'caviar';
 
