@@ -46,8 +46,15 @@ try {
     Write-Host "Ошибка загрузки BLACK: $_" -ForegroundColor Red
 }
 
-Write-Host "`nИзображения загружены. Переименовываем во временные файлы..."
+Write-Host ""
+Write-Host "Изображения загружены. Переименовываем во временные файлы..."
 Write-Host "Для конвертации в WebP используйте ImageMagick или другой инструмент."
-Write-Host "`nВременные файлы:"
-Get-ChildItem "$red/*-temp.*", "$blk/*-temp.*" | ForEach-Object { Write-Host "  $_" }
+Write-Host ""
+Write-Host "Временные файлы:"
+$tempFiles = @(Get-ChildItem -Path "$red\*-temp.*" -ErrorAction SilentlyContinue) + @(Get-ChildItem -Path "$blk\*-temp.*" -ErrorAction SilentlyContinue)
+if ($tempFiles.Count -gt 0) {
+    $tempFiles | ForEach-Object { Write-Host "  $_" }
+} else {
+    Write-Host "  (временные файлы не найдены)"
+}
 

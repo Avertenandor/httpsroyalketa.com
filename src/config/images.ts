@@ -4,6 +4,9 @@
  * All images from premium stock sources, optimized for web delivery.
  */
 
+// NOTE: Для изображений икры используйте манифест из @/data/caviar.images.ts
+// Этот файл содержит только общие изображения (hero backgrounds, process, etc.)
+
 export interface ImageSource {
   id: string;
   url: string;

@@ -43,8 +43,7 @@ export function Hero({
             <img
               src={backgroundImage}
               alt="Hero background"
-              className="w-full h-full object-cover object-center"
-              style={{ objectPosition: '50% 45%' }}
+              className="w-full h-full object-cover object-[50%_45%]"
               loading="eager"
               decoding="async"
             />
