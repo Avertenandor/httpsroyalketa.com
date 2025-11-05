@@ -26,6 +26,8 @@ const navigation: (NavItem | NavGroup)[] = [
     ],
   },
   { name: 'Туры на завод', href: '/hatchery-tour' },
+          { name: 'Сахалин', href: '/sakhalin' },
+          { name: 'Туризм', href: '/tourism' },
   {
     name: 'Компания',
     items: [
