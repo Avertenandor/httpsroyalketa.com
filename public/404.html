@@ -5,28 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Royal Keta</title>
   <script>
-    // GitHub Pages SPA redirect hack
-    // This script takes the current URL path and redirects to index.html
-    // with the path stored in the query string for React Router to handle
-    (function() {
-      var redirect = sessionStorage.redirect;
-      delete sessionStorage.redirect;
-      if (redirect && redirect !== location.href) {
-        history.replaceState(null, null, redirect);
-      }
-    })();
-
-    // Store current path and redirect to index.html
-    sessionStorage.redirect = location.href;
-    location.replace(
-      location.pathname.split('/').slice(0, -1).join('/') +
-      '/?/' +
-      location.pathname.slice(1) +
-      location.search
+    // GitHub Pages SPA redirect - redirects all 404s to index.html
+    // This allows React Router to handle the routing
+    var path = window.location.pathname;
+    var search = window.location.search;
+    var hash = window.location.hash;
+    
+    // Redirect to index.html with the original path
+    window.location.replace(
+      window.location.origin + 
+      '/index.html' + 
+      path + 
+      search + 
+      hash
     );
   </script>
 </head>
 <body>
   <!-- GitHub Pages SPA Redirect -->
+  <p>Redirecting...</p>
 </body>
 </html>

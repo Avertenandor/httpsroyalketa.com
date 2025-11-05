@@ -12,6 +12,7 @@ const routes = [
   { path: '/', priority: '1.0', changefreq: 'daily' },
   { path: '/hatchery-tour', priority: '0.9', changefreq: 'weekly' },
   { path: '/science', priority: '0.8', changefreq: 'monthly' },
+  { path: '/salmon-info', priority: '0.8', changefreq: 'monthly' },
   { path: '/caviar', priority: '0.8', changefreq: 'weekly' },
   { path: '/investment', priority: '0.9', changefreq: 'weekly' },
   { path: '/tokenization', priority: '0.8', changefreq: 'monthly' },
