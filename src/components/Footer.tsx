@@ -31,9 +31,9 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="glass-card border-t border-white/10 mt-20">
-      <div className="content-container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+    <footer className="glass-card border-t border-white/10 mt-12 sm:mt-16 md:mt-20">
+      <div className="content-container py-8 sm:py-10 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link
@@ -43,11 +43,11 @@ export function Footer() {
               <span className="text-2xl">👑</span>
               <span className="gradient-gold">ROYAL KETA</span>
             </Link>
-            <p className="text-foreground-muted mb-4 prose-content">
+            <p className="text-sm sm:text-base text-foreground-muted mb-4 sm:mb-6 prose-content leading-relaxed">
               Премиальный рыбоводный завод и производство икры на острове Сахалин.
               Почувствуйте науку, попробуйте совершенство.
             </p>
-            <div className="space-y-2 text-sm text-foreground-muted">
+            <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-foreground-muted">
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-gold" />
                 <span>Невельский район, Сахалин</span>
@@ -69,13 +69,13 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-display font-semibold text-gold mb-4">Компания</h3>
-            <ul className="space-y-2">
+            <h3 className="font-display font-semibold text-gold mb-3 sm:mb-4 text-sm sm:text-base">Компания</h3>
+            <ul className="space-y-1.5 sm:space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-sm text-foreground-muted hover:text-gold transition-colors"
+                    className="text-xs sm:text-sm text-foreground-muted hover:text-gold transition-colors"
                   >
                     {link.name}
                   </Link>

@@ -30,7 +30,7 @@ export function Hero({
   };
 
   return (
-    <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       {backgroundImage && (
         <>
@@ -145,7 +145,7 @@ export function Hero({
           )}
 
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 gradient-gold text-shadow-gold"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold mb-4 sm:mb-6 px-4 sm:px-0 gradient-gold text-shadow-gold leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -155,7 +155,7 @@ export function Hero({
 
           {description && (
             <motion.p
-              className="text-lg md:text-xl text-foreground-muted max-w-3xl mx-auto mb-8"
+              className="text-base sm:text-lg md:text-xl text-foreground-muted max-w-3xl mx-auto mb-6 sm:mb-8 px-4 sm:px-6 md:px-0 leading-relaxed"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -166,18 +166,18 @@ export function Hero({
 
           {(primaryCta || secondaryCta) && (
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-4 sm:px-0 w-full sm:w-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
               {primaryCta && (
-                <Button asChild variant="premium" size="lg">
+                <Button asChild variant="premium" size="lg" className="w-full sm:w-auto">
                   <Link to={primaryCta.href}>{primaryCta.text}</Link>
                 </Button>
               )}
               {secondaryCta && (
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
                   <Link to={secondaryCta.href}>{secondaryCta.text}</Link>
                 </Button>
               )}

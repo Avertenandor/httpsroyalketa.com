@@ -24,23 +24,23 @@ export function CaviarGallery() {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
   return (
-    <section className="content-container py-20">
+    <section className="content-container py-12 sm:py-16 md:py-20 lg:py-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="text-center mb-8 sm:mb-10 md:mb-12"
       >
-        <Badge variant="gold" className="mb-4">Фотогалерея</Badge>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
+        <Badge variant="gold" className="mb-3 sm:mb-4">Фотогалерея</Badge>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gold mb-3 sm:mb-4 px-4 sm:px-0">
           Красота нашей икры
         </h2>
-        <p className="text-foreground-muted max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base text-foreground-muted max-w-2xl mx-auto px-4 sm:px-6 md:px-0 leading-relaxed">
           Каждая икринка — произведение природы и нашего мастерства
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
         {galleryImages.map((image, index) => (
           <motion.div
             key={image.id}

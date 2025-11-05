@@ -80,33 +80,33 @@ export default function Investment() {
         </div>
       </section>
 
-      {/* Investment Calculator Section */}
-      <section className="content-container py-20 bg-gradient-to-b from-background/50 to-background">
-        <div className="text-center mb-12">
-          <Badge variant="gold" className="mb-4">Калькулятор Инвестиций</Badge>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
-            Рассчитайте Свой Доход
-          </h2>
-          <p className="text-foreground-muted max-w-2xl mx-auto">
-            Узнайте, сколько икры и дохода вы получите при различных моделях инвестирования
-          </p>
-        </div>
+              {/* Investment Calculator Section */}
+              <section className="content-container py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-background/50 to-background">
+                <div className="text-center mb-8 sm:mb-10 md:mb-12 px-4 sm:px-0">
+                  <Badge variant="gold" className="mb-3 sm:mb-4">Калькулятор Инвестиций</Badge>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gold mb-3 sm:mb-4 leading-tight">
+                    Рассчитайте Свой Доход
+                  </h2>
+                  <p className="text-sm sm:text-base text-foreground-muted max-w-2xl mx-auto leading-relaxed">
+                    Узнайте, сколько икры и дохода вы получите при различных моделях инвестирования
+                  </p>
+                </div>
         <InvestmentCalculator />
       </section>
 
-      <section className="content-container py-20">
-        <div id="contact" className="premium-card p-8 text-center">
-          <h3 className="text-2xl font-display font-bold text-gold mb-4">
-            Готовы Инвестировать?
-          </h3>
-          <p className="text-foreground-muted mb-6">
-            Запросите подробную информацию об инвестиционных моделях и условиях
-          </p>
-          <Button asChild variant="premium" size="lg">
-            <a href="mailto:invest@royalketa.com">Связаться с Инвестиционной Командой</a>
-          </Button>
-        </div>
-      </section>
+              <section className="content-container py-12 sm:py-16 md:py-20 lg:py-24">
+                <div id="contact" className="premium-card p-6 sm:p-8 text-center">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-gold mb-3 sm:mb-4 px-4 sm:px-0">
+                    Готовы Инвестировать?
+                  </h3>
+                  <p className="text-sm sm:text-base text-foreground-muted mb-4 sm:mb-6 px-4 sm:px-0 leading-relaxed">
+                    Запросите подробную информацию об инвестиционных моделях и условиях
+                  </p>
+                  <Button asChild variant="premium" size="lg" className="w-full sm:w-auto">
+                    <a href="mailto:invest@royalketa.com">Связаться с Инвестиционной Командой</a>
+                  </Button>
+                </div>
+              </section>
     </>
   );
 }

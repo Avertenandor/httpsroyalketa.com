@@ -138,7 +138,7 @@ export function Header() {
         Перейти к основному содержанию
       </a>
       <nav
-        className="content-container flex items-center justify-between py-3 md:py-4"
+        className="content-container flex items-center justify-between py-2.5 sm:py-3 md:py-4"
         aria-label="Основная навигация"
       >
         {/* Logo */}
@@ -153,7 +153,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+        <div className="hidden lg:flex items-center gap-3 xl:gap-4 2xl:gap-6">
           {navigation.map((item) =>
             isNavGroup(item) ? (
               <div
@@ -164,7 +164,7 @@ export function Header() {
               >
                 <button
                   className={cn(
-                    'flex items-center gap-1 text-sm font-medium transition-all duration-200',
+                    'flex items-center gap-1 text-xs xl:text-sm font-medium transition-all duration-200',
                     'hover:text-gold text-foreground-muted relative group',
                     openDropdown === item.name && 'text-gold'
                   )}
@@ -246,7 +246,7 @@ export function Header() {
                 key={item.href}
                 to={item.href}
                 className={cn(
-                  'text-sm font-medium transition-all duration-200 relative group',
+                  'text-xs xl:text-sm font-medium transition-all duration-200 relative group',
                   'hover:text-gold',
                   location.pathname === item.href
                     ? 'text-gold'
