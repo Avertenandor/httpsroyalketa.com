@@ -12,60 +12,7 @@ interface Testimonial {
   avatar?: string;
 }
 
-export function Testimonials() {
-  return (
-    <section className="content-container py-12 sm:py-16 md:py-20 lg:py-24">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-8 sm:mb-10 md:mb-12"
-      >
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold gradient-gold mb-3 sm:mb-4 px-4 sm:px-0">
-          Отзывы наших клиентов
-        </h2>
-        <p className="text-sm sm:text-base text-foreground-muted max-w-2xl mx-auto px-4 sm:px-6 md:px-0 leading-relaxed">
-          Узнайте, что говорят о нас инвесторы, семьи и партнеры
-        </p>
-      </motion.div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        {testimonials.map((testimonial, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <Card className="h-full card-tilt">
-              <CardContent className="p-6">
-                <Quote className="w-8 h-8 text-gold/50 mb-4" />
-                <p className="text-sm sm:text-base text-foreground mb-4 leading-relaxed">
-                  {testimonial.content}
-                </p>
-                <div className="flex items-center gap-2 mb-2">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-gold text-lg">★</span>
-                  ))}
-                </div>
-                <div>
-                  <p className="font-semibold text-gold text-sm sm:text-base">{testimonial.name}</p>
-                  <p className="text-xs sm:text-sm text-foreground-muted">
-                    {testimonial.role}
-                    {testimonial.company && ` • ${testimonial.company}`}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function TestimonialsContent() {
+const testimonials: Testimonial[] = [
   const testimonials: Testimonial[] = [
     {
       name: 'Александр Петров',
@@ -108,24 +55,25 @@ function TestimonialsContent() {
     },
   ];
 
+export function Testimonials() {
   return (
-    <section className="content-container py-20">
+    <section className="content-container py-12 sm:py-16 md:py-20 lg:py-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="text-center mb-8 sm:mb-10 md:mb-12"
       >
-        <Badge variant="gold" className="mb-4">Отзывы</Badge>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
+        <Badge variant="gold" className="mb-3 sm:mb-4">Отзывы</Badge>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gold mb-3 sm:mb-4 px-4 sm:px-0">
           Что говорят наши клиенты
         </h2>
-        <p className="text-foreground-muted max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base text-foreground-muted max-w-2xl mx-auto px-4 sm:px-6 md:px-0 leading-relaxed">
           Нам доверяют инвесторы, семьи и деловые партнёры по всему региону
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
         {testimonials.map((testimonial, index) => (
           <motion.div
             key={index}
@@ -135,18 +83,18 @@ function TestimonialsContent() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <Card className="h-full hover:shadow-glow-gold transition-all duration-300 hover:-translate-y-1">
-              <CardContent className="p-6">
-                <Quote className="w-10 h-10 text-gold/30 mb-4" />
+              <CardContent className="p-4 sm:p-6">
+                <Quote className="w-8 h-8 sm:w-10 sm:h-10 text-gold/30 mb-3 sm:mb-4" />
 
-                <p className="text-foreground-muted mb-6 line-clamp-4">
+                <p className="text-sm sm:text-base text-foreground-muted mb-4 sm:mb-6 line-clamp-4 leading-relaxed">
                   "{testimonial.content}"
                 </p>
 
-                <div className="flex items-center gap-1 mb-4">
+                <div className="flex items-center gap-1 mb-3 sm:mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <svg
                       key={i}
-                      className="w-5 h-5 text-gold fill-current"
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-gold fill-current"
                       viewBox="0 0 20 20"
                     >
                       <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
@@ -154,15 +102,15 @@ function TestimonialsContent() {
                   ))}
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold to-ocean flex items-center justify-center text-white font-bold text-lg">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-gold to-ocean flex items-center justify-center text-white font-bold text-base sm:text-lg flex-shrink-0">
                     {testimonial.name.charAt(0)}
                   </div>
-                  <div>
-                    <p className="font-semibold text-foreground">
+                  <div className="min-w-0">
+                    <p className="font-semibold text-foreground text-sm sm:text-base truncate">
                       {testimonial.name}
                     </p>
-                    <p className="text-sm text-foreground-muted">
+                    <p className="text-xs sm:text-sm text-foreground-muted truncate">
                       {testimonial.role}
                       {testimonial.company && ` • ${testimonial.company}`}
                     </p>
