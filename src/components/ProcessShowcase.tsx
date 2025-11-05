@@ -30,24 +30,24 @@ export function ProcessShowcase() {
   ];
 
   return (
-    <section className="content-container py-20">
+    <section className="content-container py-12 sm:py-16 md:py-20 lg:py-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="text-center mb-8 sm:mb-10 md:mb-12"
       >
-        <Badge variant="ocean" className="mb-4">Наш процесс</Badge>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
+        <Badge variant="ocean" className="mb-3 sm:mb-4">Наш процесс</Badge>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gold mb-3 sm:mb-4 px-4 sm:px-0">
           От океана до вашего стола
         </h2>
-        <p className="text-foreground-muted max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base text-foreground-muted max-w-2xl mx-auto px-4 sm:px-6 md:px-0 leading-relaxed">
           Каждый этап производства выполняется с максимальной тщательностью и вниманием к деталям
         </p>
       </motion.div>
 
       {/* Main process images grid */}
-      <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+      <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8 md:mb-12">
         {processImages.map((image, index) => (
           <motion.div
             key={image.id}
@@ -67,11 +67,11 @@ export function ProcessShowcase() {
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
 
             {/* Text overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-6">
-              <p className="text-lg font-semibold text-gold mb-2">
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6">
+              <p className="text-base sm:text-lg font-semibold text-gold mb-1 sm:mb-2">
                 {index === 0 ? 'Профессиональная подготовка' : 'Мастерство в каждом движении'}
               </p>
-              <p className="text-sm text-foreground-muted">
+              <p className="text-xs sm:text-sm text-foreground-muted leading-relaxed">
                 {image.alt}
               </p>
             </div>
@@ -80,7 +80,7 @@ export function ProcessShowcase() {
       </div>
 
       {/* Features grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12">
         {features.map((feature, index) => (
           <motion.div
             key={feature.title}
@@ -88,13 +88,13 @@ export function ProcessShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="glass-card p-6 text-center"
+            className="glass-card p-4 sm:p-6 text-center"
           >
-            <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-ocean/20 flex items-center justify-center">
-              <feature.icon className="w-6 h-6 text-ocean" />
+            <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 sm:mb-3 rounded-full bg-ocean/20 flex items-center justify-center">
+              <feature.icon className="w-5 h-5 sm:w-6 sm:h-6 text-ocean" />
             </div>
-            <h4 className="font-semibold text-gold mb-2">{feature.title}</h4>
-            <p className="text-sm text-foreground-muted">{feature.description}</p>
+            <h4 className="text-sm sm:text-base font-semibold text-gold mb-1 sm:mb-2">{feature.title}</h4>
+            <p className="text-xs sm:text-sm text-foreground-muted leading-relaxed">{feature.description}</p>
           </motion.div>
         ))}
       </div>
@@ -104,20 +104,20 @@ export function ProcessShowcase() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="premium-card p-8 text-center"
+        className="premium-card p-6 sm:p-8 text-center"
       >
-        <h3 className="text-2xl font-display font-bold text-gold mb-4">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-gold mb-3 sm:mb-4 px-4 sm:px-0">
           Хотите увидеть процесс своими глазами?
         </h3>
-        <p className="text-foreground-muted mb-6 max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base text-foreground-muted mb-4 sm:mb-6 max-w-2xl mx-auto px-4 sm:px-0 leading-relaxed">
           Посетите наш завод и узнайте, как из маленькой икринки рождается премиальный продукт.
           Экскурсия включает дегустацию и подарочную баночку икры.
         </p>
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Button asChild variant="premium" size="lg">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
+          <Button asChild variant="premium" size="lg" className="w-full sm:w-auto">
             <Link to="/hatchery-tour">Забронировать экскурсию</Link>
           </Button>
-          <Button asChild variant="outline" size="lg">
+          <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
             <Link to="/science">Узнать о науке</Link>
           </Button>
         </div>

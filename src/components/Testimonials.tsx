@@ -13,6 +13,59 @@ interface Testimonial {
 }
 
 export function Testimonials() {
+  return (
+    <section className="content-container py-12 sm:py-16 md:py-20 lg:py-24">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center mb-8 sm:mb-10 md:mb-12"
+      >
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold gradient-gold mb-3 sm:mb-4 px-4 sm:px-0">
+          Отзывы наших клиентов
+        </h2>
+        <p className="text-sm sm:text-base text-foreground-muted max-w-2xl mx-auto px-4 sm:px-6 md:px-0 leading-relaxed">
+          Узнайте, что говорят о нас инвесторы, семьи и партнеры
+        </p>
+      </motion.div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        {testimonials.map((testimonial, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <Card className="h-full card-tilt">
+              <CardContent className="p-6">
+                <Quote className="w-8 h-8 text-gold/50 mb-4" />
+                <p className="text-sm sm:text-base text-foreground mb-4 leading-relaxed">
+                  {testimonial.content}
+                </p>
+                <div className="flex items-center gap-2 mb-2">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <span key={i} className="text-gold text-lg">★</span>
+                  ))}
+                </div>
+                <div>
+                  <p className="font-semibold text-gold text-sm sm:text-base">{testimonial.name}</p>
+                  <p className="text-xs sm:text-sm text-foreground-muted">
+                    {testimonial.role}
+                    {testimonial.company && ` • ${testimonial.company}`}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function TestimonialsContent() {
   const testimonials: Testimonial[] = [
     {
       name: 'Александр Петров',

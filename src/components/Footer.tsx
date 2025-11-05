@@ -86,13 +86,13 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-display font-semibold text-gold mb-4">Услуги</h3>
-            <ul className="space-y-2">
+            <h3 className="font-display font-semibold text-gold mb-3 sm:mb-4 text-sm sm:text-base">Услуги</h3>
+            <ul className="space-y-1.5 sm:space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-sm text-foreground-muted hover:text-gold transition-colors"
+                    className="text-xs sm:text-sm text-foreground-muted hover:text-gold transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -103,20 +103,20 @@ export function Footer() {
 
           {/* Support */}
           <div>
-            <h3 className="font-display font-semibold text-gold mb-4">Поддержка</h3>
-            <ul className="space-y-2">
+            <h3 className="font-display font-semibold text-gold mb-3 sm:mb-4 text-sm sm:text-base">Поддержка</h3>
+            <ul className="space-y-1.5 sm:space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-sm text-foreground-muted hover:text-gold transition-colors"
+                    className="text-xs sm:text-sm text-foreground-muted hover:text-gold transition-colors"
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="mt-6 flex gap-3">
+            <div className="mt-4 sm:mt-6 flex gap-2 sm:gap-3">
               <a
                 href="https://t.me/royalketa"
                 target="_blank"
@@ -140,13 +140,13 @@ export function Footer() {
         </div>
 
         {/* Mercury Badge */}
-        <div className="mt-8 flex justify-center">
+        <div className="mt-6 sm:mt-8 flex justify-center px-4">
           <MercuryBadge />
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-foreground-muted">
-          <p>&copy; {currentYear} ROYAL KETA. Все права защищены.</p>
-          <div className="flex gap-6">
+        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-xs sm:text-sm text-foreground-muted">
+          <p className="text-center sm:text-left">&copy; {currentYear} ROYAL KETA. Все права защищены.</p>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 text-center sm:text-left">
             <Link to="/legal#privacy" className="hover:text-gold transition-colors">
               Политика конфиденциальности
             </Link>

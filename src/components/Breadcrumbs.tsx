@@ -57,8 +57,8 @@ export function Breadcrumbs() {
   });
 
   return (
-    <nav aria-label="Хлебные крошки" className="content-container py-4 border-b border-background/20">
-      <ol className="flex items-center gap-2 text-sm">
+    <nav aria-label="Хлебные крошки" className="content-container py-3 sm:py-4 border-b border-background/20">
+      <ol className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm flex-wrap">
         {breadcrumbs.map((crumb, index) => {
           const isLast = index === breadcrumbs.length - 1;
           const isHome = index === 0;

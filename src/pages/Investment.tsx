@@ -49,28 +49,28 @@ export default function Investment() {
         primaryCta={{ text: 'Запросить Информацию', href: '#contact' }}
       />
 
-      <section className="content-container py-20">
-        <div className="text-center mb-12">
-          <Badge variant="gold" className="mb-4">Инвестиционные Модели</Badge>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
+      <section className="content-container py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12 px-4 sm:px-0">
+          <Badge variant="gold" className="mb-3 sm:mb-4">Инвестиционные Модели</Badge>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gold mb-3 sm:mb-4 leading-tight">
             Выберите Свой Путь
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-16">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-12 sm:mb-14 md:mb-16">
           {models.map((model) => (
             <Card key={model.name}>
-              <CardHeader>
-                <Badge variant="ocean" className="w-fit mb-2">{model.name}</Badge>
-                <CardTitle>{model.title}</CardTitle>
-                <CardDescription>{model.description}</CardDescription>
+              <CardHeader className="p-4 sm:p-6">
+                <Badge variant="ocean" className="w-fit mb-2 text-xs sm:text-sm">{model.name}</Badge>
+                <CardTitle className="text-lg sm:text-xl md:text-2xl">{model.title}</CardTitle>
+                <CardDescription className="text-sm sm:text-base leading-relaxed">{model.description}</CardDescription>
               </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
+              <CardContent className="p-4 sm:p-6 pt-0">
+                <ul className="space-y-1.5 sm:space-y-2">
                   {model.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-sm">
-                      <div className="h-1.5 w-1.5 rounded-full bg-gold" />
-                      {feature}
+                    <li key={feature} className="flex items-center gap-2 text-xs sm:text-sm leading-relaxed">
+                      <div className="h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0" />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>

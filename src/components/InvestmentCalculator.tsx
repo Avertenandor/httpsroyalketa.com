@@ -59,23 +59,8 @@ export function InvestmentCalculator() {
   const roi = (totalAnnualReturn / investment) * 100;
 
   return (
-    <section className="content-container py-20">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-12"
-      >
-        <Badge variant="gold" className="mb-4">Рассчитать доходность</Badge>
-        <h2 className="text-3xl md:text-4xl font-display font-bold text-gold mb-4">
-          Инвестиционный калькулятор
-        </h2>
-        <p className="text-foreground-muted max-w-2xl mx-auto">
-          Оцените потенциальную доходность по различным инвестиционным моделям
-        </p>
-      </motion.div>
-
-      <div className="grid lg:grid-cols-2 gap-8">
+    <div className="w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
         {/* Input Section */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -86,13 +71,13 @@ export function InvestmentCalculator() {
             <CardHeader>
               <CardTitle>Выберите ваши инвестиции</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-4 sm:space-y-6">
               {/* Model Selection */}
               <div>
-                <label className="text-sm font-medium text-foreground mb-3 block">
+                <label className="text-xs sm:text-sm font-medium text-foreground mb-2 sm:mb-3 block">
                   Инвестиционная модель
                 </label>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3">
                   {(Object.keys(models) as InvestmentModel[]).map((key) => (
                     <button
                       key={key}
@@ -102,14 +87,14 @@ export function InvestmentCalculator() {
                           setInvestment(models[key].minInvestment);
                         }
                       }}
-                      className={`p-4 rounded-lg border-2 transition-all duration-300 text-left ${
+                      className={`p-3 sm:p-4 rounded-lg border-2 transition-all duration-300 text-left ${
                         selectedModel === key
                           ? 'border-gold bg-gold/10'
                           : 'border-border hover:border-gold/50'
                       }`}
                     >
-                      <div className="font-bold text-gold mb-1">Модель {key}</div>
-                      <div className="text-xs text-foreground-muted">
+                      <div className="text-sm sm:text-base font-bold text-gold mb-1">Модель {key}</div>
+                      <div className="text-xs sm:text-sm text-foreground-muted">
                         {models[key].name}
                       </div>
                     </button>
@@ -119,7 +104,7 @@ export function InvestmentCalculator() {
 
               {/* Amount Input */}
               <div>
-                <label className="text-sm font-medium text-foreground mb-3 block">
+                <label className="text-xs sm:text-sm font-medium text-foreground mb-2 sm:mb-3 block">
                   Сумма инвестиций (₽)
                 </label>
                 <input
@@ -131,12 +116,12 @@ export function InvestmentCalculator() {
                   onChange={(e) => setInvestment(Number(e.target.value))}
                   className="w-full h-2 bg-border rounded-lg appearance-none cursor-pointer accent-gold"
                 />
-                <div className="flex justify-between mt-2 text-sm text-foreground-muted">
+                <div className="flex justify-between mt-2 text-xs sm:text-sm text-foreground-muted">
                   <span>₽ {model.minInvestment.toLocaleString()}</span>
                   <span className="font-bold text-gold">
                     ₽ {investment.toLocaleString()}
                   </span>
-                  <span>₽ 10,000,000</span>
+                  <span>₽ 10M</span>
                 </div>
               </div>
 
@@ -147,7 +132,7 @@ export function InvestmentCalculator() {
                     key={amount}
                     onClick={() => setInvestment(amount)}
                     disabled={amount < model.minInvestment}
-                    className={`px-3 py-1 rounded-full text-xs transition-all ${
+                    className={`px-2 sm:px-3 py-1 rounded-full text-xs transition-all ${
                       investment === amount
                         ? 'bg-gold text-background'
                         : 'bg-border hover:bg-gold/20 disabled:opacity-30 disabled:cursor-not-allowed'
@@ -168,9 +153,9 @@ export function InvestmentCalculator() {
           viewport={{ once: true }}
         >
           <Card className="h-full bg-gradient-to-br from-gold/5 to-ocean/5">
-            <CardHeader>
-              <CardTitle>Ожидаемая годовая доходность</CardTitle>
-              <p className="text-sm text-foreground-muted">
+            <CardHeader className="p-4 sm:p-6">
+              <CardTitle className="text-lg sm:text-xl md:text-2xl">Ожидаемая годовая доходность</CardTitle>
+              <p className="text-xs sm:text-sm text-foreground-muted leading-relaxed">
                 {model.description}
               </p>
             </CardHeader>
