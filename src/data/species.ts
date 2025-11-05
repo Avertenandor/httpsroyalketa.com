@@ -22,7 +22,7 @@ export const SPECIES: Record<
     card: '/img/fish/sima/card.webp',
     hero: '/img/fish/sima/hero.webp',
     altCard: 'Сима, иллюстрация (профиль)',
-    altHero: 'Сима под водой (аквариум)',
+    altHero: 'Сима (Oncorhynchus masou) в аквариуме',
   },
   semga: {
     ru: 'Сёмга',
@@ -30,7 +30,7 @@ export const SPECIES: Record<
     card: '/img/fish/semga/card.webp',
     hero: '/img/fish/semga/hero.webp',
     altCard: 'Сёмга, профиль',
-    altHero: 'Сёмга, профиль',
+    altHero: 'Сёмга (Salmo salar), профиль',
   },
   keta: {
     ru: 'Кета',
@@ -38,7 +38,7 @@ export const SPECIES: Record<
     card: '/img/fish/keta/card.webp',
     hero: '/img/fish/keta/hero.webp',
     altCard: 'Кета, под водой',
-    altHero: 'Кета (нерест), под водой',
+    altHero: 'Кета (Oncorhynchus keta) во время нереста, под водой',
   },
   nerka: {
     ru: 'Нерка',
@@ -46,15 +46,15 @@ export const SPECIES: Record<
     card: '/img/fish/nerka/card.webp',
     hero: '/img/fish/nerka/hero.webp',
     altCard: 'Нерка, пара',
-    altHero: 'Нерка, самец и самка',
+    altHero: 'Нерка (Oncorhynchus nerka), самец и самка',
   },
   gorbusha: {
     ru: 'Горбуша',
     latin: 'Oncorhynchus gorbuscha',
     card: '/img/fish/gorbusha/card.webp',
     hero: '/img/fish/gorbusha/hero.webp',
-    altCard: 'Горбуша, под водой',
-    altHero: 'Горбуша, под водой',
+    altCard: 'Горбуша (Oncorhynchus gorbuscha), под водой',
+    altHero: 'Горбуша (Oncorhynchus gorbuscha), под водой',
   },
   chavycha: {
     ru: 'Чавыча',
