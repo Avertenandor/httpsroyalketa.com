@@ -53,7 +53,19 @@ export default function Caviar() {
           {products.map((product) => (
             <Card key={product.name}>
               <CardHeader>
-                <Award className="h-10 w-10 text-gold mb-3" />
+                <div className="flex items-center justify-between mb-3">
+                  <Award className="h-10 w-10 text-gold" />
+                  <a
+                    href="/delivery#belarus"
+                    className="inline-flex items-center gap-1 rounded-full px-2 py-1 text-xs font-medium transition-all duration-300 hover:scale-105"
+                    style={{
+                      background: 'linear-gradient(90deg, rgba(0,194,255,.15), rgba(0,255,163,.15))',
+                      border: '1px solid rgba(255,255,255,.1)',
+                    }}
+                  >
+                    <span>РФ + Беларусь</span>
+                  </a>
+                </div>
                 <CardTitle>{product.name}</CardTitle>
                 <CardDescription>{product.weight}</CardDescription>
               </CardHeader>

@@ -56,15 +56,32 @@ export default function Home() {
         jsonLd={organizationJsonLd}
       />
 
-      <Hero
-        subtitle="От икринки к королевской"
-        title="Где наука встречается с совершенством"
-        description="Познакомьтесь с искусством разведения лосося на острове Сахалин. Семейные туры, премиальная икра и инвестиционные возможности в устойчивой аквакультуре."
-        primaryCta={{ text: 'Забронировать семейный тур', href: '/hatchery-tour' }}
-        secondaryCta={{ text: 'Презентация для инвесторов', href: '/investment' }}
-        backgroundImage={heroBackgrounds[1].urlLarge}
-        backgroundOverlay="dark"
-      />
+              <Hero
+                subtitle="От икринки к королевской"
+                title="Где наука встречается с совершенством"
+                description="Познакомьтесь с искусством разведения лосося на острове Сахалин. Семейные туры, премиальная икра и инвестиционные возможности в устойчивой аквакультуре."
+                primaryCta={{ text: 'Забронировать семейный тур', href: '/hatchery-tour' }}
+                secondaryCta={{ text: 'Презентация для инвесторов', href: '/investment' }}
+                backgroundImage={heroBackgrounds[1].urlLarge}
+                backgroundOverlay="dark"
+              />
+
+              {/* Delivery Badge */}
+              <section className="content-container py-6 sm:py-8">
+                <div className="text-center">
+                  <a
+                    href="/delivery"
+                    className="inline-flex items-center gap-2 rounded-full px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-medium transition-all duration-300 hover:scale-105"
+                    style={{
+                      background: 'linear-gradient(90deg, rgba(0,194,255,.15), rgba(0,255,163,.15))',
+                      border: '1px solid rgba(255,255,255,.1)',
+                    }}
+                  >
+                    <span>🚚</span>
+                    <span>Доставляем по всей РФ и в Беларусь</span>
+                  </a>
+                </div>
+              </section>
 
       {/* Three Pillars */}
       <section className="content-container py-12 sm:py-16 md:py-20 lg:py-24">

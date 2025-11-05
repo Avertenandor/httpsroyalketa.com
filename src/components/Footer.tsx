@@ -11,13 +11,14 @@ const footerLinks = {
     { name: 'О лососевых', href: '/salmon-info' },
     { name: 'О осетровых', href: '/sturgeon-info' },
   ],
-  services: [
-    { name: 'Экскурсия на завод', href: '/hatchery-tour' },
-    { name: 'Премиальная икра', href: '/caviar' },
-    { name: 'Крабалка', href: '/crabbing' },
-    { name: 'Инвестиции', href: '/investment' },
-    { name: 'Цены', href: '/pricing' },
-  ],
+          services: [
+            { name: 'Экскурсия на завод', href: '/hatchery-tour' },
+            { name: 'Премиальная икра', href: '/caviar' },
+            { name: 'Крабалка', href: '/crabbing' },
+            { name: 'Инвестиции', href: '/investment' },
+            { name: 'Доставка', href: '/delivery' },
+            { name: 'Цены', href: '/pricing' },
+          ],
   support: [
     { name: 'FAQ', href: '/faq' },
     { name: 'Контакты', href: '/contacts' },
@@ -144,15 +145,22 @@ export function Footer() {
           <MercuryBadge />
         </div>
 
-        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-xs sm:text-sm text-foreground-muted">
-          <p className="text-center sm:text-left">&copy; {currentYear} ROYAL KETA. Все права защищены.</p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 text-center sm:text-left">
-            <Link to="/legal#privacy" className="hover:text-gold transition-colors">
-              Политика конфиденциальности
-            </Link>
-            <Link to="/legal#terms" className="hover:text-gold transition-colors">
-              Условия использования
-            </Link>
+        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10">
+          <div className="mb-4 sm:mb-6 p-3 sm:p-4 rounded-lg bg-background/30 border border-white/10">
+            <p className="text-xs sm:text-sm text-foreground-muted leading-relaxed mb-2">
+              <strong className="text-foreground">Отправка скоропортящихся рыбных продуктов и икры</strong>, требующих температуры 0…+6 °C, <strong className="text-foreground">не выполняется</strong> стандартными службами (Boxberry/Почта). Для таких отправок используется <strong className="text-foreground">температурная логистика</strong> по договору (стоимость/сроки — по согласованию). Глобальные экспресс-операторы (FedEx/UPS) в РФ/РБ не работают — мы их <strong className="text-foreground">не используем</strong>.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-xs sm:text-sm text-foreground-muted">
+            <p className="text-center sm:text-left">&copy; {currentYear} ROYAL KETA. Все права защищены.</p>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 text-center sm:text-left">
+              <Link to="/legal#privacy" className="hover:text-gold transition-colors">
+                Политика конфиденциальности
+              </Link>
+              <Link to="/legal#terms" className="hover:text-gold transition-colors">
+                Условия использования
+              </Link>
+            </div>
           </div>
         </div>
       </div>
