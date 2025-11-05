@@ -36,6 +36,7 @@ const navigation: (NavItem | NavGroup)[] = [
     ],
   },
   { name: 'Инвестиции', href: '/investment' },
+  { name: 'Доставка', href: '/delivery' },
   { name: 'Цены', href: '/pricing' },
   { name: 'FAQ', href: '/faq' },
   { name: 'Меркурий (эВСД)', href: '/mercury' },
