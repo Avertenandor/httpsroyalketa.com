@@ -129,11 +129,15 @@ export default function SturgeonInfo() {
             </div>
             <div className="relative rounded-2xl overflow-hidden">
               <img
-                src="/img/species/sturgeon/sturgeon-bottom.webp"
+                src="/img/species/sturgeon/sturgeon-bottom-optimized.webp"
                 alt="Осётр у гравийного дна"
                 className="w-full h-full object-cover"
                 loading="lazy"
                 decoding="async"
+                onError={(e) => {
+                  // Fallback to hero if optimized version fails
+                  (e.target as HTMLImageElement).src = '/img/species/sturgeon/hero-sturgeon.webp';
+                }}
               />
             </div>
           </div>
