@@ -43,10 +43,14 @@
   <!-- GitHub Pages SPA redirect handler -->
   <script>
     (function() {
-      var redirect = sessionStorage.redirect;
-      delete sessionStorage.redirect;
-      if (redirect && redirect !== location.href) {
-        history.replaceState(null, null, redirect);
+      var redirect = sessionStorage.getItem('redirect');
+      if (redirect) {
+        sessionStorage.removeItem('redirect');
+        // Only redirect if we're not already on that path
+        var currentPath = window.location.pathname + window.location.search + window.location.hash;
+        if (redirect !== currentPath && redirect !== '/index.html') {
+          history.replaceState(null, null, redirect);
+        }
       }
     })();
   </script>
