@@ -47,14 +47,16 @@ try {
 }
 
 Write-Host ""
-Write-Host "Изображения загружены. Переименовываем во временные файлы..."
+Write-Host "Изображения загружены."
 Write-Host "Для конвертации в WebP используйте ImageMagick или другой инструмент."
 Write-Host ""
 Write-Host "Временные файлы:"
-$tempFiles = @(Get-ChildItem -Path "$red\*-temp.*" -ErrorAction SilentlyContinue) + @(Get-ChildItem -Path "$blk\*-temp.*" -ErrorAction SilentlyContinue)
-if ($tempFiles.Count -gt 0) {
-    $tempFiles | ForEach-Object { Write-Host "  $_" }
+$tempFilesRed = Get-ChildItem -Path "$red\*-temp.*" -ErrorAction SilentlyContinue
+$tempFilesBlk = Get-ChildItem -Path "$blk\*-temp.*" -ErrorAction SilentlyContinue
+$allTempFiles = @($tempFilesRed) + @($tempFilesBlk)
+if ($allTempFiles.Count -gt 0) {
+    $allTempFiles | ForEach-Object { Write-Host "  $_" }
 } else {
-    Write-Host "  (временные файлы не найдены)"
+    Write-Host "  (temp files not found)"
 }
 

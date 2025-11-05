@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import { Fish, MapPin, Clock, Shield, TrendingUp, Sparkles } from 'lucide-react';
 import { salmonSpecies } from '@/config/fishSpecies';
 import { SPECIES } from '@/data/species';
+import { CAVIAR } from '@/data/caviar.images';
 
 export default function SalmonInfo() {
   return (
@@ -285,9 +286,11 @@ export default function SalmonInfo() {
               <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden mb-6">
                   <img
-                    src="/img/species/salmon/ikura-don-1.jpg"
-                    alt="Икра лосося в чаше с яйцом (ikura don)"
-                    className="w-full h-64 object-cover"
+                    src={CAVIAR.red.recipe}
+                    alt={CAVIAR.red.alt.recipe}
+                    className="w-full h-64 object-cover object-[50%_45%]"
+                    loading="lazy"
+                    decoding="async"
                     loading="lazy"
                     decoding="async"
                   />
