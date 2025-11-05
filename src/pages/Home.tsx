@@ -141,6 +141,40 @@ export default function Home() {
       {/* Image Showcase */}
       <ImageShowcase />
 
+      {/* Region Section */}
+      <section className="content-container py-12 sm:py-16 md:py-20 lg:py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-8 sm:mb-10 md:mb-12"
+        >
+          <Badge variant="ocean" className="mb-3 sm:mb-4">Наш остров</Badge>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gold mb-3 sm:mb-4">Сахалин и Туризм</h2>
+          <p className="text-sm sm:text-base text-foreground-muted max-w-2xl mx-auto">Окраина океана, доброжелательные люди и маршруты на любой вкус.</p>
+        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+          <Card>
+            <CardHeader>
+              <CardTitle>Сахалин — о крае</CardTitle>
+              <CardDescription>Море, тайга и уважение к гостям материка</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Button asChild variant="ghost" className="w-full"><Link to="/sakhalin">Читать о Сахалине →</Link></Button>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>Туризм на Сахалине</CardTitle>
+              <CardDescription>Проверенные провайдеры и сезонные идеи</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Button asChild variant="ghost" className="w-full"><Link to="/tourism">Открыть подборку туров →</Link></Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Process Showcase */}
       <ProcessShowcase />
 

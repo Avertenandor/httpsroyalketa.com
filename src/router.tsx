@@ -10,6 +10,8 @@ import Pricing from './pages/Pricing';
 import Gallery from './pages/Gallery';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import Tourism from './pages/Tourism';
+import Sakhalin from './pages/Sakhalin';
 import FAQ from './pages/FAQ';
 import Contacts from './pages/Contacts';
 import About from './pages/About';
@@ -65,6 +67,14 @@ export const router = createBrowserRouter([
       {
         path: 'gallery',
         element: <Gallery />,
+      },
+      {
+        path: 'tourism',
+        element: <Tourism />,
+      },
+      {
+        path: 'sakhalin',
+        element: <Sakhalin />,
       },
       {
         path: 'blog',
