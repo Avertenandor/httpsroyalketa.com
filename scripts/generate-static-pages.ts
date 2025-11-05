@@ -170,10 +170,11 @@ function generateHTML(page: PageMeta): string {
       }
     })();
   </script>
+  <!-- Vite will inject the correct script tags during build -->
+  <script type="module" crossorigin src="/assets/index.js"></script>
 </head>
 <body>
   <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
 `;
@@ -186,9 +187,13 @@ function main() {
     const html = generateHTML(page);
 
     // Determine output path
+    // IMPORTANT: Don't overwrite root index.html - Vite needs it for build
+    // Only generate static pages for subdirectories in public/
     let outputPath: string;
     if (page.path === '/') {
-      outputPath = join(process.cwd(), 'index.html');
+      // Skip root - Vite will handle index.html
+      console.log(`⏭️  Skipping root index.html (handled by Vite)`);
+      continue;
     } else {
       const dir = join(process.cwd(), 'public', page.path.substring(1));
       mkdirSync(dir, { recursive: true });
@@ -199,8 +204,9 @@ function main() {
     console.log(`✅ Generated: ${outputPath}`);
   }
 
-  console.log(`\n🎉 Total pages generated: ${pages.length}`);
+  console.log(`\n🎉 Total pages generated: ${pages.length - 1} (root skipped)`);
   console.log('📝 Note: These files will be served to social media bots for OG preview cards.');
+  console.log('📝 Root index.html is handled by Vite during build.');
 }
 
 main();
