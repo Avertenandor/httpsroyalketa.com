@@ -6,7 +6,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { Seo } from '@/seo/Seo';
 import { Hero } from '@/components/Hero';
-import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -54,7 +53,6 @@ export default function FishSpeciesPage({ speciesId: propSpeciesId }: FishSpecie
         path={species.route}
         ogImage={heroImage}
       />
-      <Breadcrumbs />
       <Hero
         subtitle={species.category === 'salmon' ? 'Лососевые' : 'Осетровые'}
         title={species.commonName}

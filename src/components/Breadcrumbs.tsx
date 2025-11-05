@@ -57,7 +57,7 @@ export function Breadcrumbs() {
   });
 
   return (
-    <nav aria-label="Хлебные крошки" className="content-container py-4">
+    <nav aria-label="Хлебные крошки" className="content-container py-4 border-b border-background/20">
       <ol className="flex items-center gap-2 text-sm">
         {breadcrumbs.map((crumb, index) => {
           const isLast = index === breadcrumbs.length - 1;
@@ -69,14 +69,14 @@ export function Breadcrumbs() {
                 <ChevronRight className="w-4 h-4 text-foreground-muted" />
               )}
               {isLast ? (
-                <span className="text-gold font-medium flex items-center gap-1">
+                <span className="text-gold font-medium flex items-center gap-1.5">
                   {isHome && <Home className="w-4 h-4" />}
                   {crumb.label}
                 </span>
               ) : (
                 <Link
                   to={crumb.path}
-                  className="text-foreground-muted hover:text-gold transition-colors flex items-center gap-1"
+                  className="text-foreground-muted hover:text-gold transition-colors flex items-center gap-1.5"
                 >
                   {isHome && <Home className="w-4 h-4" />}
                   {!isHome && crumb.label}

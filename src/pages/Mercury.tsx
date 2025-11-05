@@ -1,6 +1,6 @@
 import { Seo } from '@/seo/Seo';
 import { Hero } from '@/components/Hero';
-import { Breadcrumbs } from '@/components/Breadcrumbs';
+
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { MercuryBadge } from '@/components/MercuryBadge';
@@ -16,7 +16,7 @@ export default function Mercury() {
         path="/mercury/"
         ogImage="/og/mercury.jpg"
       />
-      <Breadcrumbs />
+      
       <Hero
         subtitle="Система сертификации"
         title="Меркурий — электронные ВСД для икры и рыбы"

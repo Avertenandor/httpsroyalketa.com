@@ -1,6 +1,6 @@
 import { Hero } from '@/components/Hero';
 import { Seo } from '@/seo/Seo';
-import { Breadcrumbs } from '@/components/Breadcrumbs';
+
 import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -186,7 +186,7 @@ export default function CohoSalmon() {
         ogImage="/og/salmon-info.png"
       />
 
-      <Breadcrumbs />
+      
 
       <Hero
         subtitle="Oncorhynchus kisutch"

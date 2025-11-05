@@ -1,6 +1,6 @@
 import { Seo } from '@/seo/Seo';
 import { Hero } from '@/components/Hero';
-import { Breadcrumbs } from '@/components/Breadcrumbs';
+
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -19,7 +19,7 @@ export default function SalmonInfo() {
         path="/salmon-info"
         ogImage="/og/salmon.jpg"
       />
-      <Breadcrumbs />
+      
       <Hero
         subtitle="Энциклопедия"
         title="Лососевые рыбы и красная икра"
