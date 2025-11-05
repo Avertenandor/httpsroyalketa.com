@@ -97,7 +97,7 @@ export default function SalmonInfo() {
                         species.id === 'semga' ? SPECIES.semga.card :
                         species.id === 'keta' ? SPECIES.keta.card :
                         species.id === 'nerka' ? SPECIES.nerka.card :
-                        species.id === 'gorbuscha' ? SPECIES.gorbusha.card :
+                        species.id === 'gorbusha' ? SPECIES.gorbusha.card :
                         species.id === 'chavycha' ? SPECIES.chavycha.card :
                         species.id === 'kizhuch' ? SPECIES.kizhuch.card :
                         species.image
@@ -107,7 +107,7 @@ export default function SalmonInfo() {
                         species.id === 'semga' ? SPECIES.semga.altCard :
                         species.id === 'keta' ? SPECIES.keta.altCard :
                         species.id === 'nerka' ? SPECIES.nerka.altCard :
-                        species.id === 'gorbuscha' ? SPECIES.gorbusha.altCard :
+                        species.id === 'gorbusha' ? SPECIES.gorbusha.altCard :
                         species.id === 'chavycha' ? SPECIES.chavycha.altCard :
                         species.id === 'kizhuch' ? SPECIES.kizhuch.altCard :
                         `${species.commonName} (${species.scientificName})`

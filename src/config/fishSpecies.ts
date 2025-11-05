@@ -51,7 +51,7 @@ export const salmonSpecies: FishSpecies[] = [
     category: 'salmon',
   },
   {
-    id: 'gorbuscha',
+    id: 'gorbusha',
     commonName: 'Горбуша',
     scientificName: 'Oncorhynchus gorbuscha',
     englishName: 'Pink Salmon',
