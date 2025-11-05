@@ -92,8 +92,15 @@ export default function SalmonInfo() {
                   <div className="relative overflow-hidden rounded-t-lg">
                     <img
                       src={species.image}
-                      alt={species.commonName}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                      alt={
+                        species.id === 'keta' ? 'Кета (Oncorhynchus keta) под водой' :
+                        species.id === 'gorbuscha' ? 'Горбуша (Oncorhynchus gorbuscha), подводный кадр' :
+                        species.id === 'nerka' ? 'Нерка (Oncorhynchus nerka), самец и самка (брачная окраска)' :
+                        species.id === 'kizhuch' ? 'Кижуч (Oncorhynchus kisutch), нерестовая окраска' :
+                        species.id === 'chavycha' ? 'Чавыча (Oncorhynchus tshawytscha) прыжок на перекате' :
+                        `${species.commonName} (${species.scientificName})`
+                      }
+                      className="w-full h-48 object-cover object-[50%_45%] group-hover:scale-110 transition-transform duration-300 rounded-xl"
                       loading="lazy"
                       decoding="async"
                     />

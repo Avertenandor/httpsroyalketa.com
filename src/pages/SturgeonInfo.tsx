@@ -175,8 +175,12 @@ export default function SturgeonInfo() {
                   <div className="relative overflow-hidden rounded-t-lg">
                     <img
                       src={species.image}
-                      alt={species.commonName}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                      alt={
+                        species.id === 'sevruga' ? 'Севрюга (Acipenser stellatus)' :
+                        species.id === 'sterlet' ? 'Стерлядь (Acipenser ruthenus)' :
+                        `${species.commonName} (${species.scientificName})`
+                      }
+                      className="w-full h-48 object-cover object-[50%_45%] group-hover:scale-110 transition-transform duration-300 rounded-xl"
                       loading="lazy"
                       decoding="async"
                     />
