@@ -63,7 +63,7 @@ export function ImageShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
-            className="group relative overflow-hidden rounded-xl"
+            className="group relative overflow-hidden rounded-xl bg-background/50"
           >
             {/* Background Image */}
             <div className="relative h-[320px] md:h-[400px] overflow-hidden">
@@ -72,27 +72,31 @@ export function ImageShowcase() {
                 alt={item.title}
                 className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
+                decoding="async"
               />
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
             </div>
 
             {/* Content */}
-            <div className="absolute bottom-0 left-0 right-0 p-6">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center backdrop-blur-sm">
+            <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+              <div className="flex items-start gap-3 mb-3">
+                <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center backdrop-blur-sm flex-shrink-0">
                   <item.icon className="w-6 h-6 text-gold" />
                 </div>
-                <h3 className="text-xl font-display font-bold text-gold">
-                  {item.title}
-                </h3>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-xl font-display font-bold text-gold leading-tight">
+                    {item.title}
+                  </h3>
+                </div>
               </div>
-              <p className="text-foreground-muted mb-4">
+              <p className="text-sm text-foreground-muted mb-4 leading-relaxed">
                 {item.description}
               </p>
               <Button
                 asChild
                 variant="ghost"
+                size="sm"
                 className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
                 <Link to={item.link}>
