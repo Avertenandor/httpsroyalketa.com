@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Fish, MapPin, Clock, Shield, TrendingUp, Sparkles } from 'lucide-react';
 import { salmonSpecies } from '@/config/fishSpecies';
+import { SPECIES } from '@/data/species';
 
 export default function SalmonInfo() {
   return (
@@ -91,18 +92,27 @@ export default function SalmonInfo() {
                 <Card className="premium-card h-full hover:shadow-glow-gold transition-all duration-300 cursor-pointer group">
                   <div className="relative overflow-hidden rounded-t-lg">
                     <img
-                      src={species.image}
+                      src={
+                        species.id === 'sima' ? SPECIES.sima.card :
+                        species.id === 'semga' ? SPECIES.semga.card :
+                        species.id === 'keta' ? SPECIES.keta.card :
+                        species.id === 'nerka' ? SPECIES.nerka.card :
+                        species.id === 'gorbuscha' ? SPECIES.gorbusha.card :
+                        species.id === 'chavycha' ? SPECIES.chavycha.card :
+                        species.id === 'kizhuch' ? SPECIES.kizhuch.card :
+                        species.image
+                      }
                       alt={
-                        species.id === 'keta' ? 'Кета (Oncorhynchus keta) под водой' :
-                        species.id === 'gorbuscha' ? 'Горбуша (Oncorhynchus gorbuscha), подводный кадр' :
-                        species.id === 'nerka' ? 'Нерка (Oncorhynchus nerka), самец и самка (брачная окраска)' :
-                        species.id === 'kizhuch' ? 'Кижуч (Oncorhynchus kisutch), нерестовая окраска' :
-                        species.id === 'chavycha' ? 'Чавыча (Oncorhynchus tshawytscha) прыжок на перекате' :
-                        species.id === 'sima' ? 'Сима (Oncorhynchus masou)' :
-                        species.id === 'semga' ? 'Сёмга (Salmo salar), атлантический лосось' :
+                        species.id === 'sima' ? SPECIES.sima.altCard :
+                        species.id === 'semga' ? SPECIES.semga.altCard :
+                        species.id === 'keta' ? SPECIES.keta.altCard :
+                        species.id === 'nerka' ? SPECIES.nerka.altCard :
+                        species.id === 'gorbuscha' ? SPECIES.gorbusha.altCard :
+                        species.id === 'chavycha' ? SPECIES.chavycha.altCard :
+                        species.id === 'kizhuch' ? SPECIES.kizhuch.altCard :
                         `${species.commonName} (${species.scientificName})`
                       }
-                      className="w-full h-48 object-cover object-[50%_45%] group-hover:scale-110 transition-transform duration-300 rounded-xl"
+                      className="w-full h-48 sm:h-52 object-cover object-[50%_45%] group-hover:scale-110 transition-transform duration-300 rounded-xl"
                       loading="lazy"
                       decoding="async"
                     />

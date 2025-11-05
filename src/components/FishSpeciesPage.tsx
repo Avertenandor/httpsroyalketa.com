@@ -13,6 +13,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { Fish, MapPin, Clock, TrendingUp, Shield, Sparkles, Heart, Droplets } from 'lucide-react';
 import { allFishSpecies } from '@/config/fishSpecies';
+import { SPECIES, type SpeciesId } from '@/data/species';
 
 interface FishSpeciesPageProps {
   speciesId?: string;
@@ -41,20 +42,25 @@ export default function FishSpeciesPage({ speciesId: propSpeciesId }: FishSpecie
     );
   }
 
+  // Get hero image from SPECIES if available
+  const speciesData = SPECIES[species.id as SpeciesId];
+  const heroImage = speciesData?.hero || species.imageLarge;
+  const heroAlt = speciesData?.altHero || `${species.commonName} (${species.scientificName})`;
+
   return (
     <>
       <Seo
-        title={`${species.commonName} (${species.scientificName}) | Royal Keta`}
+        title={`${species.commonName} — ${species.scientificName} | Royal Keta`}
         description={`Подробная информация о ${species.commonName.toLowerCase()}: где обитает, чем питается, жизненный цикл, польза и ценность. ${species.description}`}
         path={species.route}
-        ogImage={species.imageLarge}
+        ogImage={heroImage}
       />
       <Breadcrumbs />
       <Hero
         subtitle={species.category === 'salmon' ? 'Лососевые' : 'Осетровые'}
         title={species.commonName}
         description={species.description}
-        backgroundImage={species.imageLarge}
+        backgroundImage={heroImage}
         backgroundOverlay="dark"
       />
 
