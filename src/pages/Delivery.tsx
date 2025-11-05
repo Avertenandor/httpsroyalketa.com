@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { Truck, MapPin, Calendar, Thermometer, Package, AlertCircle, CheckCircle2, XCircle } from 'lucide-react';
+import { Truck, MapPin, Thermometer, Package, AlertCircle, CheckCircle2, XCircle } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useState } from 'react';
 
