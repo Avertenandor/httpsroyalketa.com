@@ -111,6 +111,12 @@ const pages: PageMeta[] = [
     description: 'Terms of service, privacy policy, and legal information for Royal Keta.',
     ogImage: '/og/legal.png',
   },
+  {
+    path: '/mercury',
+    title: 'Меркурий — электронные ВСД для икры и рыбы',
+    description: 'Royal Keta оформляет электронные ветеринарные сопроводительные документы (эВСД) в системе «Меркурий» на каждую партию икры и рыбной продукции. Что это, как работает цепочка, FAQ и нормативная база.',
+    ogImage: '/og/mercury.jpg',
+  },
 ];
 
 function generateHTML(page: PageMeta): string {
