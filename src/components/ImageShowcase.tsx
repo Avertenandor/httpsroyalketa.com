@@ -74,8 +74,10 @@ export function ImageShowcase() {
                 loading="lazy"
                 decoding="async"
               />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
+              {/* Overlay - усилен для скрытия текста на изображениях */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/40" />
+              {/* Дополнительный затемняющий слой для средней части */}
+              <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-transparent" />
             </div>
 
             {/* Content */}
