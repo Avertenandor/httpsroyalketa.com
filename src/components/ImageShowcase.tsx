@@ -3,7 +3,6 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Sparkles, Award, Heart } from 'lucide-react';
-import { caviarProductImages } from '@/config/images';
 
 interface ShowcaseItem {
   title: string;
@@ -17,21 +16,21 @@ const showcaseItems: ShowcaseItem[] = [
   {
     title: 'Премиальное Качество',
     description: 'Каждая икринка тщательно отобрана и проверена нашими специалистами',
-    imageUrl: caviarProductImages[1].urlMedium, // Макро икра кеты
+    imageUrl: '/img/species/salmon/hero-salmon.webp',
     icon: Award,
     link: '/caviar',
   },
   {
     title: 'Идеально для Подарка',
     description: 'Роскошная упаковка делает нашу икру идеальным подарком',
-    imageUrl: caviarProductImages[4].urlMedium, // Икра в жестяной банке
+    imageUrl: '/img/species/salmon/ikura-don-1.jpg',
     icon: Heart,
     link: '/caviar',
   },
   {
     title: 'Превосходный Вкус',
     description: 'Нежный вкус и тающая текстура в каждой баночке',
-    imageUrl: caviarProductImages[0].urlMedium, // Gunkan с икрой
+    imageUrl: '/img/species/salmon/ikura-don-1.jpg',
     icon: Sparkles,
     link: '/caviar',
   },
@@ -119,7 +118,7 @@ export function ImageShowcase() {
       >
         <div className="relative h-[400px] md:h-[500px]">
           <img
-            src={caviarProductImages[3].urlLarge}
+            src="/img/species/salmon/ikura-don-1.jpg"
             alt="Премиальная красная икра Royal Keta"
             className="w-full h-full object-cover object-center"
             loading="lazy"
