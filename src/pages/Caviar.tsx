@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Award, Truck } from 'lucide-react';
+import { CAVIAR } from '@/data/caviar.images';
 
 export default function Caviar() {
   const products = [
@@ -32,13 +33,15 @@ export default function Caviar() {
         title="Премиальная Икра"
         description="Премиальная красная икра Роял Кета. Устойчивое производство, изысканный вкус. Доступна для оптовых заказов."
         path="/caviar"
-        ogImage="/og/caviar.png"
+        ogImage={CAVIAR.red.og}
       />
 
       <Hero
         subtitle="Царская Кета Икра"
         title="Совершенство в Каждой Баночке"
         description="Премиальная красная икра из устойчиво разводимого тихоокеанского лосося"
+        backgroundImage="/img/caviar/red/hero.webp"
+        backgroundOverlay="dark"
       />
 
       <section className="content-container py-20">

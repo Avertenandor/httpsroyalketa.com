@@ -13,7 +13,8 @@
     "generate:og": "tsx scripts/generate-og-images.ts",
     "generate:static": "tsx scripts/generate-static-pages.ts",
     "generate:icons": "node -e \"const sharp=require('sharp');Promise.all([sharp('public/logo.svg').resize(192,192).toFile('public/icons/icon-192.png'),sharp('public/logo.svg').resize(512,512).toFile('public/icons/icon-512.png')]).then(()=>console.log('✓ Icons generated')).catch(e=>console.log('⚠ Install sharp: npm install sharp'))\"",
-    "generate:all": "npm run generate:sitemap && npm run generate:og && npm run generate:static"
+    "generate:all": "npm run generate:sitemap && npm run generate:og && npm run generate:static",
+    "audit:caviar": "node scripts/audit-caviar-uniqueness.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",

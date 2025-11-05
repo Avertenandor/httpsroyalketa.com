@@ -3,11 +3,13 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Sparkles, Award, Heart } from 'lucide-react';
+import { CAVIAR } from '@/data/caviar.images';
 
 interface ShowcaseItem {
   title: string;
   description: string;
   imageUrl: string;
+  alt: string;
   icon: React.ComponentType<{ className?: string }>;
   link: string;
 }
@@ -16,21 +18,24 @@ const showcaseItems: ShowcaseItem[] = [
   {
     title: 'Премиальное Качество',
     description: 'Каждая икринка тщательно отобрана и проверена нашими специалистами',
-    imageUrl: '/img/species/salmon/hero-salmon.webp',
+    imageUrl: CAVIAR.red.cards[0],
+    alt: CAVIAR.red.alt.cards[0],
     icon: Award,
     link: '/caviar',
   },
   {
     title: 'Идеально для Подарка',
     description: 'Роскошная упаковка делает нашу икру идеальным подарком',
-    imageUrl: '/img/species/salmon/ikura-don-1.jpg',
+    imageUrl: CAVIAR.red.cards[1],
+    alt: CAVIAR.red.alt.cards[1],
     icon: Heart,
     link: '/caviar',
   },
   {
     title: 'Превосходный Вкус',
     description: 'Нежный вкус и тающая текстура в каждой баночке',
-    imageUrl: '/img/species/salmon/ikura-don-1.jpg',
+    imageUrl: CAVIAR.red.cards[2],
+    alt: CAVIAR.red.alt.cards[2],
     icon: Sparkles,
     link: '/caviar',
   },
@@ -68,8 +73,8 @@ export function ImageShowcase() {
             <div className="relative h-[280px] sm:h-[320px] md:h-[360px] lg:h-[400px] overflow-hidden">
               <img
                 src={item.imageUrl}
-                alt={item.title}
-                className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                alt={item.alt}
+                className="w-full h-full object-cover object-[50%_45%] transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
                 decoding="async"
               />
@@ -110,20 +115,22 @@ export function ImageShowcase() {
       </div>
 
       {/* Feature highlight with large image */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mt-8 sm:mt-12 md:mt-16 relative overflow-hidden rounded-xl sm:rounded-2xl"
-      >
-        <div className="relative h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px]">
-          <img
-            src="/img/species/salmon/ikura-don-1.jpg"
-            alt="Премиальная красная икра Royal Keta"
-            className="w-full h-full object-cover object-center"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 md:via-background/60 to-transparent" />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mt-8 sm:mt-12 md:mt-16 relative overflow-hidden rounded-xl sm:rounded-2xl"
+              >
+                <div className="relative h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px]">
+                  <img
+                    src={CAVIAR.red.recipe}
+                    alt={CAVIAR.red.alt.recipe}
+                    className="w-full h-full object-cover object-[50%_45%]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,#0b0f1acc,transparent_40%)] pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 md:via-background/60 to-transparent" />
 
           {/* Content overlay */}
           <div className="absolute inset-0 flex items-center">
