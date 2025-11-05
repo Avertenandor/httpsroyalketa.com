@@ -4,6 +4,7 @@ import { Hero } from '@/components/Hero';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { productionImages, processImages, sustainabilityImages, caviarProductImages } from '@/config/images';
 
 type Category = 'all' | 'science' | 'family' | 'caviar';
 
@@ -11,27 +12,25 @@ interface GalleryItem {
   id: number;
   title: string;
   category: Category;
-  thumbnail: string;
+  image: string;
+  alt: string;
   description: string;
 }
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
 
-  // Placeholder gallery items
+  // Реальные изображения вместо заглушек
   const galleryItems: GalleryItem[] = [
-    { id: 1, title: 'Процесс Отбора Икры', category: 'science', thumbnail: '🥚', description: 'Тщательный отбор премиального генетического материала' },
-    { id: 2, title: 'Семейная Группа Тура', category: 'family', thumbnail: '👨‍👩‍👧‍👦', description: 'Семьи изучают разведение лосося' },
-    { id: 3, title: 'Премиальная Красная Икра', category: 'caviar', thumbnail: '🫙', description: 'Свежеприготовленная икра кеты' },
-    { id: 4, title: 'Инкубационное Оборудование', category: 'science', thumbnail: '🔬', description: 'Современные инкубационные камеры' },
-    { id: 5, title: 'Дети Кормят Рыб', category: 'family', thumbnail: '🐟', description: 'Интерактивное кормление' },
-    { id: 6, title: 'Дегустация Икры', category: 'caviar', thumbnail: '🍽️', description: 'Гости наслаждаются премиальной икрой' },
-    { id: 7, title: 'Выпуск Смолтов', category: 'science', thumbnail: '🌊', description: 'Здоровые смолты попадают в океан' },
-    { id: 8, title: 'Гид Объясняет', category: 'family', thumbnail: '👨‍🏫', description: 'Эксперт-гиды делятся знаниями' },
-    { id: 9, title: 'Подарочные Банки Икры', category: 'caviar', thumbnail: '🎁', description: 'Красиво упакованные подарочные наборы' },
-    { id: 10, title: 'Развитие Мальков', category: 'science', thumbnail: '🐠', description: 'Молодой лосось в развитийных ёмкостях' },
-    { id: 11, title: 'Рыболовная Сессия', category: 'family', thumbnail: '🎣', description: 'Поймал-отпустил' },
-    { id: 12, title: 'Производство Икры', category: 'caviar', thumbnail: '⚙️', description: 'Обзор производственного цеха' },
+    { id: 1, title: 'Процесс отбора икры', category: 'science', image: productionImages[0].urlLarge, alt: productionImages[0].alt, description: 'Тщательный отбор генетического материала и биобезопасность' },
+    { id: 2, title: 'Инкубация и контроль', category: 'science', image: processImages[0].urlLarge, alt: processImages[0].alt, description: 'Температура, кислород и бережный стресс‑контроль' },
+    { id: 3, title: 'Производственный контроль', category: 'science', image: processImages[1].urlLarge, alt: processImages[1].alt, description: 'Стандарты HACCP и аудит параметров' },
+    { id: 4, title: 'Семейные туры', category: 'family', image: sustainabilityImages[2].urlLarge, alt: sustainabilityImages[2].alt, description: 'Образовательные прогулки на природе' },
+    { id: 5, title: 'Красная икра — макро', category: 'caviar', image: '/img/caviar/red/hero.webp', alt: 'Красная икра в банке — макро', description: 'Премиальная икра кеты насыщенного цвета' },
+    { id: 6, title: 'Ikura-don — подача', category: 'caviar', image: '/img/caviar/red/recipe-1.webp', alt: 'Ikura-don — подача с желтком', description: 'Осмысленная подача и гастрономия' },
+    { id: 7, title: 'Чёрная икра — макро', category: 'caviar', image: '/img/caviar/black/hero.webp', alt: 'Чёрная икра в банке — макро', description: 'Классический строгий кадр' },
+    { id: 8, title: 'Чёрная икра — забор ложкой', category: 'caviar', image: '/img/caviar/black/card-2.webp', alt: 'Чёрная икра — забор ложкой', description: 'Контроль качества и консистенции' },
+    { id: 9, title: 'Выпуск смолтов', category: 'science', image: sustainabilityImages[0].urlLarge, alt: sustainabilityImages[0].alt, description: 'Здоровые смолты уходят в естественную среду' },
   ];
 
   const filteredItems = activeCategory === 'all'
@@ -89,9 +88,16 @@ export default function Gallery() {
               transition={{ duration: 0.3, delay: idx * 0.05 }}
               className="premium-card overflow-hidden cursor-pointer group hover:shadow-glow-gold transition-all duration-300"
             >
-              {/* Placeholder Image */}
-              <div className="aspect-[4/3] bg-background-secondary flex items-center justify-center text-8xl group-hover:scale-105 transition-transform duration-300">
-                {item.thumbnail}
+              {/* Image */}
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  className="w-full h-full object-cover object-[50%_45%] transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
               </div>
               {/* Info */}
               <div className="p-4">
@@ -116,16 +122,9 @@ export default function Gallery() {
         )}
 
         <div className="mt-16 premium-card p-8 text-center">
-          <h3 className="text-2xl font-display font-bold text-gold mb-4">
-            Настоящие Фото Скоро
-          </h3>
-          <p className="text-foreground-muted mb-6 max-w-2xl mx-auto">
-            Мы готовим обширную фотогалерею, демонстрирующую наш процесс разведения,
-            семейные туры и премиальную икорную продукцию. Загляните сюда вскоре за качественными изображениями.
-          </p>
-          <p className="text-sm text-foreground-muted">
-            Примечание: Текущие заглушки будут заменены профессиональной фотографией.
-          </p>
+          <h3 className="text-2xl font-display font-bold text-gold mb-4">Хотите увидеть всё своими глазами?</h3>
+          <p className="text-foreground-muted mb-6 max-w-2xl mx-auto">Забронируйте тур — покажем процесс, лаборатории и финальную продукцию.</p>
+          <Button asChild variant="premium"><a href="/hatchery-tour">Забронировать тур</a></Button>
         </div>
       </section>
     </>
