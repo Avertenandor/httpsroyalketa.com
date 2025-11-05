@@ -43,6 +43,34 @@ export default function Sakhalin() {
           </div>
         </div>
       </section>
+      {/* Lighthouses & Bays */}
+      <section className="content-container pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+          <div className="space-y-3 text-sm sm:text-base text-foreground-muted leading-relaxed">
+            <Badge variant="ocean" className="mb-2">Маяки и бухты</Badge>
+            <p>Юг Сахалина — земля маяков и туманов. Здесь навигация всегда была искусством, а маяки — символом ответственности и технического мышления моряков.</p>
+            <p>Берег изрезан множеством бухт, куда заходят штормы и морские птицы. Наблюдать за приливом и отливом особенно интересно на высоких точках, где виден контраст океана и скал.</p>
+            <p>Маршруты к маякам требуют внимания к погоде и экипировке: непромокаемая куртка, треккинговая обувь, запас воды и перекуса. Сотовая связь может пропадать.</p>
+            <p>По возможности, выбирайте организованные туры с морскими переходами и разрешениями. Это безопаснее и бережнее к природе.</p>
+            <p>Бухты — место встреч рыбалки, наблюдения за птицами и неспешных пикников. Здесь легко почувствовать масштаб и тишину острова.</p>
+            <p>Фотографам подойдут рассветы и сумерки: мягкий свет, туманные переходы, силуэты маяков и рельеф береговой линии.</p>
+            <p>Экологический аспект — важнейший. Пожалуйста, не оставляйте следов: уносите мусор, не подходите близко к гнездовьям и лежбищам животных.</p>
+            <p>Зимой маршруты меняются: прозрачные льды и снежные карнизы открывают другие ракурсы. Требуется опыт и сопровождение.</p>
+            <p>Море непредсказуемо: оцените прогноз и ветер, чтобы прогулка оставила только хорошие впечатления.</p>
+            <p>Лучший опыт — когда видно не только объект, но и ландшафт, историю и ответственность людей, которые поддерживают навигацию.</p>
+          </div>
+          <div className="space-y-4">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+              <img src="/img/sakhalin/lighthouse-bay.webp" alt="Береговая линия с маяком и бухтой" className="w-full h-full object-cover object-[50%_45%]" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 to-transparent" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+              <img src="/img/sakhalin/satellite.webp" alt="Спутниковый вид острова (иллюстрация)" className="w-full h-full object-cover object-center" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/70 to-transparent" />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* The Island in three images */}
       <section className="content-container pb-12 sm:pb-16 md:pb-20 lg:pb-24">
@@ -80,13 +108,72 @@ export default function Sakhalin() {
               </ul>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-              <img src={tourismImages[0].urlLarge} alt={tourismImages[0].alt} className="w-full h-full object-cover object-[50%_45%]" loading="lazy" />
+              <img src="/img/sakhalin/uus-airport.webp" alt="Аэропорт Южно‑Сахалинск (UUS) — терминал" className="w-full h-full object-cover object-[50%_45%]" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/70 to-transparent" />
             </div>
           </div>
         </div>
       </section>
 
+      {/* Hotels */}
+      <section className="content-container pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <Badge variant="ocean" className="mb-3 sm:mb-4">Гостиницы</Badge>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-gold">Где остановиться</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+          {[{
+            name: 'Santa Resort Hotel', site: 'https://santaresort.ru/', addr: 'Южно‑Сахалинск, Санаторная аллея, 3',
+          },{
+            name: 'Mega Palace', site: 'https://megapalace.ru/', addr: 'Южно‑Сахалинск, пр. Победы, 73',
+          },{
+            name: 'Belka Hotel', site: 'https://belka-hotel.ru/', addr: 'Южно‑Сахалинск, ул. Калинина, 38',
+          },{
+            name: 'Гостиница «Гагарин»', site: 'https://gagarin-hotel.ru/', addr: 'Южно‑Сахалинск, ул. Ленинская, 280',
+          }].map((h) => (
+            <Card key={h.name}>
+              <CardHeader>
+                <CardTitle>{h.name}</CardTitle>
+                <CardDescription>{h.addr}</CardDescription>
+              </CardHeader>
+              <div className="px-6 pb-6">
+                <a href={h.site} target="_blank" rel="noopener noreferrer" className="text-ocean hover:text-gold transition-colors">{h.site.replace('https://','')}</a>
+                <p className="text-xs text-foreground-muted mt-2">Телефон см. на официальном сайте</p>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Transport */}
+      <section className="content-container pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+        <div className="premium-card p-6 sm:p-8">
+          <div className="grid md:grid-cols-3 gap-6">
+            <div>
+              <Badge variant="ocean" className="mb-3">Аренда авто</Badge>
+              <ul className="list-disc pl-5 text-sm sm:text-base text-foreground-muted space-y-1">
+                <li>Пункты на UUS и в городе; нужны права РФ и депозит.</li>
+                <li>Зимняя резина и полный привод — рекомендуются поздней осенью и зимой.</li>
+                <li>Парковки во дворах и у гостиниц; вне города — осторожно на грунтовках.</li>
+              </ul>
+            </div>
+            <div>
+              <Badge variant="ocean" className="mb-3">Такси и трансфер</Badge>
+              <ul className="list-disc pl-5 text-sm sm:text-base text-foreground-muted space-y-1">
+                <li>Из аэропорта до центра 15–25 минут по трафику.</li>
+                <li>Доступны городские службы и частные трансферы от туркомпаний.</li>
+              </ul>
+            </div>
+            <div>
+              <Badge variant="ocean" className="mb-3">Общественный транспорт</Badge>
+              <ul className="list-disc pl-5 text-sm sm:text-base text-foreground-muted space-y-1">
+                <li>Городские автобусы и маршрутные такси; расписание уточняйте на остановках/в приложениях.</li>
+                <li>Для поездок к природным объектам — удобнее тур/аренда авто.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Sights */}
       <section className="content-container pb-12 sm:pb-16 md:pb-20 lg:pb-24">
         <div className="text-center mb-8 sm:mb-10 md:mb-12">

@@ -26,6 +26,12 @@ const targets = [
   { url: 'https://unsplash.com/photos/BT6AXIbfIYo/download?force=true', out: 'public/img/caviar/black/premium-1.webp', fmt: 'webp' },
   // SCIENCE specific
   { url: 'https://images.pexels.com/photos/1615180/pexels-photo-1615180.jpeg?cs=srgb&fm=jpg', out: 'public/img/science/smolt-release.webp', fmt: 'webp' },
+  // Sakhalin UUS airport (placeholder until local photo)
+  { url: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?cs=srgb&fm=jpg', out: 'public/img/sakhalin/uus-airport.webp', fmt: 'webp' },
+  // Lighthouses & bays illustration
+  { url: 'https://images.pexels.com/photos/258190/pexels-photo-258190.jpeg?cs=srgb&fm=jpg', out: 'public/img/sakhalin/lighthouse-bay.webp', fmt: 'webp' },
+  // Satellite style illustration (temporary until CC-BY satellite of Sakhalin)
+  { url: 'https://images.pexels.com/photos/87009/earth-blue-planet-globe-planet-87009.jpeg?cs=srgb&fm=jpg', out: 'public/img/sakhalin/satellite.webp', fmt: 'webp' },
 ];
 
 async function downloadToBuffer(url) {
