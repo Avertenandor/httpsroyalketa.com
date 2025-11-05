@@ -291,8 +291,6 @@ export default function SalmonInfo() {
                     className="w-full h-64 object-cover object-[50%_45%]"
                     loading="lazy"
                     decoding="async"
-                    loading="lazy"
-                    decoding="async"
                   />
                 </div>
                 <Badge variant="ocean" className="mb-4">Экологическая ответственность</Badge>

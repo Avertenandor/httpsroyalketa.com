@@ -211,6 +211,6 @@ export function InvestmentCalculator() {
           </Card>
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 }
